@@ -52,11 +52,11 @@ function adminLogin()
 			
 			if(a[0].includes(" "))
 			{
-				console.log(arr);
+				throw e;
 			}
 			else
 			{
-				//throw e;
+				console.log(arr);
 			}
 			
 			//let flat = flatten(arr);
