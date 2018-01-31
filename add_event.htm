@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
 
 
     <title>Add Event</title>
@@ -25,58 +28,60 @@
      <div class="container">
 
        <!-- EVENT INPUT -->
+       <form class="" action="user_interface.html" method="post">
 
-       <div class="form-group">
-         <label class="control-label col-sm-2" for="event">Event:</label>
-         <div class="col-sm-5">
-           <input type="text" class="form-control" id="event" placeholder="Enter Event" name="event">
+
+         <div class="form-group">
+           <label class="control-label col-sm-2" for="event">Event:</label>
+           <div class="col-sm-5">
+             <input type="text" class="form-control" id="event"
+                    placeholder="Enter Event" name="event" required>
+           </div>
          </div>
-       </div>
 
-       <!-- DATE INPUT-->
+         <!-- DATE INPUT-->
 
-       <div class="form-group">
-         <label class="control-label col-sm-2" for="date">Date:</label>
-         <div class="col-sm-5">
-           <input type="date" class="form-control" id="date" placeholder="Enter Date" name="date">
+         <div class="form-group">
+           <label class="control-label col-sm-2" for="date">Date:</label>
+           <div class="col-sm-5">
+             <input type="date" class="form-control" id="date"
+                    placeholder="mm/dd/yyyy" name="date" required>
+           </div>
          </div>
-       </div>
 
-       <!-- TIME INPUT-->
-       <!-- TODO: Change time input to match project needs-->
+         <!-- TIME INPUT-->
+         <!-- TODO: Change time input to match project needs-->
 
-       <div class="form-group">
-         <label  class="control-label col-sm-2" for="time">Time:</label>
-         <div class="col-sm-5">
-           <input type="time" step="1200" class="form-control" id="datetimepicker3" placeholder="Enter Time" name="time" value="12:00">
+         <div class="form-group">
+           <label  class="control-label col-sm-2" for="time">Time:</label>
+           <div class="col-sm-5">
+             <input type="time" autocomplete="on" step="1200"
+                    class="form-control" id="datetimepicker3" name="time"
+                    value="" min="5:00" max="24:00" placeholder="12:00 PM"
+                    required>
+           </div>
          </div>
-       </div>
 
-       <!-- SUBMIT BUTTON -->
-       <!-- TODO: actually submit the data that is given -->
+         <!-- SUBMIT BUTTON -->
+         <!-- TODO: actually submit the data that is given -->
 
-       <div class="form-group">
-         <div class="col-sm-5">
-           <input type="submit" class="form-control" id="submit" name="submit" >
-         </div>
-       </div>
+         <button type="submit" class="btn btn-primary" name="submit">Submit</button>
 
 
-       <!-- CANCEL BUTTON -->
+         <!-- CANCEL BUTTON -->
 
-       <div class="form-group">
-         <div class="col-sm-5">
-           <input type="button" class="form-control" name="cancel" value="Cancel" onclick="window.location='user_interface.html'">
-         </div>
-       </div>
+
+         <button type="button" name="cancel" class="btn btn-primary"
+         onclick="window.location='user_interface.html'">Cancel</button>
 
 
 
-       <!-- TODO: Add something that tells the user if the inputed the correct data or not -->
+         <!-- TODO: Add something that tells the user if the inputed the
+                    correct data or not -->
 
 
 
-
+       </form>
 
      </div>
 
