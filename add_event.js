@@ -10,6 +10,8 @@
 
 /**
  * Toggle 24 hour mode and 12 hour mode
+ * Checks if the 24-Hour checkbox is checked then populates the
+ * select box with the correct number of options.
  */
 
 function timeSwitcher(){
@@ -18,13 +20,18 @@ function timeSwitcher(){
     var checkBox = document.getElementById("timeCheckBox");
  
 
-
     if(checkBox.checked == true){
         
-        mode24HR(24);
+        unpopulateHour();
+        populateHours(24);
+        /**
+        * TODO: add function that gets rid of AMPM in 24 hour mode
+        */
         
-    } else if(checkBox.checked == false) {
+    } else {
         
+        unpopulateHour();
+        populateHours(12);
 
     }
     
@@ -34,10 +41,11 @@ function timeSwitcher(){
 
 /**
  * 24-hour mode
+ * Adds the correct number of options in a select menu
+ * @param: Enter a value of either 24 or 12 to select which mode to run.
  */
 
- function mode24HR(mode) {
-     console.log("populate hour ran");
+ function populateHours(mode) {
      
      var docfrag = document.createDocumentFragment();
 
@@ -49,6 +57,24 @@ function timeSwitcher(){
      var select = document.getElementById("selectHour");
      select.appendChild(docfrag);
  }
+
+
+
+ /**
+  * Remoove 24 Hour mode 
+  */
+
+function unpopulateHour(){
+    var hours = document.getElementById("selectHour")
+
+    for( var i = 0; i <= 24; i++){
+        hours.remove(hours.i);
+    }
+
+}
+
+
+
 
 
 
