@@ -1,7 +1,7 @@
 // Jamison Walrod
 // EECS 448
 // Project 1
-// 31 January 2018
+// 02 February 2018
 //
 // Code for checkbox used in html was found on StackOverflow: https://stackoverflow.com/questions/28372466/how-to-call-a-function-from-checkbox-onclick-or-onchange
 // String to array: https://stackoverflow.com/questions/19418244/elegant-way-to-convert-string-of-array-of-arrays-into-a-javascript-array-of-arra
@@ -9,7 +9,9 @@
 // Checking if parameter is an array: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
 // Check to see if string includes a character:	https://www.w3schools.com/jsref/jsref_includes.asp
 // 
-// 
+// Comparing two strings: https://stackoverflow.com/questions/7837456/how-to-compare-arrays-in-javascript
+// Open new html in javascript: https://stackoverflow.com/questions/442384/jumping-to-a-new-html-page-with-javascript
+//
 //
 
 main = function() {
@@ -46,11 +48,12 @@ function adminLogin()
 			console.log("Password: ", val);
 		});
 		
+		//// Promise.all will validate the login input ////
 		Promise.all([u,p]).then(function(a)
 		{
-			
-			console.log("Inside promise");
-			
+			console.log("Inside Promise.all");
+
+			//// Checks if username has a space ////
 			if(a[0].includes(" "))
 			{
 				console.log(a);
@@ -60,6 +63,7 @@ function adminLogin()
 				throw e;
 				
 			}
+			//// Checks if password has a space ////
 			else if(a[1].includes(" "))
 			{
 				console.log(a);
@@ -68,6 +72,7 @@ function adminLogin()
 				chalk.println("Invalid password! Cannot contain spaces!");
 				throw e;
 			}
+			//// Checks if username and password exist ////
 			else if(adminCompare(a) != true)
 			{
 				console.log(a);
@@ -76,12 +81,12 @@ function adminLogin()
 				chalk.println("No login found! Please try again.");
 				adminLogin();
 			}
+			//// Transfers admin to add_event.html on successful login////
 			else
 			{
 				console.log("Success!");
-				chalk.println("");
 				chalk.println("Welcome!");
-				//-> eventFunction();
+				window.location.href = "add_event.html";
 			}
 			
 		}).catch(function(e)
@@ -99,6 +104,7 @@ function adminLogin()
 		chalk.println(" ");
 		chalk.println("ERROR");
 	}
+
 }
 
 //
