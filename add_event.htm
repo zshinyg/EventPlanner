@@ -28,47 +28,51 @@
      <div class="container">
 
        <!-- EVENT INPUT -->
-       <form class="" action="user_interface.html" method="post">
+       <form action="user_interface.html" method="post">
 
 
-         <div class="form-group">
+        <div class="form-group">
            <label class="control-label col-sm-2" for="event">Event:</label>
            <div class="col-sm-5">
              <input type="text" class="form-control" id="event"
                     placeholder="Enter Event" name="event" required>
            </div>
-         </div>
+        
 
-         <!-- DATE INPUT-->
+            <!-- DATE INPUT-->
 
-         <div class="form-group">
            <label class="control-label col-sm-2" for="date">Date:</label>
            <div class="col-sm-5">
              <input type="date" class="form-control" id="date"
                     placeholder="mm/dd/yyyy" name="date" required>
            </div>
+         
+            <!-- TIME INPUT-->
+
+           <label for="time" class="control-label col-sm-2" for=>Time:</label>
+           <div id="time" style="inline" class="col-sm-5">
+              <select name="selectHour" id="selectHour"></select>
+              <select name="selectMinutes" id="minutes">
+                <option value="00">00</option>
+                <option value="20">20</option>
+                <option value="40">40</option>
+              </select>
+              <select name="ampm" id="ampm">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+              </select>
+              <input type="checkbox" id="timeCheckBox" onclick="timeSwitcher()">
+              <label for="timeCheckBox">24-Hour mode</label>
+            </div>    
          </div>
 
-         <!-- TIME INPUT-->
-         <!-- TODO: Change time input to match project needs-->
-
-         <div class="form-group">
-           <label  class="control-label col-sm-2" for="time">Time:</label>
-           <div class="col-sm-5">
-             <input type="time" autocomplete="on" step="1200"
-                    class="form-control" id="datetimepicker3" name="time"
-                    value="" min="5:00" max="24:00" placeholder="12:00 PM"
-                    required>
-           </div>
-         </div>
-
-         <!-- SUBMIT BUTTON -->
-         <!-- TODO: actually submit the data that is given -->
+            <!-- SUBMIT BUTTON -->
+            <!-- TODO: actually submit the data that is given -->
 
          <button type="submit" class="btn btn-primary" name="submit">Submit</button>
 
 
-         <!-- CANCEL BUTTON -->
+            <!-- CANCEL BUTTON -->
 
 
          <button type="button" name="cancel" class="btn btn-primary"
@@ -98,4 +102,6 @@
 
 
   </body>
+
+  <script src="add_event.js"></script>
 </html>
