@@ -49,9 +49,9 @@
          
             <!-- TIME INPUT-->
 
-           <label for="time" class="control-label col-sm-2" for=>Time:</label>
-           <div id="time" style="inline" class="col-sm-5">
-              <select name="selectHour" id="selectHour">
+            <label for="startTime" class="control-label col-sm-2" >Start:</label>
+            <div id="startTime" style="inline" class="col-sm-5">
+              <select name="startHour" id="startHour">
                 <option value="01">01</option>
                 <option value="02">02</option>
                 <option value="03">03</option>
@@ -65,7 +65,7 @@
                 <option value="11">11</option>
                 <option value="12">12</option>
               </select>
-              <select name="selectMinutes" id="minutes">
+              <select name="startMinutes" id="startMinutes">
                 <option value="00">00</option>
                 <option value="20">20</option>
                 <option value="40">40</option>
@@ -74,10 +74,39 @@
                 <option value="AM">AM</option>
                 <option value="PM">PM</option>
               </select>
-              <input type="checkbox" id="timeCheckBox" onclick="timeSwitcher()">
-              <label for="timeCheckBox">24-Hour mode</label>
-            </div>    
+            </div> 
+            
+          <label for="endTime" class="control-label col-sm-2" >End:</label>
+          <div id="endTime" style="inline" class="col-sm-5">
+              <select name="endHour" id="endHour">
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <select name="endMinutes" id="endMinutes">
+                <option value="00">00</option>
+                <option value="20">20</option>
+                <option value="40">40</option>
+              </select>
+              <select name="ampm2" id="ampm2">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+              </select>
+            
+
          </div>
+         <input type="checkbox" id="timeCheckBox" onclick="timeSwitcher()">
+         <label for="timeCheckBox">24-Hour mode</label>
+
 
             <!-- SUBMIT BUTTON -->
             <!-- TODO: actually submit the data that is given -->

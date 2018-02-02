@@ -18,54 +18,72 @@ function timeSwitcher(){
     console.log("timeSwitcher Ran");
     
     var checkBox = document.getElementById("timeCheckBox");
- 
+    var el1 = "startHour";
+    var el2 = "endHour";
 
     if(checkBox.checked == true){
-        
-        unpopulateHour();
-        populateHours(24);
-        /**
-        * TODO: add function that gets rid of AMPM in 24 hour mode
-        */
-        
+        unpopulateHour(el1);
+        populateHours(23,0,el1);
+        unpopulateHour(el2);
+        populateHours(23,0,el2);
+        removeAMPM();
+
     } else {
         
-        unpopulateHour();
-        populateHours(12);
-
+        unpopulateHour(el1);
+        populateHours(12,1,el1);
+        unpopulateHour(el2);
+        populateHours(12,1,el2);
+        addAMPM();
     }
-    
+}
+
+
+
+function addAMPM(){
+    document.getElementById("ampm").style.visibility="";
+    document.getElementById("ampm2").style.visibility="";
 
 }
+
+/**
+ * Remove AMPM select box
+ */
+ function removeAMPM(){
+     document.getElementById("ampm").style.visibility="hidden";
+     document.getElementById("ampm2").style.visibility="hidden";
+
+ }
 
 
 /**
  * 24-hour mode
  * Adds the correct number of options in a select menu
- * @param: Enter a value of either 24 or 12 to select which mode to run.
+ * @param: Enter a value of either 24 or 12 to select which mode to run and the value for the time to start at.
  */
 
- function populateHours(mode) {
+ function populateHours(mode,i,id) {
      
      var docfrag = document.createDocumentFragment();
 
-     for (var i = 1; i <=mode; ++i)
+     for (i; i <=mode; ++i)
      {
           docfrag.appendChild(new Option(i, i));
      }
      
-     var select = document.getElementById("selectHour");
+     var select = document.getElementById(id);
      select.appendChild(docfrag);
  }
 
 
 
  /**
-  * Remoove 24 Hour mode 
+  * Remove 24 Hour mode 
   */
 
-function unpopulateHour(){
-    var hours = document.getElementById("selectHour")
+function unpopulateHour(id){
+
+    var hours = document.getElementById(id);
 
     for( var i = 0; i <= 24; i++){
         hours.remove(hours.i);
