@@ -9,7 +9,9 @@
 // INTEGER VARIABLES:
 //          MONTH, DAY, YEAR, HOUR, MIN
 //          SMIN AND SHOUR ARE START HOUR MIN AND HOUR
-//          L IS LAST 
+//          L IS LAST
+// IMPORTANT:
+//          ALL HOURS ARE STORED IN 24 HOUR FORMAT FROM 0-23
 function meeting (title, month, day, year, shour, smin, lhour, lmin) {
   this.title = title;
   this.month = month;
