@@ -133,12 +133,11 @@ function submitVals()  {
      if ((ampm2 == "PM") && (lhour > 12)){
        lhour = lhour+12;
      }
-     if ((ampm1 == "AM") && (shour == 12))
-     {
-       shour = 0;
+     if ((ampm1 == "AM") && (shour <= 12)){
+       shour = shour;
      }
-     if ((ampm2 == "AM") && (lhour ==12)){
-       lhour =0;
+     if ((ampm2 == "AM") && (lhour <= 12)){
+       lhour = lhour;
      }
 
   }
@@ -149,13 +148,6 @@ function submitVals()  {
   console.log("Start time: "+shour + ":"+smin);
   console.log("End time: " + lhour + ":" + lmin);
 }
-
-
-
-/**
- * TODO: add function that displays an error message if
- *       the time is not in 20 second intervals
- */
 
 
 /**
