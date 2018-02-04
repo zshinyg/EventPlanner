@@ -89,14 +89,6 @@ function unpopulateHour(id){
 
 
 
-
-
-/**
- * TODO: add function that displays an error message if
- *       the time is not in 20 second intervals
- */
-
-
 /**
  * TODO: add funtion that displays a success message after
  *       the user submits the form.
