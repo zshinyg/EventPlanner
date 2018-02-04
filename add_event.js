@@ -1,19 +1,11 @@
-/**
-* @date 1/31/18
-* @file add_event.js
-* @brief file to help with add_event.htm
-*/
-
-
 "use-strict"
 
 
 /**
- * Toggle 24 hour mode and 12 hour mode
+ * Toggle 24-hour mode and 12-hour mode.
  * Checks if the 24-Hour checkbox is checked then populates the
  * select box with the correct number of options.
  */
-
 function timeSwitcher(){
     console.log("timeSwitcher Ran");
     
@@ -26,48 +18,51 @@ function timeSwitcher(){
         populateHours(23,0,el1);
         unpopulateHour(el2);
         populateHours(23,0,el2);
-        removeAMPM();
+        hideAMPM();
 
-    } else {
-        
+    } else { 
         unpopulateHour(el1);
         populateHours(12,1,el1);
         unpopulateHour(el2);
         populateHours(12,1,el2);
-        addAMPM();
+        showAMPM();
     }
 }
 
-
-
-function addAMPM(){
+/**
+ * Shows the AMPM select when 24-Hour mode is disabled.
+ */
+function showAMPM(){
     document.getElementById("ampm").style.visibility="";
     document.getElementById("ampm2").style.visibility="";
 
 }
 
 /**
- * Remove AMPM select box
+ * Hides AMPM select box when 24-Hour mode is enabled.
  */
- function removeAMPM(){
+ function hideAMPM(){
      document.getElementById("ampm").style.visibility="hidden";
      document.getElementById("ampm2").style.visibility="hidden";
-
  }
 
 
 /**
- * 24-hour mode
- * Adds the correct number of options in a select menu
- * @param: Enter a value of either 24 or 12 to select which mode to run and the value for the time to start at.
+ * Populates the selct box with the given amount of hours.
+ * 12 for 12-Hour mode and 23 for 24-Hour mode.
+ * @param {number} mode 12 for 12-Hour mode and 23 for 
+ *      24-Hour mode.
+ * @param {number} i This is the number that the select box
+ *      starts at. It should be a 1 for 12-Hour mode and
+ *      0 for 24-hour mode.
+ * @param {string} id This is the element id of the select box
+ *      that needs to be populated.
  */
-
  function populateHours(mode,i,id) {
-     
+
      var docfrag = document.createDocumentFragment();
 
-     for (i; i <=mode; ++i)
-     {
+     for (i; i <=mode; ++i){
           docfrag.appendChild(new Option(i, i));
      }
      
@@ -77,10 +72,10 @@ function addAMPM(){
 
 
 
- /**
-  * Remove 24 Hour mode 
-  */
-
+/**
+ *  Unpopulates the select box in preperation of repopulating it.
+ *  @param {string} id This is the element id of the select box    that needs to be populated.
+ */
 function unpopulateHour(id){
 
     var hours = document.getElementById(id);
