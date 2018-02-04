@@ -4,11 +4,14 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
           crossorigin="anonymous">
+
+
     <title>Add Event</title>
   </head>
   <body>
@@ -34,7 +37,7 @@
              <input type="text" class="form-control" id="event"
                     placeholder="Enter Event" name="event" required>
            </div>
-        
+
 
             <!-- DATE INPUT-->
 
@@ -43,7 +46,7 @@
              <input type="date" class="form-control" id="date"
                     placeholder="mm/dd/yyyy" name="date" required>
            </div>
-         
+
             <!-- TIME INPUT-->
 
             <label for="startTime" class="control-label col-sm-2" >Start:</label>
@@ -71,8 +74,8 @@
                 <option value="AM">AM</option>
                 <option value="PM">PM</option>
               </select>
-            </div> 
-            
+            </div>
+
           <label for="endTime" class="control-label col-sm-2" >End:</label>
           <div id="endTime" style="inline" class="col-sm-5">
               <select name="endHour" id="endHour">
@@ -98,17 +101,18 @@
                 <option value="AM">AM</option>
                 <option value="PM">PM</option>
               </select>
+
+
          </div>
-         <input style="inline" type="checkbox" id="timeCheckBox" onclick="timeSwitcher()">
+         <input type="checkbox" id="timeCheckBox" onclick="timeSwitcher()">
          <label for="timeCheckBox">24-Hour mode</label>
 
-         
 
-         <div class="container"> 
             <!-- SUBMIT BUTTON -->
             <!-- TODO: actually submit the data that is given -->
 
-         <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+         <button type="submit" onclick = "submitVals()" class="btn btn-primary" name="submit">Submit</button>
+
 
 
             <!-- CANCEL BUTTON -->
@@ -123,8 +127,7 @@
                     correct data or not -->
 
 
-          </div>
-        </div>
+
        </form>
 
      </div>

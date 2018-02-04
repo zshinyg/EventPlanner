@@ -8,13 +8,19 @@
 //          TITLE
 // INTEGER VARIABLES:
 //          MONTH, DAY, YEAR, HOUR, MIN
-function meeting (title, month, day, year, hour, min) {
+//          SMIN AND SHOUR ARE START HOUR MIN AND HOUR
+//          L IS LAST
+// IMPORTANT:
+//          ALL HOURS ARE STORED IN 24 HOUR FORMAT FROM 0-23
+function meeting (title, month, day, year, shour, smin, lhour, lmin) {
   this.title = title;
   this.month = month;
   this.day = day;
   this.year = year;
-  this.hour = hour;
-  this.min = min;
+  this.shour = shour;
+  this.smin = smin;
+  this.lhour = lhour;
+  this.lmin = lmin;
   this.list = new linkedlist();
 }
 
