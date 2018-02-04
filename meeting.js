@@ -28,3 +28,16 @@ meeting.prototype.add = function (lastName, firstName){
   this.list.add(person);
   return person;
 }
+
+
+
+// VALUE OF
+// WORKAROUND FOR OPERATOR OVERLOADING
+// RETURNS THE MONTH TO ORGANIZE BY
+// EXAMPLE: EVENTS
+//        A = COW, MONTH = 7
+//        B = CAT, MONTH = 8
+//      A>B RETURNS FALSE THANKS TO THIS
+meeting.prototype.valueOf = function () {
+  return this.month;
+}
