@@ -150,6 +150,17 @@ function submitVals()  {
 }
 
 
+function addRow() {
+
+    var table = document.getElementById("eventTable");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var newText = document.createTextNode('New Row');
+    cell1.appendChild(newText);
+    
+}
+
+
 /**
  * TODO: add funtion that displays a success message after
  *       the user submits the form.
