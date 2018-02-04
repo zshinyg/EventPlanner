@@ -37,7 +37,7 @@
              <input type="text" class="form-control" id="event"
                     placeholder="Enter Event" name="event" required>
            </div>
-        
+
 
             <!-- DATE INPUT-->
 
@@ -46,7 +46,7 @@
              <input type="date" class="form-control" id="date"
                     placeholder="mm/dd/yyyy" name="date" required>
            </div>
-         
+
             <!-- TIME INPUT-->
 
             <label for="startTime" class="control-label col-sm-2" >Start:</label>
@@ -74,8 +74,8 @@
                 <option value="AM">AM</option>
                 <option value="PM">PM</option>
               </select>
-            </div> 
-            
+            </div>
+
           <label for="endTime" class="control-label col-sm-2" >End:</label>
           <div id="endTime" style="inline" class="col-sm-5">
               <select name="endHour" id="endHour">
@@ -101,7 +101,7 @@
                 <option value="AM">AM</option>
                 <option value="PM">PM</option>
               </select>
-            
+
 
          </div>
          <input type="checkbox" id="timeCheckBox" onclick="timeSwitcher()">
@@ -111,7 +111,8 @@
             <!-- SUBMIT BUTTON -->
             <!-- TODO: actually submit the data that is given -->
 
-         <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+         <button type="submit" onclick = "submitVals()" class="btn btn-primary" name="submit">Submit</button>
+
 
 
             <!-- CANCEL BUTTON -->
