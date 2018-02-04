@@ -58,7 +58,66 @@ function linkedlist() {
 
 //____________________________________________________________________________
 
+// ADD
+// TAKES IN A VALUE TO SAVE IN THE NODE (IN OUR CASE AN ATTENDEE)
+// THIS FUNCTION SORTS THE DATA FROM LEAST (FIRST VALUE)  TO GREATEST (LAST NODE)
+//
+linkedlist.prototype.add = function (val) {
 
+  var m_node = new node(val);
+  currentnode = this.first;
+
+  // Check to see if the list is empty
+  if (this.first == null)
+  {
+      this.first = m_node;
+  } // end if
+
+  else if (this.size == 1){
+    //console.log("size == 1");
+
+    if (currentnode.greater(val)){
+      console.log("Current node value: " + currentnode.data + " is greater than " + val);
+      this.first = m_node;
+      m_node.next = currentnode;
+    }//. end if
+
+    else {
+      this.first.next = m_node;
+    } // end else
+  } // end else if
+
+  else if (currentnode.greater(val)){
+
+    console.log("Current node value: " + currentnode.data + " is greater than " + val);
+    this.first = m_node;
+    m_node.next = currentnode;
+  }// end else if
+
+  else {
+
+    priornode = this.first;
+    currentnode = this.first.next;
+
+    while (currentnode) {
+
+      if (currentnode.greater(val)){
+
+        console.log("Current node value: " + currentnode.data + " is greater than " + val);
+        break;
+      } // end if
+      priornode = currentnode;
+      currentnode = currentnode.next;
+    } // end while
+    priornode.next = m_node;
+    m_node.next = currentnode;
+  }
+
+  this.size++;
+  //console.log("size is : " + this.size);
+
+  return m_node;
+} // end add
 
 
 
@@ -72,14 +131,15 @@ linkedlist.prototype.addBack = function (val) {
 
   if (this.first == null){
     this.first = m_node;
-  }
+  }// end if
+
   else {
 
     while (currentnode.next){
       currentnode = currentnode.next;
     }
     currentnode.next = m_node;
-  }
+  }// end else 
   this.size++;
 }
 
@@ -175,7 +235,7 @@ linkedlist.prototype.printAll = function(){
   if (this.size == 0){
     console.log("empty list");
   }// end if
-  
+
   else {
     while (currentnode){
       console.log(currentnode.data);
@@ -184,43 +244,6 @@ linkedlist.prototype.printAll = function(){
   }
 }
 
-//                BROKEN FUNCTIONS, RETURN TO IF TIME ALLOWS
-
-//_________________________________________________________________________
 
 
-
-// ADD
-// TAKES IN A VALUE TO SAVE IN THE NODE (IN OUR CASE AN ATTENDEE)
-// THIS FUNCTION SORTS THE DATA FROM LEAST (FIRST VALUE)  TO GREATEST (LAST NODE)
-//
-/*linkedlist.prototype.add = function (val) {
-  var m_node = new node(val);
-  currentnode = this.first;
-
-  // Check to see if the list is empty
-  if (this.first == null)
-  {
-      this.first = m_node;
-  } // end if
-
-  else {
-    priornode = this.first;
-    currentnode = this.first.next;
-    while (currentnode != null) {
-      if (currentnode.greater(val)){
-        break;
-      } // end if
-      priornode = currentnode;
-      currentnode = currentnode.next;
-    } // end while
-    priornode.next = m_node;
-    m_node = currentnode;
-  }
-
-  this.size++;
-  console.log("size is : " + this.size);
-
-  return m_node;
-} // end add */
 //____________________________________________________________________________

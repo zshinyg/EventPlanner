@@ -16,3 +16,15 @@ attendee.prototype.getLastName = function () {
 attendee.prototype.getFristName = function () {
   return this.firstName;
 }
+
+
+// VALUE OF
+// WORKAROUND FOR OPERATOR OVERLOADING
+// RETURNS THE LASTNAME TO ORGANIZE BY
+// EXAMPLE: ATTENDEE
+//        A = LASTNAME = BILL
+//        B = LASTNAME = CHANCE
+//      A>B RETURNS FALSE THANKS TO THIS
+attendee.prototype.valueOf = function () {
+  return this.lastName;
+}
