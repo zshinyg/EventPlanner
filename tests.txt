@@ -1,0 +1,76 @@
+TESTING LINKEDLIST WITH NUMS
+var list = new linkedlist;
+console.log("list created");
+list.addBack(9);
+console.log("added 9");
+list.addBack(10);
+console.log("added 10");
+list.addBack(4);
+console.log("added 4");
+list.addBack(11);
+console.log("added 11");
+var object = list.search(9);
+console.log(object);
+if (object.data != null) {
+  console.log("found 9");
+}
+else {
+  console.log("object not found");
+}
+var objectt = list.remove(9);
+console.log(object);
+if (objectt === true) {
+  console.log("removal of 9 successful");
+}
+else {
+  console.log("removal unsuccessful");
+}
+list.printAll();
+
+
+
+TESTING ADDING OF ATTENDEES
+var list = new linkedlist;
+var person = new attendee("Thomas", "Bill");
+var kid =  new attendee("Alex", "Jim");
+var thing = new attendee("Zeck", "Phil");
+list.addBack(person);
+list.addBack(kid);
+list.addBack(thing);
+list.printAll();
+
+
+
+
+TESTING SORTED ADD FUNCTION
+    var list = new linkedlist;
+    console.log("list created");
+    list.add(9);
+    list.printAll();
+    console.log("__________");
+    list.add(10);
+    list.printAll();
+    console.log("__________");
+    list.add(4);
+    list.printAll();
+    console.log("__________");
+    list.add(11);
+    list.printAll();
+    console.log("__________");
+    var object = list.search(9);
+    console.log(object);
+    if (object.data != null) {
+      console.log("found 9");
+    }
+    else {
+      console.log("object not found");
+    }
+    var objectt = list.remove(9);
+    console.log(object);
+    if (objectt === true) {
+      console.log("removal of 9 successful");
+    }
+    else {
+      console.log("removal unsuccessful");
+    }
+    list.printAll();
