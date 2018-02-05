@@ -119,6 +119,7 @@ function submitVals()  {
   var year = parseInt(yyyy);
   if (month == 01 && day == 01){
     window.alert("Can't schedule a meeting on New Year's Day.");
+    location.reload(true);
     return 0;
   }
   if (month == 07 && day == 04){
