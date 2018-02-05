@@ -131,9 +131,13 @@ function submitVals()  {
   }
 
   var shour = document.getElementById("startHour").value;
+  var strthour = parseInt(shour);
   var smin = document.getElementById("startMinutes").value;
+  var strtmin = parseInt(smin);
   var lhour = document.getElementById("endHour").value;
+  var endhour = parseInt(lhour);
   var lmin = document.getElementById("endMinutes").value;
+  var endmin = parseInt(lmin);
 
   var ampm1 = document.getElementById("ampm").value;
   console.log(ampm1);
@@ -146,17 +150,17 @@ function submitVals()  {
   if (!clock24){
      // See if am/pm selected for both cases
      // If it is pm, add 12 to the value
-     if ((ampm1 == "PM") && (shour > 12)){
-       shour = shour+12;
+     if ((ampm1 == "PM") && (strthour > 12)){
+       strthour = strthour+12;
      }
-     if ((ampm2 == "PM") && (lhour > 12)){
-       lhour = lhour+12;
+     if ((ampm2 == "PM") && endlhour > 12)){
+       endhour = endhour+12;
      }
-     if ((ampm1 == "AM") && (shour == 12)){
-       shour = 0;
+     if ((ampm1 == "AM") && (strthour == 12)){
+       strthour = 0;
      }
      if ((ampm2 == "AM") && (lhour == 12)){
-       lhour = 0;
+       endhour = 0;
      }
 
   }
