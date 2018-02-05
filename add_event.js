@@ -114,14 +114,20 @@ function submitVals()  {
   var dd = date.substr(8,2);
   var mm = date.substr(5,2);
   var yyyy = date.substr(0,4);
-  if (mm == 01 && dd == 01){
+  var day = parseInt(dd);
+  var month = parseInt(mm);
+  var year = parseInt(yyyy);
+  if (month == 01 && day == 01){
     window.alert("Can't schedule a meeting on New Year's Day.");
+    return 0;
   }
-  if (mm == 07 && dd == 04){
+  if (month == 07 && day == 04){
     window.alert("Can't schedule a meeting on Independence Day.");
+    return 0;
   }
-  if (mm == 12 && dd == 25){
+  if (month == 12 && day == 25){
     window.alert("Can't schedule a meeting on Christmas.");
+    return 0;
   }
 
   var shour = document.getElementById("startHour").value;
