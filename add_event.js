@@ -1,10 +1,3 @@
-/**
-* @date 1/31/18
-* @file add_event.js
-* @brief file to help with add_event.htm
-*/
-
-
 "use-strict"
 
 
@@ -62,9 +55,14 @@ function addAMPM(){
 
 
 /**
- * 24-hour mode
- * Adds the correct number of options in a select menu
- * @param: Enter a value of either 24 or 12 to select which mode to run and the value for the time to start at.
+ * populates the select box with the correct number of hours
+ * @param {number} mode sets the mode for the select box
+ *      23 for 24-Hour mode and 12 for 12-Hour mode.
+ * @param {number} i sets the number for the select box to
+ *      start counting at. Should be 1 for 12-Hour mode and
+ *      0 for 24-Hour mode.
+ * @param {string} id This is the element id of the select
+ *      box you would like to populate.
  */
 
  function populateHours(mode,i,id) {
@@ -82,10 +80,11 @@ function addAMPM(){
 
 
 
- /**
-  * Remove 24 Hour mode
-  */
-
+/**
+ * unpopulates this given select box
+ * @param {string} id This is the element id of the select
+ *      box you would like to populate.
+ */
 function unpopulateHour(id){
 
     var hours = document.getElementById(id);
@@ -160,6 +159,10 @@ function addRow() {
     
 }
 
+/**
+ * TODO: get rid of time slots that we are supposed to in the
+ *      project description.
+ */
 
 /**
  * TODO: add funtion that displays a success message after
