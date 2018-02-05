@@ -150,10 +150,10 @@ function submitVals()  {
   if (!clock24){
      // See if am/pm selected for both cases
      // If it is pm, add 12 to the value
-     if ((ampm1 == "PM") && (strthour > 12)){
+     if ((ampm1 == "PM") && (strthour != 12)){
        strthour = strthour+12;
      }
-     if ((ampm2 == "PM") && (endhour > 12)){
+     if ((ampm2 == "PM") && (endhour != 12)){
        endhour = endhour+12;
      }
      if ((ampm1 == "AM") && (strthour == 12)){
