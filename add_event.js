@@ -74,7 +74,7 @@ function addAMPM(){
          * TODO: make it so it populates with the correct hours for the project.
          */
 
-         if(){
+         if(1){
             docfrag.appendChild(new Option(i, i));
          }
      }
