@@ -41,18 +41,21 @@
 	<!-- Admin or user selection -->
 	<div class="container">
 	
+	<!-- Admin -->
 	If you are an Administrator and would like to add an event...
 	<form action="adminLogin_interface.html">
-	<input type="submit" value="Admin Login" onclick="alert('Please login to continue')">
+	<button type="admin" onclick="alert('Please login to continue')" class="btn btn-primary"
+		name="admin">Admin Login</button>
 	</form>
 
-	
+
+	<!-- User -->
 	...or a User
 	<form action="user_avalability.html">
-	<input type="submit" value="Continue to add availability" onclick="alert('Okay!')">
+	<button type="user" onclick="alert('Okay!')" class="btn btn-primary"
+		name="user">Continue to add availability</button>
 	</form>	
 	
 	<!-- </font> -->
     </body>
 </html>
-
