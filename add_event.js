@@ -144,7 +144,7 @@ function submitVals()  {
   var ampm2 = document.getElementById("ampm2").value;
   console.log(ampm2);
 
-  // TODO For the hours, see if 24/12 hours are toggled.  If 12, see if it is am or pm
+  //   For the hours, see if 24/12 hours are toggled.  If 12, see if it is am or pm
   //   FOR STORING THE TIME IN 24 HOUR MODE
   //  ALL TIMES OF EVENTS ARE STORED THIS WAY
   if (!clock24){
