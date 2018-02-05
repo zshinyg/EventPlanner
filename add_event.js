@@ -60,18 +60,22 @@ function addAMPM(){
  *      23 for 24-Hour mode and 12 for 12-Hour mode.
  * @param {number} i sets the number for the select box to
  *      start counting at. Should be 1 for 12-Hour mode and
- *      0 for 24-Hour mode.
+ *      5 for 24-Hour mode.
  * @param {string} id This is the element id of the select
  *      box you would like to populate.
  */
-
  function populateHours(mode,i,id) {
 
      var docfrag = document.createDocumentFragment();
 
-     for (i; i <=mode; ++i)
-     {
-          docfrag.appendChild(new Option(i, i));
+     for (i; i <=mode; ++i){
+
+         if(i < 5 || 12 <= i <= 13){
+          break;  
+         }
+         else{
+            docfrag.appendChild(new Option(i, i));
+         }
      }
 
      var select = document.getElementById(id);
