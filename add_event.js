@@ -157,17 +157,17 @@ function submitVals()  {
        endhour = endhour+12;
      }
      if ((ampm1 == "AM") && (strthour == 12)){
-       strthour = 0;
+       strthour = 00;
      }
      if ((ampm2 == "AM") && (endhour == 12)){
-       endhour = 0;
+       endhour = 00;
      }
 
   }
 
   // TEST IN CONSOLE
   console.log("Event name: "+ eventTitle);
-  console.log("Date: " + dd + "/" + mm + "/" + yyyy);
+  console.log("Date: " + day + "/" + month + "/" + year);
   console.log("Start time: "+strthour + ":"+strtmin);
   console.log("End time: " + endhour + ":" + endmin);
 }
