@@ -117,18 +117,7 @@ function submitVals()  {
   var day = parseInt(dd);
   var month = parseInt(mm);
   var year = parseInt(yyyy);
-  if (month == 01 && day == 01){
-    window.alert("Can't schedule a meeting on New Year's Day.");
-    return 0;
-  }
-  if (month == 07 && day == 04){
-    window.alert("Can't schedule a meeting on Independence Day.");
-    return 0;
-  }
-  if (month == 12 && day == 25){
-    window.alert("Can't schedule a meeting on Christmas.");
-    return 0;
-  }
+
 
   var shour = document.getElementById("startHour").value;
   var strthour = parseInt(shour);
@@ -181,6 +170,21 @@ function addRow() {
     var newText = document.createTextNode('New Row');
     cell1.appendChild(newText);
 
+}
+
+function invalidDate() {
+  if (month == 01 && day == 01){
+    window.alert("Can't schedule a meeting on New Year's Day.");
+    return 0;
+  }
+  if (month == 07 && day == 04){
+    window.alert("Can't schedule a meeting on Independence Day.");
+    return 0;
+  }
+  if (month == 12 && day == 25){
+    window.alert("Can't schedule a meeting on Christmas.");
+    return 0;
+  }
 }
 
 /**
