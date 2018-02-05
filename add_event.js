@@ -153,7 +153,7 @@ function submitVals()  {
      if ((ampm1 == "PM") && (strthour > 12)){
        strthour = strthour+12;
      }
-     if ((ampm2 == "PM") && endlhour > 12)){
+     if ((ampm2 == "PM") && (endlhour > 12)){
        endhour = endhour+12;
      }
      if ((ampm1 == "AM") && (strthour == 12)){
