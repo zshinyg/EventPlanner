@@ -110,10 +110,21 @@ function submitVals()  {
   var mm = date.substr(5,2);
   var yyyy = date.substr(0,4);
 
+  // Integer values of date
+  var day = parseInt(10, dd);
+  var month = parseInt(10,mm);
+  var year = parseInt(10,yyyy);
+
   var shour = document.getElementById("startHour").value;
   var smin = document.getElementById("startMinutes").value;
   var lhour = document.getElementById("endHour").value;
   var lmin = document.getElementById("endMinutes").value;
+
+  // Integer values of time
+  var startHour = parseInt(10, shour);
+  var startMin = parseInt(10, smin);
+  var lastHour = parseInt(10, lhour);
+  var lastMin = parseInt(10, lmin);
 
   var ampm1 = document.getElementById("ampm").value;
   console.log(ampm1);
@@ -126,24 +137,24 @@ function submitVals()  {
   if (!clock24){
      // See if am/pm selected for both cases
      // If it is pm, add 12 to the value
-     if ((ampm1 == "PM") && (shour > 12)){
-       shour = shour+12;
+     if ((ampm1 == "PM") && (shour < 12)){
+       startHour = startHour+12;
      }
-     if ((ampm2 == "PM") && (lhour > 12)){
-       lhour = lhour+12;
+     if ((ampm2 == "PM") && (lhour < 12)){
+       lastHour = lastHour+12;
      }
      if ((ampm1 == "AM") && (shour == 12)){
-       shour = 0;
+       startHour = 0;
      }
      if ((ampm2 == "AM") && (lhour == 12)){
-       lhour = 0;
+       lastHour = 0;
      }
 
   }
 
   // TEST IN CONSOLE
   console.log("Event name: "+ eventTitle);
-  console.log("Date: " + dd + "/" + mm + "/" + yyyy);
+  console.log("Date: " + month + "/" + day + "/" + year);
   console.log("Start time: "+shour + ":"+smin);
   console.log("End time: " + lhour + ":" + lmin);
 }
