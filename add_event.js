@@ -70,10 +70,11 @@ function addAMPM(){
 
      for (i; i <=mode; ++i){
 
-         if(i < 5 || 12 <= i <= 13){
-          break;  
-         }
-         else{
+        /**
+         * TODO: make it so it populates with the correct hours for the project.
+         */
+
+         if(){
             docfrag.appendChild(new Option(i, i));
          }
      }
