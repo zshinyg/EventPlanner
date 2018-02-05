@@ -16,22 +16,23 @@ function timeSwitcher(){
     var checkBox = document.getElementById("timeCheckBox");
     var el1 = "startHour";
     var el2 = "endHour";
+    var ampm1 = "ampm";
+    var ampm2 = "ampm2";
 
     if(checkBox.checked == true){
-        unpopulateHour(el1);
-        populateHours(23,0,el1);
-        unpopulateHour(el2);
-        populateHours(23,0,el2);
         removeAMPM();
+        unpopulateHour(el1);
+        populateHours(23,0,el1,ampm1);
+        unpopulateHour(el2);
+        populateHours(23,0,el2,ampm2);
         clock24 = true;
 
     } else {
-
-        unpopulateHour(el1);
-        populateHours(12,1,el1);
-        unpopulateHour(el2);
-        populateHours(12,1,el2);
         addAMPM();
+        unpopulateHour(el1);
+        populateHours(12,1,el1,ampm1);
+        unpopulateHour(el2);
+        populateHours(12,1,el2,ampm2);
         clock24 = false;
     }
 }
@@ -64,20 +65,44 @@ function addAMPM(){
  * @param {string} id This is the element id of the select
  *      box you would like to populate.
  */
- function populateHours(mode,i,id) {
+ function populateHours(mode,i,id,ampmID) {
 
      var docfrag = document.createDocumentFragment();
 
-     for (i; i <=mode; ++i){
+    //24-Hour mode
+     if(mode == 23){
 
-        /**
-         * TODO: make it so it populates with the correct hours for the project.
-         */
-
-         if(1){
-            docfrag.appendChild(new Option(i, i));
+        for (i; i <=mode; ++i){
+             if( (i >= 5) && (i < 12) || ( i > 12)) {
+                docfrag.appendChild(new Option(i, i));
+             }
          }
      }
+
+     //12-Hour mode
+     if(mode == 12){
+        var ampm = document.getElementById(ampmID).value;
+
+        if( ampm == "AM") {
+            for(i; i <= mode; ++i) {
+                if( (i >= 5) && ( i < 12)){
+                    docfrag.appendChild(new Option(i, i));
+                }
+            }
+        }
+        else if( ampm == "PM"){
+            for(i; i <= mode; ++i) {
+                if( (i < 12)){
+                    docfrag.appendChild(new Option(i, i));
+                }
+
+            }
+        }
+    }
+
+
+
+     
 
      var select = document.getElementById(id);
      select.appendChild(docfrag);
