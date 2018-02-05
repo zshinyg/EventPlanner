@@ -187,8 +187,3 @@ function addRow() {
  * TODO: get rid of time slots that we are supposed to in the
  *      project description.
  */
-
-/**
- * TODO: add funtion that displays a success message after
- *       the user submits the form.
- */
