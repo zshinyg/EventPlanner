@@ -60,18 +60,23 @@ function addAMPM(){
  *      23 for 24-Hour mode and 12 for 12-Hour mode.
  * @param {number} i sets the number for the select box to
  *      start counting at. Should be 1 for 12-Hour mode and
- *      0 for 24-Hour mode.
+ *      5 for 24-Hour mode.
  * @param {string} id This is the element id of the select
  *      box you would like to populate.
  */
-
  function populateHours(mode,i,id) {
 
      var docfrag = document.createDocumentFragment();
 
-     for (i; i <=mode; ++i)
-     {
-          docfrag.appendChild(new Option(i, i));
+     for (i; i <=mode; ++i){
+
+        /**
+         * TODO: make it so it populates with the correct hours for the project.
+         */
+
+         if(){
+            docfrag.appendChild(new Option(i, i));
+         }
      }
 
      var select = document.getElementById(id);
@@ -109,6 +114,15 @@ function submitVals()  {
   var dd = date.substr(8,2);
   var mm = date.substr(5,2);
   var yyyy = date.substr(0,4);
+  if (mm == 01 && dd == 01){
+    window.alert("Can't schedule a meeting on New Year's Day.");
+  }
+  if (mm == 07 && dd == 04){
+    window.alert("Can't schedule a meeting on Independence Day.");
+  }
+  if (mm == 12 && dd == 25){
+    window.alert("Can't schedule a meeting on Christmas.");
+  }
 
   // Integer values of date
   var day = parseInt(10, dd);
