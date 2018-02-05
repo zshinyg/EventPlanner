@@ -119,14 +119,14 @@ function submitVals()  {
   var lhour = document.getElementById("endHour").value;
   var lmin = document.getElementById("endMinutes").value;
 
-  var ampm1 = document.getElementById("ampm");
+  var ampm1 = document.getElementById("ampm").value;
   console.log(ampm1);
-  var ampm2 = document.getElementById("ampm2");
+  var ampm2 = document.getElementById("ampm2").value;
   console.log(ampm2);
 
   // TODO For the hours, see if 24/12 hours are toggled.  If 12, see if it is am or pm
   //   FOR STORING THE TIME IN 24 HOUR MODE
-  //  ALL TIMES OF EVENTS ARE STORED THIS WAY 
+  //  ALL TIMES OF EVENTS ARE STORED THIS WAY
   if (!clock24){
      // See if am/pm selected for both cases
      // If it is pm, add 12 to the value
@@ -160,7 +160,7 @@ function addRow() {
     var cell1 = row.insertCell(0);
     var newText = document.createTextNode('New Row');
     cell1.appendChild(newText);
-    
+
 }
 
 /**
@@ -172,4 +172,3 @@ function addRow() {
  * TODO: add funtion that displays a success message after
  *       the user submits the form.
  */
-
