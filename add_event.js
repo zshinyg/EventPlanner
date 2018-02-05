@@ -111,9 +111,9 @@ function submitVals()  {
   // var date is in form yyyy-mm-dd
   //                     0123456789
   // .substr(start,length)
-  var dd;
-  var mm;
-  var yyyy;
+  var dd = date.substr(8,2);
+  var mm = date.substr(5,2);
+  var yyyy = date.substr(0,4);
   if (mm == 1 && dd == 1){
     alert("Can't schedule a meeting on New Year's Day.");
   }
@@ -122,14 +122,6 @@ function submitVals()  {
   }
   if (mm == 12 && dd == 25){
     alert("Can't schedule a meeting on Christmas.");
-  }
-  try {
-    dd = date.substr(8,2);
-    mm = date.substr(5,2);
-    yyyy = date.substr(0,4);
-  }
-  catch(e){
-    console.log(e);
   }
 
   var shour = document.getElementById("startHour").value;
