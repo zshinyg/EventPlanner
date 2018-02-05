@@ -168,8 +168,8 @@ function submitVals()  {
   // TEST IN CONSOLE
   console.log("Event name: "+ eventTitle);
   console.log("Date: " + dd + "/" + mm + "/" + yyyy);
-  console.log("Start time: "+shour + ":"+smin);
-  console.log("End time: " + lhour + ":" + lmin);
+  console.log("Start time: "+strthour + ":"+strtmin);
+  console.log("End time: " + endhour + ":" + endmin);
 }
 
 
