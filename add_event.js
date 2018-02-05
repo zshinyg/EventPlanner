@@ -177,13 +177,16 @@ function invalidDate() {
     window.alert("Can't schedule a meeting on New Year's Day.");
     return 0;
   }
-  if (month == 07 && day == 04){
+  else if (month == 07 && day == 04){
     window.alert("Can't schedule a meeting on Independence Day.");
     return 0;
   }
-  if (month == 12 && day == 25){
+  else if (month == 12 && day == 25){
     window.alert("Can't schedule a meeting on Christmas.");
     return 0;
+  }
+  else{
+    window.location("redirect_interface.html");
   }
 }
 
