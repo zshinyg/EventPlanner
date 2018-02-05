@@ -115,13 +115,13 @@ function submitVals()  {
   var mm;
   var yyyy;
   if (mm == 1 && dd == 1){
-    throw "Can't schedule a meeting on New Year's Day."
+    alert("Can't schedule a meeting on New Year's Day.");
   }
   if (mm == 7 && dd == 4){
-    throw "Can't schedule a meeting on Independence Day."
+    alert("Can't schedule a meeting on Independence Day.");
   }
   if (mm == 12 && dd == 25){
-    throw "Can't schedule a meeting on Christmas."
+    alert("Can't schedule a meeting on Christmas.");
   }
   try {
     dd = date.substr(8,2);
