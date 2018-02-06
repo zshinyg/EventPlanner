@@ -16,22 +16,23 @@ function timeSwitcher(){
     var checkBox = document.getElementById("timeCheckBox");
     var el1 = "startHour";
     var el2 = "endHour";
+    var ampm1 = "ampm";
+    var ampm2 = "ampm2";
 
     if(checkBox.checked == true){
-        unpopulateHour(el1);
-        populateHours(23,0,el1);
-        unpopulateHour(el2);
-        populateHours(23,0,el2);
         removeAMPM();
+        unpopulateHour(el1);
+        populateHours(23,0,el1,ampm1);
+        unpopulateHour(el2);
+        populateHours(23,0,el2,ampm2);
         clock24 = true;
 
     } else {
-
-        unpopulateHour(el1);
-        populateHours(12,1,el1);
-        unpopulateHour(el2);
-        populateHours(12,1,el2);
         addAMPM();
+        unpopulateHour(el1);
+        populateHours(12,1,el1,ampm1);
+        unpopulateHour(el2);
+        populateHours(12,1,el2,ampm2);
         clock24 = false;
     }
 }
@@ -64,20 +65,44 @@ function addAMPM(){
  * @param {string} id This is the element id of the select
  *      box you would like to populate.
  */
- function populateHours(mode,i,id) {
+ function populateHours(mode,i,id,ampmID) {
 
      var docfrag = document.createDocumentFragment();
 
-     for (i; i <=mode; ++i){
+    //24-Hour mode
+     if(mode == 23){
 
-        /**
-         * TODO: make it so it populates with the correct hours for the project.
-         */
-
-         if(){
-            docfrag.appendChild(new Option(i, i));
+        for (i; i <=mode; ++i){
+             if( (i >= 5) && (i < 12) || ( i > 12)) {
+                docfrag.appendChild(new Option(i, i));
+             }
          }
      }
+
+     //12-Hour mode
+     if(mode == 12){
+        var ampm = document.getElementById(ampmID).value;
+
+        if( ampm == "AM") {
+            for(i; i <= mode; ++i) {
+                if( (i >= 5) && ( i < 12)){
+                    docfrag.appendChild(new Option(i, i));
+                }
+            }
+        }
+        else if( ampm == "PM"){
+            for(i; i <= mode; ++i) {
+                if( (i < 12)){
+                    docfrag.appendChild(new Option(i, i));
+                }
+
+            }
+        }
+    }
+
+
+
+     
 
      var select = document.getElementById(id);
      select.appendChild(docfrag);
@@ -114,15 +139,10 @@ function submitVals()  {
   var dd = date.substr(8,2);
   var mm = date.substr(5,2);
   var yyyy = date.substr(0,4);
-  if (mm == 01 && dd == 01){
-    window.alert("Can't schedule a meeting on New Year's Day.");
-  }
-  if (mm == 07 && dd == 04){
-    window.alert("Can't schedule a meeting on Independence Day.");
-  }
-  if (mm == 12 && dd == 25){
-    window.alert("Can't schedule a meeting on Christmas.");
-  }
+  var day = parseInt(dd);
+  var month = parseInt(mm);
+  var year = parseInt(yyyy);
+
 
   // Integer values of date
   var day = parseInt(10, dd);
@@ -130,9 +150,13 @@ function submitVals()  {
   var year = parseInt(10,yyyy);
 
   var shour = document.getElementById("startHour").value;
+  var strthour = parseInt(shour);
   var smin = document.getElementById("startMinutes").value;
+  var strtmin = parseInt(smin);
   var lhour = document.getElementById("endHour").value;
+  var endhour = parseInt(lhour);
   var lmin = document.getElementById("endMinutes").value;
+  var endmin = parseInt(lmin);
 
   // Integer values of time
   var startHour = parseInt(10, shour);
@@ -145,12 +169,13 @@ function submitVals()  {
   var ampm2 = document.getElementById("ampm2").value;
   console.log(ampm2);
 
-  // TODO For the hours, see if 24/12 hours are toggled.  If 12, see if it is am or pm
+  //   For the hours, see if 24/12 hours are toggled.  If 12, see if it is am or pm
   //   FOR STORING THE TIME IN 24 HOUR MODE
   //  ALL TIMES OF EVENTS ARE STORED THIS WAY
   if (!clock24){
      // See if am/pm selected for both cases
      // If it is pm, add 12 to the value
+<<<<<<< HEAD
      if ((ampm1 == "PM") && (shour < 12)){
        startHour = startHour+12;
      }
@@ -162,15 +187,34 @@ function submitVals()  {
      }
      if ((ampm2 == "AM") && (lhour == 12)){
        lastHour = 0;
+=======
+     if ((ampm1 == "PM") && (strthour != 12)){
+       strthour = strthour+12;
+     }
+     if ((ampm2 == "PM") && (endhour != 12)){
+       endhour = endhour+12;
+     }
+     if ((ampm1 == "AM") && (strthour == 12)){
+       strthour = 00;
+     }
+     if ((ampm2 == "AM") && (endhour == 12)){
+       endhour = 00;
+>>>>>>> 9585f053a6aac881c38a046ed78e413e10560d22
      }
 
   }
 
   // TEST IN CONSOLE
   console.log("Event name: "+ eventTitle);
+<<<<<<< HEAD
   console.log("Date: " + month + "/" + day + "/" + year);
   console.log("Start time: "+shour + ":"+smin);
   console.log("End time: " + lhour + ":" + lmin);
+=======
+  console.log("Date: " + day + "/" + month + "/" + year);
+  console.log("Start time: "+strthour + ":"+strtmin);
+  console.log("End time: " + endhour + ":" + endmin);
+>>>>>>> 9585f053a6aac881c38a046ed78e413e10560d22
 }
 
 
@@ -184,12 +228,25 @@ function addRow() {
 
 }
 
+function invalidDate() {
+  if (month == 01 && day == 01){
+    window.alert("Can't schedule a meeting on New Year's Day.");
+    return 0;
+  }
+  else if (month == 07 && day == 04){
+    window.alert("Can't schedule a meeting on Independence Day.");
+    return 0;
+  }
+  else if (month == 12 && day == 25){
+    window.alert("Can't schedule a meeting on Christmas.");
+    return 0;
+  }
+  else{
+    window.location("redirect_interface.html");
+  }
+}
+
 /**
  * TODO: get rid of time slots that we are supposed to in the
  *      project description.
- */
-
-/**
- * TODO: add funtion that displays a success message after
- *       the user submits the form.
  */

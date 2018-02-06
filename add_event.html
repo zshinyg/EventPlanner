@@ -28,7 +28,7 @@
      <div class="container">
 
        <!-- EVENT INPUT -->
-       <form action="user_interface.html" method="post">
+       <form onclick = "invalidDate()" >
 
 
         <div class="form-group">
@@ -70,7 +70,7 @@
                 <option value="20">20</option>
                 <option value="40">40</option>
               </select>
-              <select name="ampm" id="ampm">
+              <select name="ampm" onchange="timeSwitcher()" id="ampm">
                 <option value="AM">AM</option>
                 <option value="PM">PM</option>
               </select>
@@ -97,7 +97,7 @@
                 <option value="20">20</option>
                 <option value="40">40</option>
               </select>
-              <select name="ampm2" id="ampm2">
+              <select name="ampm2" onchange="timeSwitcher()" id="ampm2">
                 <option value="AM">AM</option>
                 <option value="PM">PM</option>
               </select>
@@ -106,11 +106,12 @@
          </div>
          <input type="checkbox" id="timeCheckBox" onclick="timeSwitcher()">
          <label for="timeCheckBox">24-Hour mode</label>
+         <p> </p>
 
 
             <!-- SUBMIT BUTTON -->
             <!-- TODO: actually submit the data that is given -->
-         <button type="submit" onclick = "submitVals()" class="btn btn-primary" name="submit">Submit</button>
+         <button type="submit" onclick = "invalidDate()" class="btn btn-primary" name="submit">Submit</button>
 
             <!-- CANCEL BUTTON -->
          <button type="button" name="cancel" class="btn btn-primary"
