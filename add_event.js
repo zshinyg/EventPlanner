@@ -144,11 +144,6 @@ function submitVals()  {
   var year = parseInt(yyyy);
 
 
-  // Integer values of date
-  var day = parseInt(10, dd);
-  var month = parseInt(10,mm);
-  var year = parseInt(10,yyyy);
-
   var shour = document.getElementById("startHour").value;
   var strthour = parseInt(shour);
   var smin = document.getElementById("startMinutes").value;
@@ -193,11 +188,46 @@ function submitVals()  {
 
   // TEST IN CONSOLE
   console.log("Event name: "+ eventTitle);
-  console.log("Date: " + day + "/" + month + "/" + year);
+  console.log("Date: " + month + "/" + day + "/" + year);
   console.log("Start time: "+strthour + ":"+strtmin);
   console.log("End time: " + endhour + ":" + endmin);
+
+ let inputDate = new Date(year, month-1, day);
+ let currentDate = new Date();
+ console.log("Input date: "+ inputDate);
+ console.log("Curent date: "+ currentDate);
+
+  // Check date
+ isInvalidDate(month, day, year, inputDate, currentDate);
+
 }
 
+// Checks to see if the date can be used or not
+function isInvalidDate(month, day, year, inputDate, currentDate)
+{
+    if (month == 01 && day == 01){
+        window.alert("Can't schedule a meeting on New Year's Day.");
+        console.log("ERROR: Can't schedule a meeting on New Year's Day.");
+    }
+    else if (month == 07 && day == 04){
+        window.alert("Can't schedule a meeting on Independence Day.");
+        console.log("ERROR: Can't schedule a meeting on Independence Day.");
+    }
+    else if (month == 12 && day == 25){
+        window.alert("Can't schedule a meeting on Christmas.");
+        console.log("ERROR: Can't schedule a meeting on Christmas.");
+    }
+    else if(inputDate < currentDate)
+    {
+        window.alert("Can't schedule a meeting in the past.");
+        console.log("ERROR: Can't schedule a meeting in the past.");
+    }
+    else
+    {
+        console.log("Success!");
+        window.location.href = "redirect_interface.html";
+    }
+}
 
 function addRow() {
 
@@ -208,26 +238,3 @@ function addRow() {
     cell1.appendChild(newText);
 
 }
-
-function invalidDate() {
-  if (month == 01 && day == 01){
-    window.alert("Can't schedule a meeting on New Year's Day.");
-    return 0;
-  }
-  else if (month == 07 && day == 04){
-    window.alert("Can't schedule a meeting on Independence Day.");
-    return 0;
-  }
-  else if (month == 12 && day == 25){
-    window.alert("Can't schedule a meeting on Christmas.");
-    return 0;
-  }
-  else{
-    window.location("redirect_interface.html");
-  }
-}
-
-/**
- * TODO: get rid of time slots that we are supposed to in the
- *      project description.
- */
