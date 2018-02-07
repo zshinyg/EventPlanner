@@ -6,6 +6,8 @@
 // Project 1
 // 31 January 2018
 //
+// This file was provided by Paul Kline for EECS 368. It has a few minor changes, such as making the entrybox smaller.
+//
 
 
 
