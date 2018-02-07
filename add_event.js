@@ -192,7 +192,7 @@ function submitVals()  {
   console.log("Start time: "+strthour + ":"+strtmin);
   console.log("End time: " + endhour + ":" + endmin);
 
- let inputDate = new Date(year, month-1, day);
+ let inputDate = new Date(year, month-1, day, shour, smin);
  let currentDate = new Date();
  console.log("Input date: "+ inputDate);
  console.log("Curent date: "+ currentDate);
