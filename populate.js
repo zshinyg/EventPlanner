@@ -24,12 +24,12 @@ function populate() {
   var mE = readData("masterEvent");
   var mU = readData("masterUser");
 
-  if (mE == null){
+  if (mE[0] == null){
     var arr = new Array;
     writeData(arr, 0, "masterEvent");
   }
 
-  if (mU == null){
+  if (mU[0] == null) {
     var arr = new Array;
     writeData(arr, 0, "masterUser");
   }

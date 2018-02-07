@@ -139,7 +139,7 @@ linkedlist.prototype.addBack = function (val) {
       currentnode = currentnode.next;
     }
     currentnode.next = m_node;
-  }// end else 
+  }// end else
   this.size++;
 }
 
@@ -223,6 +223,20 @@ linkedlist.prototype.remove = function(val) {
   return bool;
 } // end remove
 
+
+
+
+// IS EMPTY
+// Checks to see if list is empty
+// returns true if it is, false else
+linkedlist.prototype.isEmpty = function() {
+  if (this.size == 0){
+    return true;
+  }
+  else {
+    return false;
+  }
+}
 
 
 
