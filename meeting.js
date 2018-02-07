@@ -14,13 +14,8 @@
 //          ALL HOURS ARE STORED IN 24 HOUR FORMAT FROM 0-23
 function meeting (title, month, day, year, shour, smin, lhour, lmin) {
   this.title = title;
-  this.month = month;
-  this.day = day;
-  this.year = year;
-  this.shour = shour;
-  this.smin = smin;
-  this.lhour = lhour;
-  this.lmin = lmin;
+  this.date = new Date(year, month, day, shour, smin);
+  this.len = ((lhour*60)+lmin)-((shour*60)+smin);
   this.list = new linkedlist();
 }
 
@@ -45,5 +40,5 @@ meeting.prototype.add = function (lastName, firstName){
 //        B = CAT, MONTH = 8
 //      A>B RETURNS FALSE THANKS TO THIS
 meeting.prototype.valueOf = function () {
-  return this.year;
+  return this.date;
 }
