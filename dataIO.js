@@ -59,6 +59,21 @@ function writeData(arr, num, name) {
 
 
 
+// FUNCTION readData
+//
+//   readData(name)
+//
+//  TAKES IN A NAME OF A DATA STRUCTURE TO READ IN
+//  TAKES FROM localStorage
+// IF FILE NON EXISTENT, PRINT TO CONOSLE AND RETURN null
+// RETURNS AN ARRAY STUCTURED AS SO
+//
+//  array(data1, data1.1, data1.2..., data2, data2.1,...)
+//
+// BASED ON READ FILE FORMAT AS
+//  data1@data1.1@data1.2... data2@data2.1...
+//  SEE HOW THE writeData FUNCTION ABOVE WRITES FOR A MORE
+//   DETAILED DESCRIPTION
 
 function readData(name){
 
@@ -69,22 +84,32 @@ function readData(name){
     return 0;
   }// end if
 
-  console.log(doc);
+  //console.log(doc);
+  var line = '';
   var elements = 0;
   var arr = new Array;
 
+  // Go through each index of the string
   for (var i = 0; i < doc.length; i++){
+
+    // If the value is ' ' or '@' skip it and add that new element to arr
     if (doc[i] == ' '){
+      arr[elements] = line;
+      line = '';
       elements++;
-      console.log("equal space");
-    }
+      //console.log("equal space");
+    }// ene if
+
     else if (doc[i] == '@'){
-      console.log("equal @");
+      //console.log("equal @");
+      arr[elements] = line;
+      line = '';
       elements++;
-    }
+    } // end else if
     else{
-      arr[elements] += doc[i];
-    }
-  }
-  console.log(arr);
+      line += doc[i];
+    }// end else
+  } // end for 
+  //console.log(arr);
+  return arr;
 }
