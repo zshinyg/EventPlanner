@@ -21,22 +21,22 @@ var masterUser = new linkedlist;
 
 function populate() {
 
-  masterEvent = readData(masterEvent);
-  var mU = readData(masterUser);
+  masterEvent = readData("masterEvent");
+  var mU = readData("masterUser");
 
-  if (mE == null){
+  if (masterEvent == null){
     var arr = new Array;
-    writeData(arr, 0, masterEvent);
+    writeData(arr, 0, "masterEvent");
   }
 
   if (mU == null){
     var arr = new Array;
-    writeData(arr, 0, masterUser);
+    writeData(arr, 0, "masterUser");
   }
 
   // For master event, create lists of each of the years
-  for (var i = 0; i < mE.length; i++){
-    var mE[i] = new linkedlist;
+  for (var i = 0; i < masterEvent.length; i++){
+    masterEvent[i] = new linkedlist;
   }
 
   // For master user, create list of all users
@@ -51,8 +51,8 @@ function populate() {
   // the years of events. Now we need to run though each
   // list of years and populate those lists
 
-  for (var i = 0; i < mE.length; i++){
-    var year = readData(mE[i]);
+  for (var i = 0; i < masterEvent.length; i++){
+    var year = readData(masterEvent[i]);
     if (year == null){
       break;
     }
