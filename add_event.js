@@ -102,7 +102,7 @@ function addAMPM(){
 
 
 
-     
+
 
      var select = document.getElementById(id);
      select.appendChild(docfrag);
@@ -198,7 +198,14 @@ function submitVals()  {
  console.log("Curent date: "+ currentDate);
 
   // Check date
- isInvalidDate(month, day, year, inputDate, currentDate);
+ if (isInvalidDate(month, day, year, inputDate, currentDate)){
+
+   var length = ((endhour*60)+endmin)-((strthour*60)+strtmin;
+   var temp = new meeting(eventTitle, inputDate, length);
+   masterEvent.add(temp);
+ }
+
+
 
 }
 
@@ -208,24 +215,29 @@ function isInvalidDate(month, day, year, inputDate, currentDate)
     if (month == 01 && day == 01){
         window.alert("Can't schedule a meeting on New Year's Day.");
         console.log("ERROR: Can't schedule a meeting on New Year's Day.");
+        return false;
     }
     else if (month == 07 && day == 04){
         window.alert("Can't schedule a meeting on Independence Day.");
         console.log("ERROR: Can't schedule a meeting on Independence Day.");
+        return false;
     }
     else if (month == 12 && day == 25){
         window.alert("Can't schedule a meeting on Christmas.");
         console.log("ERROR: Can't schedule a meeting on Christmas.");
+        return false;
     }
     else if(inputDate < currentDate)
     {
         window.alert("Can't schedule a meeting in the past.");
         console.log("ERROR: Can't schedule a meeting in the past.");
+        return false;
     }
     else
     {
         console.log("Success!");
         window.location.href = "redirect_interface.html";
+        return true;
     }
 }
 

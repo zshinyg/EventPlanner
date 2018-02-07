@@ -7,15 +7,13 @@
 // STRING VARIALBE:
 //          TITLE
 // INTEGER VARIABLES:
-//          MONTH, DAY, YEAR, HOUR, MIN
-//          SMIN AND SHOUR ARE START HOUR MIN AND HOUR
-//          L IS LAST
+//          Date, Length
 // IMPORTANT:
 //          ALL HOURS ARE STORED IN 24 HOUR FORMAT FROM 0-23
-function meeting (title, month, day, year, shour, smin, lhour, lmin) {
+function meeting (title, date, length) {
   this.title = title;
   this.date = new Date(year, month-1, day, shour, smin);
-  this.len = ((lhour*60)+lmin)-((shour*60)+smin);
+  this.len = length;
   this.list = new linkedlist();
 }
 
@@ -33,12 +31,7 @@ meeting.prototype.add = function (lastName, firstName){
 
 
 // VALUE OF
-// WORKAROUND FOR OPERATOR OVERLOADING
-// RETURNS THE MONTH TO ORGANIZE BY
-// EXAMPLE: EVENTS
-//        A = COW, MONTH = 7
-//        B = CAT, MONTH = 8
-//      A>B RETURNS FALSE THANKS TO THIS
+// Allows for comparison of events by date.
 meeting.prototype.valueOf = function () {
   return this.date;
 }

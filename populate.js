@@ -16,15 +16,15 @@
 //  GLOBAL VARIABLES HERE ARE THE ARRAY FOR LISTS OF YEARS AND
 //  THE LIST OF MASTER USERS
 
-var masterEvent = new Array;
+var masterEvent = new linkedlist;
 var masterUser = new linkedlist;
 
 function populate() {
 
-  masterEvent = readData("masterEvent");
+  var mE = readData("masterEvent");
   var mU = readData("masterUser");
 
-  if (masterEvent == null){
+  if (mE == null){
     var arr = new Array;
     writeData(arr, 0, "masterEvent");
   }
@@ -32,11 +32,6 @@ function populate() {
   if (mU == null){
     var arr = new Array;
     writeData(arr, 0, "masterUser");
-  }
-
-  // For master event, create lists of each of the years
-  for (var i = 0; i < masterEvent.length; i++){
-    masterEvent[i] = new linkedlist;
   }
 
   // For master user, create list of all users
@@ -47,18 +42,14 @@ function populate() {
     masterUser.add(attendee);
   }
 
-  // By now, there is LL of users, and an array of lists for
-  // the years of events. Now we need to run though each
-  // list of years and populate those lists
 
-  for (var i = 0; i < masterEvent.length; i++){
-    var year = readData(masterEvent[i]);
-    if (year == null){
-      break;
-    }
-    for (var j = 0; j < year.length; j+=8){
-      var thing = new meeting(year[j],year[j+1],year[j+2],year[j+3],year[j+4],year[j+5],year[j+6],year[j+7]);
-    } // end for j
+  // For master event, create a list of all events
+  for (var i = 0; i < mE.length; i+=3){
+    var title = mE[i];
+    var date = mE[i+1];
+    var length = mE[i+2];
+    var temp = new meeting(title, date, length);
+    masterEvent.add(temp);
   } // end for i
 
 }
