@@ -14,7 +14,7 @@
 //          ALL HOURS ARE STORED IN 24 HOUR FORMAT FROM 0-23
 function meeting (title, month, day, year, shour, smin, lhour, lmin) {
   this.title = title;
-  this.date = new Date(year, month, day, shour, smin);
+  this.date = new Date(year, month-1, day, shour, smin);
   this.len = ((lhour*60)+lmin)-((shour*60)+smin);
   this.list = new linkedlist();
 }
