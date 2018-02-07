@@ -10,6 +10,9 @@
 // Global variable for saving time in 24hr time format or not
  var clock24 = false;
 
+// Used for web page redirection if date is invalid
+ var badDate;
+
 function timeSwitcher(){
     console.log("timeSwitcher Ran");
 
@@ -198,6 +201,7 @@ function submitVals()  {
  console.log("Curent date: "+ currentDate);
 
   // Check date
+<<<<<<< HEAD
  if (isInvalidDate(month, day, year, inputDate, currentDate)){
 
    var length = ((endhour*60)+endmin)-((strthour*60)+strtmin;
@@ -206,6 +210,9 @@ function submitVals()  {
  }
 
 
+=======
+ badDate = isInvalidDate(month, day, year, inputDate, currentDate);
+>>>>>>> 3a3ca0a1501832f1847a3ca68d764581a18f08b1
 
 }
 
@@ -213,31 +220,67 @@ function submitVals()  {
 function isInvalidDate(month, day, year, inputDate, currentDate)
 {
     if (month == 01 && day == 01){
-        window.alert("Can't schedule a meeting on New Year's Day.");
+        window.alert("Can't schedule a meeting on New Year's Day. Please try again.");
         console.log("ERROR: Can't schedule a meeting on New Year's Day.");
+<<<<<<< HEAD
         return false;
+=======
+        return true;
+>>>>>>> 3a3ca0a1501832f1847a3ca68d764581a18f08b1
     }
     else if (month == 07 && day == 04){
-        window.alert("Can't schedule a meeting on Independence Day.");
+        window.alert("Can't schedule a meeting on Independence Day. Please try again.");
         console.log("ERROR: Can't schedule a meeting on Independence Day.");
+<<<<<<< HEAD
         return false;
+=======
+        return true;
+>>>>>>> 3a3ca0a1501832f1847a3ca68d764581a18f08b1
     }
     else if (month == 12 && day == 25){
-        window.alert("Can't schedule a meeting on Christmas.");
+        window.alert("Can't schedule a meeting on Christmas. Please try again.");
         console.log("ERROR: Can't schedule a meeting on Christmas.");
+<<<<<<< HEAD
         return false;
+=======
+        return true;
+>>>>>>> 3a3ca0a1501832f1847a3ca68d764581a18f08b1
     }
     else if(inputDate < currentDate)
     {
-        window.alert("Can't schedule a meeting in the past.");
+        window.alert("Can't schedule a meeting in the past. Please try again.");
         console.log("ERROR: Can't schedule a meeting in the past.");
+<<<<<<< HEAD
         return false;
+=======
+        return true;
+>>>>>>> 3a3ca0a1501832f1847a3ca68d764581a18f08b1
     }
     else
     {
         console.log("Success!");
+        return false;
+    }
+}
+
+// Redirects the page according to if date is invalid
+function redirect()
+{
+    if(badDate == true)
+    {
+        console.log("Not redirecting, refreshing instead");
+        window.location.href = "add_event.html";
+    }
+    else if(badDate == false)
+    {
+        console.log("Redirecting to redirect page");
         window.location.href = "redirect_interface.html";
         return true;
+    }
+    else
+    {
+        console.log("Redirecting to home");
+        window.location.href = "user_interface.html";
     }
 }
 
