@@ -202,12 +202,27 @@ function submitVals()  {
 function addRow() {
 
     var table = document.getElementById("eventTable");
-    var row = table.insertRow(0);
+    var row = table.insertRow(-1);
     var cell1 = row.insertCell(0);
-    var newText = document.createTextNode('New Row');
-    cell1.appendChild(newText);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+
+    /**
+     * TODO: Needs to add an yes or no button under attending.
+     * 
+     */
+
+
+    cell1.innerHTML = "new cell"
+    cell2.innerHTML = "new cell"
+    cell3.innerHTML = "new cell"
+    cell4.innerHTML = "new cell"
 
 }
+
+
+
 
 function invalidDate() {
   if (month == 01 && day == 01){
@@ -227,7 +242,9 @@ function invalidDate() {
   }
 }
 
+
+
 /**
- * TODO: get rid of time slots that we are supposed to in the
- *      project description.
+ * TODO: Add a function that wont allow a user to create an
+ *      event that goes back in time.
  */
