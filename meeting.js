@@ -45,5 +45,5 @@ meeting.prototype.add = function (lastName, firstName){
 //        B = CAT, MONTH = 8
 //      A>B RETURNS FALSE THANKS TO THIS
 meeting.prototype.valueOf = function () {
-  return this.year;
+  return this.month;
 }
