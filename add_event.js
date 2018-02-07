@@ -175,19 +175,7 @@ function submitVals()  {
   if (!clock24){
      // See if am/pm selected for both cases
      // If it is pm, add 12 to the value
-<<<<<<< HEAD
-     if ((ampm1 == "PM") && (shour < 12)){
-       startHour = startHour+12;
-     }
-     if ((ampm2 == "PM") && (lhour < 12)){
-       lastHour = lastHour+12;
-     }
-     if ((ampm1 == "AM") && (shour == 12)){
-       startHour = 0;
-     }
-     if ((ampm2 == "AM") && (lhour == 12)){
-       lastHour = 0;
-=======
+
      if ((ampm1 == "PM") && (strthour != 12)){
        strthour = strthour+12;
      }
@@ -199,22 +187,15 @@ function submitVals()  {
      }
      if ((ampm2 == "AM") && (endhour == 12)){
        endhour = 00;
->>>>>>> 9585f053a6aac881c38a046ed78e413e10560d22
      }
 
   }
 
   // TEST IN CONSOLE
   console.log("Event name: "+ eventTitle);
-<<<<<<< HEAD
-  console.log("Date: " + month + "/" + day + "/" + year);
-  console.log("Start time: "+shour + ":"+smin);
-  console.log("End time: " + lhour + ":" + lmin);
-=======
   console.log("Date: " + day + "/" + month + "/" + year);
   console.log("Start time: "+strthour + ":"+strtmin);
   console.log("End time: " + endhour + ":" + endmin);
->>>>>>> 9585f053a6aac881c38a046ed78e413e10560d22
 }
 
 
