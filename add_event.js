@@ -209,10 +209,7 @@ function submitVals()  {
    masterEvent.add(temp);
  }
 
-
-=======
  badDate = isInvalidDate(month, day, year, inputDate, currentDate);
->>>>>>> 3a3ca0a1501832f1847a3ca68d764581a18f08b1
 
 }
 
@@ -222,39 +219,28 @@ function isInvalidDate(month, day, year, inputDate, currentDate)
     if (month == 01 && day == 01){
         window.alert("Can't schedule a meeting on New Year's Day. Please try again.");
         console.log("ERROR: Can't schedule a meeting on New Year's Day.");
-<<<<<<< HEAD
-        return false;
-=======
+
         return true;
->>>>>>> 3a3ca0a1501832f1847a3ca68d764581a18f08b1
     }
     else if (month == 07 && day == 04){
         window.alert("Can't schedule a meeting on Independence Day. Please try again.");
         console.log("ERROR: Can't schedule a meeting on Independence Day.");
-<<<<<<< HEAD
-        return false;
-=======
+
         return true;
->>>>>>> 3a3ca0a1501832f1847a3ca68d764581a18f08b1
     }
     else if (month == 12 && day == 25){
         window.alert("Can't schedule a meeting on Christmas. Please try again.");
         console.log("ERROR: Can't schedule a meeting on Christmas.");
-<<<<<<< HEAD
-        return false;
-=======
+
         return true;
->>>>>>> 3a3ca0a1501832f1847a3ca68d764581a18f08b1
     }
+
     else if(inputDate < currentDate)
     {
         window.alert("Can't schedule a meeting in the past. Please try again.");
         console.log("ERROR: Can't schedule a meeting in the past.");
-<<<<<<< HEAD
-        return false;
-=======
+
         return true;
->>>>>>> 3a3ca0a1501832f1847a3ca68d764581a18f08b1
     }
     else
     {
@@ -299,13 +285,13 @@ function addRow() {
     tr.appendChild(document.createElement('td'));
     tr.appendChild(document.createElement('td'));
 
-    var checkbox = document.createElement("INPUT"); 
-    checkbox.type = "checkbox"; 
+    var checkbox = document.createElement("INPUT");
+    checkbox.type = "checkbox";
 
     tr.cells[0].appendChild(document.createTextNode('Meeting'));
     tr.cells[1].appendChild(document.createTextNode('2/7/18'));
     tr.cells[2].appendChild( document.createTextNode('10:20 AM - 11:00 PM') );
-    tr.cells[3].appendChild(checkbox); 
+    tr.cells[3].appendChild(checkbox);
 
     table.appendChild(tr);
 
