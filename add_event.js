@@ -202,14 +202,20 @@ function submitVals()  {
 
   // Check date
 <<<<<<< HEAD
- if (isInvalidDate(month, day, year, inputDate, currentDate)){
+ if (!isInvalidDate(month, day, year, inputDate, currentDate)){
 
+   // If the date is valid, add it to the list of events
+   // and write to file
    var length = ((endhour*60)+endmin)-((strthour*60)+strtmin;
    var temp = new meeting(eventTitle, inputDate, length);
    masterEvent.add(temp);
+
+   var arr = eventArray(masterEvent);
+   writeData(arr, 3, masterEvent);
+
+   redirect();
  }
 
- badDate = isInvalidDate(month, day, year, inputDate, currentDate);
 
 }
 

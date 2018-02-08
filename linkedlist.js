@@ -260,4 +260,20 @@ linkedlist.prototype.printAll = function(){
 
 
 
+// REMOVE FRONT
+// REMOVES FIRST VALUE FROM LIST
+linkedlist.prototype.removeFront(){
+
+  currentnode = this.first;
+  if (!isEmpty()){
+    this.first = this.first.next;
+    currentnode = null;
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+
 //____________________________________________________________________________

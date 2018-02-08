@@ -109,7 +109,26 @@ function readData(name){
     else{
       line += doc[i];
     }// end else
-  } // end for 
+  } // end for
   //console.log(arr);
+  return arr;
+}
+
+
+
+
+// Event to array
+// takes in a list of events and changes it to an array
+// Since the list is passed by value, removing the first value won't destroy
+// the master list
+function eventArray (list){
+
+  var arr = new Array;
+  for (var i = 0; i <= (list.size * 3); i+=3){
+    arr[i] = list.first.title;
+    arr[i+1] = list.first.date;
+    arr[i+2] = list.first.len;
+    list.removeFirst();
+  }
   return arr;
 }
