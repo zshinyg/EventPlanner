@@ -155,6 +155,20 @@ function eventArray (list){
 
 
 
+// User to array
+// takes in a list of users and changes it to array
+
+function userArray (list){
+
+  var arr = new Array;
+  for (var i = 0; i < (list.size * 2); i++)
+  {
+    arr[i] = list.first.data.lastName;
+    arr[i+1] = list.first.data.firstName;
+  }
+  return arr;
+}
+
 
 // WHEN AT HOME PAGE, THIS FUNCTION WILL READ IN ALL DATA AND
 // POPULATE LISTS
