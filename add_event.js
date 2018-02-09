@@ -215,7 +215,10 @@ function submitVals()  {
    var arr = eventArray(masterEvent);
    writeData(arr, 3, masterEvent);
 
-   redirect();
+   redirect(false);
+ }
+ else{
+   redirect(true);
  }
 
 
@@ -265,7 +268,7 @@ function isInvalidDate(month, day, year, inputDate, currentDate, length)
 }
 
 // Redirects the page according to if date is invalid
-function redirect()
+function redirect(badDate)
 {
     if(badDate == true)
     {
