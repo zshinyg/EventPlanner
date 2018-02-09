@@ -253,7 +253,7 @@ function isInvalidDate(month, day, year, inputDate, currentDate, length)
 
         return true;
     }
-    else if(length = 0)
+    else if(length == 0)
     {
         window.alert("Can't start and end a meeting at the same time. Please try again.");
         console.log("ERROR: Can't start and end a meeting at the same time.");
@@ -281,11 +281,7 @@ function redirect(badDate)
         window.location.href = "redirect_interface.html";
         return true;
     }
-  /*  else
-    {
-        console.log("Redirecting to home");
-        window.location.href = "user_interface.html";
-    }*/
+  
 }
 
 
