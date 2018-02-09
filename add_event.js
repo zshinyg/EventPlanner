@@ -195,18 +195,20 @@ function submitVals()  {
   console.log("Start time: "+strthour + ":"+strtmin);
   console.log("End time: " + endhour + ":" + endmin);
 
- let inputDate = new Date(year, month-1, day, shour, smin);
+ let inputDate = new Date(year, month-1, day, strthour, strtmin);
  let currentDate = new Date();
  console.log("Input date: "+ inputDate);
  console.log("Curent date: "+ currentDate);
 
+  var length = ((endhour*60)+endmin)-((strthour*60)+strtmin);
+
   // Check date
 
- if (!isInvalidDate(month, day, year, inputDate, currentDate)){
+ if (!isInvalidDate(month, day, year, inputDate, currentDate, length)){
 
    // If the date is valid, add it to the list of events
    // and write to file
-   var length = ((endhour*60)+endmin)-((strthour*60)+strtmin);
+
    var temp = new meeting(eventTitle, inputDate, length);
    masterEvent.add(temp);
    masterEvent.printAll();
@@ -221,7 +223,7 @@ function submitVals()  {
 }
 
 // Checks to see if the date can be used or not
-function isInvalidDate(month, day, year, inputDate, currentDate)
+function isInvalidDate(month, day, year, inputDate, currentDate, length)
 {
     if (month == 01 && day == 01){
         window.alert("Can't schedule a meeting on New Year's Day. Please try again.");
@@ -246,6 +248,13 @@ function isInvalidDate(month, day, year, inputDate, currentDate)
     {
         window.alert("Can't schedule a meeting in the past. Please try again.");
         console.log("ERROR: Can't schedule a meeting in the past.");
+
+        return true;
+    }
+    else if(length <= 0)
+    {
+        window.alert("Can't start and end a meeting at the same time. Please try again.");
+        console.log("ERROR: Can't start and end a meeting at the same time.");
 
         return true;
     }
