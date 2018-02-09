@@ -265,7 +265,7 @@ linkedlist.prototype.printAll = function(){
 linkedlist.prototype.removeFront = function () {
 
   currentnode = this.first;
-  if (!isEmpty()){
+  if (!this.isEmpty()){
     this.first = this.first.next;
     currentnode = null;
     return true;

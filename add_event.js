@@ -211,8 +211,7 @@ function submitVals()  {
 
    var temp = new meeting(eventTitle, inputDate, length);
    masterEvent.add(temp);
-   masterEvent.printAll();
-
+   
    var arr = eventArray(masterEvent);
    writeData(arr, 3, masterEvent);
 

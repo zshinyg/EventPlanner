@@ -142,10 +142,12 @@ function eventArray (list){
 
   var arr = new Array;
   for (var i = 0; i <= (list.size * 3); i+=3){
+    console.log(list.first);
+    console.log(list.first.title + '\n' + list.first.date +'\n' + list.first.len + '\n');
     arr[i] = list.first.title;
     arr[i+1] = list.first.date;
     arr[i+2] = list.first.len;
-    list.removeFirst();
+    list.removeFront();
   }
   return arr;
 }
