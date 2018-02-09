@@ -167,10 +167,12 @@ function eventArray (list){
 function userArray (list){
 
   var arr = new Array;
-  for (var i = 0; i < (list.size * 2); i+=2)
-  {
-    arr[i] = list.first.data.lastName;
-    arr[i+1] = list.first.data.firstName;
+  var ind = 0;
+  for (var i = 0; i < list.size; i++){
+    currentnode = list.returnAt(i);
+    arr[ind] = currentnode.data.lastName;
+    arr[ind+1] = currentnode.data.firstName;
+    ind+=2;
   }
   return arr;
 }
