@@ -13,8 +13,8 @@
 //  GLOBAL VARIABLES HERE ARE THE ARRAY FOR LISTS OF YEARS AND
 //  THE LIST OF MASTER USERS
 
-var masterEvent = new linkedlist;
-var masterUser = new linkedlist;
+var masterEvent = new linkedlist();
+var masterUser = new linkedlist();
 
 
 
@@ -141,7 +141,7 @@ function readData(name){
 function eventArray (list){
 
   var arr = new Array;
-  while(!list.isEmpty()){
+  for (var i = 0; i < (list.size*3); i+=3){
     // console.log(list.first.data.title);
     // console.log(list.first.data.date);
     // console.log(list.first.data.len);
@@ -161,7 +161,7 @@ function eventArray (list){
 function userArray (list){
 
   var arr = new Array;
-  for (var i = 0; i < (list.size * 2); i++)
+  for (var i = 0; i < (list.size * 2); i+=2)
   {
     arr[i] = list.first.data.lastName;
     arr[i+1] = list.first.data.firstName;
