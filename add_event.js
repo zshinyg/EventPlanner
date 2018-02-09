@@ -211,12 +211,14 @@ function submitVals()  {
 
    var temp = new meeting(eventTitle, inputDate, length);
    masterEvent.add(temp);
-
+   
    var arr = eventArray(masterEvent);
    writeData(arr, 3, "masterEvent");
 
    redirect(false);
- }
+ } // End if on invalid date
+
+
  else{
    redirect(true);
  }
@@ -281,7 +283,7 @@ function redirect(badDate)
         window.location.href = "redirect_interface.html";
         return true;
     }
-  
+
 }
 
 

@@ -141,15 +141,21 @@ function readData(name){
 function eventArray (list){
 
   var arr = new Array;
-  for (var i = 0; i < (list.size*3); i+=3){
-    // console.log(list.first.data.title);
-    // console.log(list.first.data.date);
-    // console.log(list.first.data.len);
-    arr[i] = list.first.data.title;
-    arr[i+1] = list.first.data.date;
-    arr[i+2] = list.first.data.len;
-    list.removeFront();
+  console.log(list.isEmpty());
+
+  var ind = 0;
+  for (var i = 0; i < list.size; i++){
+    currentnode = list.returnAt(i);
+    arr[ind] = currentnode.data.title;
+    arr[ind+1] = currentnode.data.date;
+    arr[ind+2] = currentnode.data.len;
+    ind+=3;
   }
+
+  console.log("list:");
+  list.printAll();
+  console.log("master list:");
+  masterEvent.printAll();
   return arr;
 }
 

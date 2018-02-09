@@ -268,13 +268,31 @@ linkedlist.prototype.removeFront = function () {
   if (!this.isEmpty()){
     this.first = this.first.next;
     currentnode = null;
+    this.size--;
     return true;
   }
   else{
     return false;
   }
-  console.log("removed front");
 }
 
 
+// return at
+// returns node at the specified index
+// Index ranges from 0 to size
+linkedlist.prototype.returnAt = function (index){
+
+
+  if (this.isEmpty()){
+    return null;
+  }
+
+  currentnode = this.first;
+  for (var j = 0; j < this.size; j++){
+    if (index == j){
+      return currentnode;
+    }
+    currentnode = currentnode.next;
+  }
+}
 //____________________________________________________________________________
