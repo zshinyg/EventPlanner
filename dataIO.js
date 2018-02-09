@@ -152,8 +152,6 @@ function eventArray (list){
     ind+=3;
   }
 
-  console.log("list:");
-  list.printAll();
   console.log("master list:");
   masterEvent.printAll();
   return arr;
