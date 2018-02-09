@@ -211,7 +211,7 @@ function submitVals()  {
 
    var temp = new meeting(eventTitle, inputDate, length);
    masterEvent.add(temp);
-   
+
    var arr = eventArray(masterEvent);
    writeData(arr, 3, masterEvent);
 
@@ -278,11 +278,11 @@ function redirect()
         window.location.href = "redirect_interface.html";
         return true;
     }
-    else
+  /*  else
     {
         console.log("Redirecting to home");
         window.location.href = "user_interface.html";
-    }
+    }*/
 }
 
 
