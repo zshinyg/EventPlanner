@@ -142,13 +142,13 @@ function eventArray (list){
 
   var arr = new Array;
   for (var i = 0; i <= (list.size * 3); i+=3){
-    console.log(list.first.data.title);
-    console.log(list.first.data.date);
-    console.log(list.first.data.len);
+    // console.log(list.first.data.title);
+    // console.log(list.first.data.date);
+    // console.log(list.first.data.len);
     arr[i] = list.first.data.title;
     arr[i+1] = list.first.data.date;
     arr[i+2] = list.first.data.len;
-    list.removeFront();
+    //list.removeFront();
   }
   return arr;
 }

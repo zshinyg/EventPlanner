@@ -273,6 +273,7 @@ linkedlist.prototype.removeFront = function () {
   else{
     return false;
   }
+  console.log("removed front");
 }
 
 
