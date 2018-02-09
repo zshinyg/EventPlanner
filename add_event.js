@@ -213,7 +213,7 @@ function submitVals()  {
    masterEvent.add(temp);
 
    var arr = eventArray(masterEvent);
-   writeData(arr, 3, masterEvent);
+   writeData(arr, 3, "masterEvent");
 
    redirect(false);
  }
