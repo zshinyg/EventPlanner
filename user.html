@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+          <!-- JavaScript Files -->
+          <script src = "linkedlist.js"></script>
+          <script src ="meeting.js"></script>
+          <script src="global.js"></script>
+          <script src="add_event.js"></script>
+          <script src="dataIO.js"></script>
+          <script src="attendee.js" ></script>
+          <script src="user_availability.js" ></script>
+       
+
+    <title>User</title>
+
+</head>
+<body onload="populateUserSelect('userName')">
+
+    <div class="jumbotron">
+        <h1>Select/Create User</h1>
+        <p>Please select the correct user or create new.</p>
+    </div>
+
+    <div>
+        <label for="userName">Select user name:</label>
+        <form>
+            <select name="userName" id="userName"></select>
+        </form>
+
+
+
+    </div>
+
+    <div>
+        <label for="createUser">Please insert first and last name.</label>
+        <form>
+            <input placeholder="First Name" id="userFirstName" type="text">
+            <input placeholder="Last Name" id="userLastName" type="text">
+        </form>
+
+    </div>
+    <div>
+        <button type="submit" onclick="submitName()" 
+        class="btn btn-primary" name="submit">
+        Submit
+        </button>
+    </div>
+    
+</body>
+</html>
