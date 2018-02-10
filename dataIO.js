@@ -167,7 +167,7 @@ function eventArray (list){
 
   var arr = new Array;
   //console.log(list.isEmpty());
-  console.log(list.size);
+  //console.log(list.size);
 
   var ind = 0;
   for (var i = 0; i < list.size; i++){
