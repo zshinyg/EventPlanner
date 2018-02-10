@@ -1,20 +1,5 @@
 // WRITE DATA.JS
 
-// TWO MASTER LISTS:
-//      masterEvent
-//      masterUser
-//
-//  THESE TWO HAVE ALL USERS AND EVENTS INSIDE
-//  MASTER EVENT HAS THE NAME OF THE LISTS THAT STILL HAVE
-//  EVENTS.  THESE ARE NAMED BY YEARS
-//
-//  MASTERUSER HAS ALL OF THE USERS LISTED
-//
-//  GLOBAL VARIABLES HERE ARE THE ARRAY FOR LISTS OF YEARS AND
-//  THE LIST OF MASTER USERS
-
-var masterEvent = new linkedlist();
-var masterUser = new linkedlist();
 
 
 
@@ -141,7 +126,7 @@ function readData(name){
 function eventArray (list){
 
   var arr = new Array;
-  console.log(list.isEmpty());
+  //console.log(list.isEmpty());
 
   var ind = 0;
   for (var i = 0; i < list.size; i++){
@@ -152,8 +137,6 @@ function eventArray (list){
     ind+=3;
   }
 
-  console.log("master list:");
-  masterEvent.printAll();
   return arr;
 }
 

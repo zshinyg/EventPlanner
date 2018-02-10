@@ -163,9 +163,9 @@ function submitVals()  {
   var lastMin = parseInt(10, lmin);
 
   var ampm1 = document.getElementById("ampm").value;
-  console.log(ampm1);
+  // console.log(ampm1);
   var ampm2 = document.getElementById("ampm2").value;
-  console.log(ampm2);
+  // console.log(ampm2);
 
   //   For the hours, see if 24/12 hours are toggled.  If 12, see if it is am or pm
   //   FOR STORING THE TIME IN 24 HOUR MODE
@@ -189,43 +189,46 @@ function submitVals()  {
 
   }
 
-  // TEST IN CONSOLE
-  console.log("Event name: "+ eventTitle);
-  console.log("Date: " + month + "/" + day + "/" + year);
-  console.log("Start time: "+strthour + ":"+strtmin);
-  console.log("End time: " + endhour + ":" + endmin);
+  // // TEST IN CONSOLE
+  // console.log("Event name: "+ eventTitle);
+  // console.log("Date: " + month + "/" + day + "/" + year);
+  // console.log("Start time: "+strthour + ":"+strtmin);
+  // console.log("End time: " + endhour + ":" + endmin);
 
- let inputDate = new Date(year, month-1, day, strthour, strtmin);
- let currentDate = new Date();
- console.log("Input date: "+ inputDate);
- console.log("Curent date: "+ currentDate);
+  let inputDate = new Date(year, month-1, day, strthour, strtmin);
+  let currentDate = new Date();
+  // console.log("Input date: "+ inputDate);
+  // console.log("Curent date: "+ currentDate);
 
   var length = ((endhour*60)+endmin)-((strthour*60)+strtmin);
 
   // Check date
 
- if (!isInvalidDate(month, day, year, inputDate, currentDate, length)){
+  if (!isInvalidDate(month, day, year, inputDate, currentDate, length)){
 
    // If the date is valid, add it to the list of events
    // and write to file
 
-   var temp = new meeting(eventTitle, inputDate, length);
-   masterEvent.add(temp);
-   masterEvent.printAll();
+    var temp = new meeting(eventTitle, inputDate, length);
+    console.log("before the add");
+    window.masterEvent.printAll();
+    window.masterEvent.add(temp);
+    console.log("After the add");
+    window.masterEvent.printAll();
 
-   var arr = eventArray(masterEvent);
-   writeData(arr, 3, "masterEvent");
+    var arr = eventArray(masterEvent);
+    writeData(arr, 3, "masterEvent");
 
-   redirect(false);
- } // End if on invalid date
-
-
- else{
-   redirect(true);
- }
+    redirect(false);
+  } // End if on invalid date
 
 
-}
+  else{
+    redirect(true);
+  }
+
+
+} // end submitVals
 
 // Checks to see if the date can be used or not
 function isInvalidDate(month, day, year, inputDate, currentDate, length)
@@ -268,7 +271,10 @@ function isInvalidDate(month, day, year, inputDate, currentDate, length)
         console.log("Success!");
         return false;
     }
-}
+} // end isInvalidDate
+
+
+
 
 // Redirects the page according to if date is invalid
 function redirect(badDate)
