@@ -117,6 +117,46 @@ function readData(name){
 }
 
 
+function readEventData(name){
+
+  var doc = localStorage.getItem(name);
+  if (doc == null){
+
+        console.log("file " + name + " not found");
+        return 0;
+  }
+
+  var line = '';
+  var elements = 0;
+  var arr = new Array;
+
+  for (var i = 0; i < doc.length; i++){
+    var j = 0;
+    while(j<2){
+      if(doc[i] == '@'){
+        arr[elements] = line;
+        line ='';
+        elements++
+        j++;
+        i++;
+      }
+      line += doc[i];
+      i++;
+
+    }// end while j<2
+
+    while(doc[i] != ' '){
+      line += doc[i];
+      i++;
+    }
+    arr[elements] = line;
+    elements++;
+    line = '';
+  }
+
+  return arr;
+}
+
 
 
 // Event to array
@@ -167,9 +207,9 @@ function userArray (list){
 
 function populateEvent() {
 
-  var mE = readData("masterEvent");
+  var mE = readEventData("masterEvent");
 
-  if (mE[0] == null){
+  if (mE[0] == ''){
     var arr = new Array;
     writeData(arr, 0, "masterEvent");
   }

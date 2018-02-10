@@ -213,7 +213,7 @@ function submitVals()  {
     var temp = new meeting(eventTitle, inputDate, length);
     console.log("before the add");
     window.masterEvent.printAll();
-    window.masterEvent.addBack(temp);
+    window.masterEvent.add(temp);
     console.log("After the add");
     window.masterEvent.printAll();
 
