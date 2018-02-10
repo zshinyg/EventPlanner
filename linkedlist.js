@@ -85,7 +85,7 @@ linkedlist.prototype.add = function (val) {
     else {
       this.first.next = m_node;
     } // end else
-  } // end else if
+  } // end else if size == 1
 
   else if (currentnode.greater(val)){
 

@@ -209,15 +209,17 @@ function submitVals()  {
    // If the date is valid, add it to the list of events
    // and write to file
 
+   populateEvent();
     var temp = new meeting(eventTitle, inputDate, length);
     console.log("before the add");
     window.masterEvent.printAll();
-    window.masterEvent.add(temp);
+    window.masterEvent.addBack(temp);
     console.log("After the add");
     window.masterEvent.printAll();
 
     var arr = eventArray(masterEvent);
     writeData(arr, 3, "masterEvent");
+
 
     redirect(false);
   } // End if on invalid date

@@ -127,6 +127,7 @@ function eventArray (list){
 
   var arr = new Array;
   //console.log(list.isEmpty());
+  console.log(list.size);
 
   var ind = 0;
   for (var i = 0; i < list.size; i++){
@@ -164,16 +165,32 @@ function userArray (list){
 //
 
 
-function populate() {
+function populateEvent() {
 
   var mE = readData("masterEvent");
-  var mU = readData("masterUser");
 
   if (mE[0] == null){
     var arr = new Array;
     writeData(arr, 0, "masterEvent");
   }
 
+
+  // For master event, create a list of all events
+  for (var i = 0; i < mE.length; i+=3){
+    var title = mE[i];
+    var date = mE[i+1];
+    var length = mE[i+2];
+    var temp = new meeting(title, date, length);
+    window.masterEvent.add(temp);
+  } // end for i
+
+}
+
+
+
+function populateUser() {
+
+  var mU = readData("masterUser");
   if (mU[0] == null) {
     var arr = new Array;
     writeData(arr, 0, "masterUser");
@@ -184,17 +201,7 @@ function populate() {
     var lastName = mU[i];
     var firstName = mU[i+1];
     var person = new attendee(lastName, firstName);
-    masterUser.add(attendee);
+    window.masterUser.add(attendee);
   }
-
-
-  // For master event, create a list of all events
-  for (var i = 0; i < mE.length; i+=3){
-    var title = mE[i];
-    var date = mE[i+1];
-    var length = mE[i+2];
-    var temp = new meeting(title, date, length);
-    masterEvent.add(temp);
-  } // end for i
 
 }
