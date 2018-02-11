@@ -228,12 +228,14 @@ function populateEvent() {
 
 
 
-function populateUser() {
+function populateUser(name) {
 
-  var mU = readData("masterUser");
+  var list = new linkedlist;
+  list[name];
+  var mU = readData(name);
   if (mU[0] == null) {
     var arr = new Array;
-    writeData(arr, 0, "masterUser");
+    writeData(arr, 0, name);
   }
 
   // For master user, create list of all users
@@ -241,7 +243,7 @@ function populateUser() {
     var lastName = mU[i];
     var firstName = mU[i+1];
     var person = new attendee(lastName, firstName);
-    window.masterUser.add(attendee);
+    list.add(attendee);
   }
   //window.masterUser.printAll();
 }
