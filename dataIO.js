@@ -233,7 +233,7 @@ function populateUser(name) {
   var list = new linkedlist;
   list[name];
   var mU = readData(name);
-  if (mU[0] == null) {
+    if (mU[0] == null) {
     var arr = new Array;
     writeData(arr, 0, name);
   }
@@ -243,7 +243,10 @@ function populateUser(name) {
     var lastName = mU[i];
     var firstName = mU[i+1];
     var person = new attendee(lastName, firstName);
+    console.log(person);
     list.add(attendee);
+    list.printAll();
+    console.log(list.size);
   }
   return list;
   //window.masterUser.printAll();
