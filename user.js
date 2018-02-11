@@ -16,26 +16,60 @@ function submitName()  {
     var arr = userArray(masterUser);
     writeData(arr, 2, "masterUser");
 
-  //  populateUserSelect("userName");
+    populateUserSelect("userName");
 
 
 }
 
+function populateUserSelect(id) {
 
-function populateUserSelect() {
+    unpopulateNames();
+    var docfrag = document.createDocumentFragment();
 
-    function populateUserSelect(id) {
+      for(var i = 0; i < masterUser.size; i++){
 
-        for(var i = 0; i <= masterUser.size; i++){
-            var docfrag = document.createDocumentFragment();
+          //Get the node at index i from masterUser
+
+          var node = masterUser.returnAt(i);
+                    var name = node.data.firstName  + ' ' + node.data.lastName;
+          //console.log(name);
+
+          docfrag.appendChild(new Option(name));
 
 
-            docfrag.appendChild(new Option(i, i));
+      }
 
 
-            var select = document.getElementById(id);
-            select.appendChild(docfrag);
-        }
+  var select = document.getElementById(id);
+  select.appendChild(docfrag);
 
+}
+
+
+function unpopulateNames(){
+
+    var names = document.getElementById("userName");
+
+    for( var i = 0; i < masterUser.size; i++){
+        names.remove(names.i);
     }
+
+}
+
+
+function Continue(){
+
+  var name = document.getElementById("userName").value;
+  var firstName = '';
+  var lastName = '';
+  var i = 0;
+  while (name[i] != ' '){
+      firstName += name[i];
+      i++;
+  }
+  while (i < name.length){
+    lastName += name[i];
+    i++;
+  } // end while
+  //console.log("this is the name now: " + firstName  + ' ' + lastName);
 }

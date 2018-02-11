@@ -55,7 +55,7 @@ function writeData(arr, num, name) {
     doc += line + ' ';
   } // end for i
 
-  console.log(doc);
+  //console.log(doc);
   localStorage.setItem(name, doc);
 }
 

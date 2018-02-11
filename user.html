@@ -25,7 +25,7 @@
     <title>User</title>
 
 </head>
-<body onload="populateUserSelect('userName'); populateUser();">
+<body onload="populateUser();   populateUserSelect('userName')">
 
     <div class="jumbotron">
         <h1>Select/Create User</h1>
@@ -41,6 +41,12 @@
 
 
     </div>
+    <div>
+        <button type="Continue" onclick="Continue(); "
+        class="btn btn-primary" name="Continue">
+        Continue
+        </button>
+    </div>
 
     <div>
         <label for="createUser">Please insert first and last name.</label>
@@ -51,7 +57,7 @@
 
     </div>
     <div>
-        <button type="submit" onclick="submitName()"
+        <button type="submit" onclick="submitName(); "
         class="btn btn-primary" name="submit">
         Submit
         </button>
