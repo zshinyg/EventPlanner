@@ -243,5 +243,5 @@ function populateUser() {
     var person = new attendee(lastName, firstName);
     window.masterUser.add(attendee);
   }
-
+  //window.masterUser.printAll();
 }

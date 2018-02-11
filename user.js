@@ -10,13 +10,13 @@ function submitName()  {
     var firstName = document.getElementById("userFirstName").value;
     var lastName = document.getElementById("userLastName").value;
 
-    populateUser();
+    //populateUser();
     var person = new attendee(lastName,firstName);
     masterUser.add(person);
     var arr = userArray(masterUser);
     writeData(arr, 2, "masterUser");
 
-    populateUserSelect("userName");
+  //  populateUserSelect("userName");
 
 
 }
