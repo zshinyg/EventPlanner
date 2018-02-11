@@ -33,5 +33,5 @@ meeting.prototype.add = function (lastName, firstName){
 // VALUE OF
 // Allows for comparison of events by date.
 meeting.prototype.valueOf = function () {
-  return this.date;
+  return this.date.getTime();
 }
