@@ -22,7 +22,7 @@
 
     <title>Select Event</title>
 </head>
-<body onload = "populateEvent(); findMaxYear()">
+<body onload = "populateEvent(); loadEvents()">
 
 
     <div class="jumbotron">
@@ -30,21 +30,7 @@
         <p>Please select an event that you would like to attend</p>
     </div>
 
-    <div>
-        <label for="Year">Select Year:</label>
-        <form>
-            <select name="Year" id="Year"></select>
-        </form>
-    </div>
 
-    <div>
-        <label for="Month">Select Month:</label>
-        <form>
-            <select name="Month" id="Month"></select>
-        </form>
-    </div>
-
-    <button onclick="loadEvents()"> Load </button>
 
     <table name="eventTable" id="eventTable" style="width:90%">
         <thead>
@@ -63,7 +49,7 @@
     </table>
 
     <!--<button onclick="addRow()">Try it</button>-->
-    <button> Submit </button>
+    <button onclick="submit()"> Submit </button>
 
 
 

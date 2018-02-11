@@ -11,14 +11,6 @@ function setName(last, first){
   //console.log(lastName + ' ' + firstName);
 }
 
-function findMaxYear(){
-
-  var obj = masterEvent.returnAt(masterEvent.size - 1);
-  console.log(obj);
-  var date = new Date(obj.data.date);
-  console.log(date);
-}
-
 function addRow(title, date, time) {
 
     var table = document.getElementById("eventTable")
@@ -67,5 +59,27 @@ function loadEvents(){
     endMin = (node.data.len)%60;
     timeString = startHours + ':' + startMin + ' to ' + endHours + ':' + endMin;
     addRow(node.data.title, month+'/'+day+'/'+year,timeString);
+  }
+}
+
+
+
+function submit(){
+
+  //console.log("inside submit");
+  var checkBoxArray = document.getElementById("eventTable").getElementsByTagName("INPUT");
+  var itemArray = document.getElementById("eventTable").getElementsByTagName("td");
+  var nameArray = new Array;
+  for (var i = 0; i < itemArray.length; i+=4){
+    nameArray[i/4] = itemArray[i];
+  }
+//  console.log(checkBoxArray);
+//  console.log(nameArray);
+  for (var i = 0; i < checkBoxArray.length; i++){
+    if (checkBoxArray[i].checked == true){
+      console.log("found a check");
+      console.log(nameArray[i].textContent);
+
+    }
   }
 }
