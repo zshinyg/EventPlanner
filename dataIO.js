@@ -245,5 +245,6 @@ function populateUser(name) {
     var person = new attendee(lastName, firstName);
     list.add(attendee);
   }
+  return list;
   //window.masterUser.printAll();
 }

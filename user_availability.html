@@ -15,6 +15,7 @@
         <script src="add_event.js"></script>
         <script src="global.js"></script>
         <script src="meeting.js"></script>
+        <script src="attendee.js"></script>
         <script src="dataIO.js"></script>
         <script src="user_availability.js"></script>
 
@@ -22,7 +23,7 @@
 
     <title>Select Event</title>
 </head>
-<body onload = "populateEvent(); loadEvents()">
+<body onload = "populateEvent(); loadEvents(); setName()">
 
 
     <div class="jumbotron">
@@ -42,7 +43,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr name = "list" id = "list">
 
             </tr>
         </tbody>
@@ -51,6 +52,10 @@
     <!--<button onclick="addRow()">Try it</button>-->
     <button onclick="submit()"> Submit </button>
 
+
+    <form action = "user_interface.html">
+        <button type="home" class="btn btn-primary" name="Continue"> Home </button>
+    </form>
 
 
     <!-- Optional JavaScript -->

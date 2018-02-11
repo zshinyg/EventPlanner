@@ -31,7 +31,7 @@ function populateUserSelect(id) {
           //Get the node at index i from masterUser
 
           var node = masterUser.returnAt(i);
-                    var name = node.data.firstName  + ' ' + node.data.lastName;
+          var name = node.data.firstName  + ' ' + node.data.lastName;
           //console.log(name);
 
           docfrag.appendChild(new Option(name));
@@ -60,17 +60,6 @@ function unpopulateNames(){
 function addAvailability(){
 
   var name = document.getElementById("userName").value;
-  var firstName = '';
-  var lastName = '';
-  var i = 0;
-  while (name[i] != ' '){
-      firstName += name[i];
-      i++;
-  }
-  while (i < name.length){
-    lastName += name[i];
-    i++;
-  } // end while
-  setName(lastName, firstName);
-  //console.log("this is the name now: " + firstName  + ' ' + lastName);
+  sessionStorage.setItem("userName", name);
+
 }

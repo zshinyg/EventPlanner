@@ -5,10 +5,19 @@
 var lastName = '';
 var firstName = '';
 
-function setName(last, first){
-  window.lastName = last;
-  window.firstName = first;
-  //console.log(lastName + ' ' + firstName);
+function setName(){
+  var name = sessionStorage.getItem("userName");
+  var i = 0;
+  while (name[i] != ' '){
+      firstName += name[i];
+      i++;
+  }
+  i++;
+  while (i < name.length){
+    lastName += name[i];
+    i++;
+  } // end while
+    console.log("this is the name now: " + window.firstName  + ' ' + window.lastName);
 }
 
 function addRow(title, date, time) {
@@ -60,6 +69,9 @@ function loadEvents(){
     timeString = startHours + ':' + startMin + ' to ' + endHours + ':' + endMin;
     addRow(node.data.title, month+'/'+day+'/'+year,timeString);
   }
+  if (masterEvent.size == 0){
+    document.getElementById("list").innerHTML = "No events at this time";
+  }
 }
 
 
@@ -75,11 +87,24 @@ function submit(){
   }
 //  console.log(checkBoxArray);
 //  console.log(nameArray);
+// Here we keep track of which events had a check by there name
+// Next thing to do is write to file (filename being that event)
+// that the person who is logged in is attending
   for (var i = 0; i < checkBoxArray.length; i++){
     if (checkBoxArray[i].checked == true){
       console.log("found a check");
       console.log(nameArray[i].textContent);
-
+      // Populate the list of that event
+      var eventTitle = nameArray[i].textContent;
+      var list = populateUser(eventTitle);
+      // create a new attendee with the user logged in
+      console.log(window.lastName + ' ' + window.firstName);
+      var person = new attendee(window.lastName, window.firstName);
+      // add the person to the list
+      list.add(person);
+      // write the list to file
+      var tempArr = userArray(list);
+      writeData(tempArr, 2, eventTitle);
     }
   }
 }
