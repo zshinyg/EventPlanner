@@ -19,7 +19,7 @@ function findMaxYear(){
   console.log(date);
 }
 
-function addRow() {
+function addRow(title, date, time) {
 
     var table = document.getElementById("eventTable")
 
@@ -32,11 +32,40 @@ function addRow() {
     var checkbox = document.createElement("INPUT");
     checkbox.type = "checkbox";
 
-    tr.cells[0].appendChild(document.createTextNode('Meeting'));
-    tr.cells[1].appendChild(document.createTextNode('2/7/18'));
-    tr.cells[2].appendChild( document.createTextNode('10:20 AM - 11:00 PM') );
+    tr.cells[0].appendChild(document.createTextNode(title));
+    tr.cells[1].appendChild(document.createTextNode(date));
+    tr.cells[2].appendChild( document.createTextNode(time) );
     tr.cells[3].appendChild(checkbox);
 
     table.appendChild(tr);
 
+}
+
+
+
+
+function loadEvents(){
+
+  var month = '';
+  var year = '';
+  var day = '';
+  var date = '';
+  var startHours ='';
+  var startMin = '';
+  var endHours = '';
+  var endMin = '';
+  var timeString = '';
+  for (var i = 0; i < masterEvent.size; i++){
+    var node = masterEvent.returnAt(i);
+    date = node.data.date;
+    month = date.getMonth() + 1;
+    year = date.getFullYear();
+    day = date.getDate();
+    startHours = date.getHours();
+    startMin = date.getMinutes();
+    endHours = Math.floor((node.data.len)/60) + startHours;
+    endMin = (node.data.len)%60;
+    timeString = startHours + ':' + startMin + ' to ' + endHours + ':' + endMin;
+    addRow(node.data.title, month+'/'+day+'/'+year,timeString);
+  }
 }
