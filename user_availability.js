@@ -2,6 +2,16 @@
  * Adds a row to the table on user_availabilty.html. This will
  * be used to add the given events to the table.
  */
+var lastName = '';
+var firstName = '';
+
+function setName(last, first){
+  window.lastName = last;
+  window.firstName = first;
+  console.log(lastName + ' ' + firstName);
+}
+
+
 function addRow() {
 
     var table = document.getElementById("eventTable")
