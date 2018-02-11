@@ -209,7 +209,7 @@ function populateEvent() {
 
   var mE = readEventData("masterEvent");
 
-  if (mE[0] == ''){
+  if (mE[0] == null){
     var arr = new Array;
     writeData(arr, 0, "masterEvent");
   }

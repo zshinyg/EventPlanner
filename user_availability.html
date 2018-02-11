@@ -16,15 +16,32 @@
         <script src="global.js"></script>
         <script src="meeting.js"></script>
         <script src="dataIO.js"></script>
+        <script src="user_availability.js"></script>
 
 
 
     <title>Select Event</title>
 </head>
-<body>
+<body onload = "populateEvent(); findMaxYear()">
+
+
     <div class="jumbotron">
         <h1>Select Event</h1>
         <p>Please select an event that you would like to attend</p>
+    </div>
+
+    <div>
+        <label for="Year">Select Year:</label>
+        <form>
+            <select name="Year" id="Year"></select>
+        </form>
+    </div>
+
+    <div>
+        <label for="Month">Select Month:</label>
+        <form>
+            <select name="Month" id="Month"></select>
+        </form>
     </div>
 
     <table name="eventTable" id="eventTable" style="width:90%">

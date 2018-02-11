@@ -11,6 +11,13 @@ function setName(last, first){
   //console.log(lastName + ' ' + firstName);
 }
 
+function findMaxYear(){
+
+  var obj = masterEvent.returnAt(masterEvent.size - 1);
+  console.log(obj);
+  var date = new Date(obj.data.date);
+  console.log(date);
+}
 
 function addRow() {
 
