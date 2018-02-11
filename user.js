@@ -57,7 +57,7 @@ function unpopulateNames(){
 }
 
 
-function Continue(){
+function addAvailability(){
 
   var name = document.getElementById("userName").value;
   var firstName = '';
@@ -71,5 +71,6 @@ function Continue(){
     lastName += name[i];
     i++;
   } // end while
+  setName(lastName, firstName);
   //console.log("this is the name now: " + firstName  + ' ' + lastName);
 }

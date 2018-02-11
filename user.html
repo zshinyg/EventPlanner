@@ -20,13 +20,14 @@
           <script src="dataIO.js"></script>
           <script src="attendee.js" ></script>
           <script src="user.js" ></script>
-          
+          <script src="user_availability.js"></script>
+
 
 
     <title>User</title>
 
 </head>
-<body onload="populateUser();   populateUserSelect('userName')">
+<body onload="populateUser(); populateUserSelect('userName')">
 
     <div class="jumbotron">
         <h1>Select/Create User</h1>
@@ -42,8 +43,9 @@
 
 
     </div>
+
     <form action = "user_availability.html">
-        <button type="Continue" onclick="Continue(); "
+        <button type="Continue" onclick= "addAvailability()"
         class="btn btn-primary" name="Continue">
         Continue
         </button>

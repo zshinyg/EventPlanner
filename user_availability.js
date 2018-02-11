@@ -8,7 +8,7 @@ var firstName = '';
 function setName(last, first){
   window.lastName = last;
   window.firstName = first;
-  console.log(lastName + ' ' + firstName);
+  //console.log(lastName + ' ' + firstName);
 }
 
 
