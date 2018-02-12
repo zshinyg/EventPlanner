@@ -84,12 +84,12 @@ function loadEvents(){
     window[eventTitle] = populateUser(eventTitle);
     var attending = window[eventTitle].search(lastName);
 
-    console.log("print ALL in load users");
-    window[eventTitle].printAll();
+    // console.log("print ALL in load users");
+    // window[eventTitle].printAll();
 
 
-    console.log("Searching for: " + lastName + " in " + eventTitle);
-    console.log("attending = " + attending);
+    // console.log("Searching for: " + lastName + " in " + eventTitle);
+    // console.log("attending = " + attending);
     if (attending){
       checkBoxArray[i].checked = true;
     }
@@ -114,13 +114,13 @@ function submit(){
 // that the person who is logged in is attending
   for (var i = 0; i < checkBoxArray.length; i++){
     if (checkBoxArray[i].checked == true){
-      console.log("found a check");
-      console.log(nameArray[i].textContent);
+      // console.log("found a check");
+      // console.log(nameArray[i].textContent);
       // Populate the list of that event
       var eventTitle = nameArray[i].textContent;
       var list = populateUser(eventTitle);
       // create a new attendee with the user logged in
-      console.log(window.lastName + ' ' + window.firstName);
+      // console.log(window.lastName + ' ' + window.firstName);
       var person = new attendee(window.lastName, window.firstName);
       // add the person to the list
       list.add(person);
