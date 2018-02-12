@@ -28,7 +28,7 @@ function setName(){
     lastName += name[i];
     i++;
   } // end while
-    //console.log("this is the name now: " + window.firstName  + ' ' + window.lastName);
+    console.log("this is the name now: " + window.firstName  + ' ' + window.lastName);
 }
 
 
