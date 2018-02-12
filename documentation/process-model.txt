@@ -1,0 +1,29 @@
+Process Model
+
+Process Model followed: Agile Scrum
+
+Arguments:
+
+Reasoning Agile is acceptable for this project:
+The project wasn't overwhelming in size, so if
+quick changes or fixes needed to be done, it was easy enough to
+do those on the fly
+ 
+
+Reasoning for following Agile:
+We put finishing the assignment as the most important factor
+It took a lot of changes throughout the entire project, up
+until the very end where we delete several pages of HTML and js
+for the sake of simplicity and ease of use
+We tested code frequently to make sure that it worked each step of the
+way
+Our most effective method of communication was face to face,
+trying to make that happen as often as possible
+We were flexible in when we finished certain parts of the code, it wasn't
+one big long run or consistent output
+
+Reasoning for Scrum specifically:
+At the beginning of the project, we tried to come up with a generic
+list of requirements and divide it up into small projects
+We tested the code along the way, making sure that it works at every
+step of the way
