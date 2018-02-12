@@ -122,3 +122,16 @@ function adminCompare(a)
 		return false;
 	}
 }
+
+
+function check(login) {
+
+	if(login.userid.value == "admin" && login.password.value == "1234") {
+		window.open('add_event.html');
+	}
+	else{
+		alert("Incorrect username or password.");
+	}
+
+
+}

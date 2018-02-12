@@ -12,13 +12,13 @@
           crossorigin="anonymous">
 
           <!-- Javascript files -->
-        	<script src="http://code.jquery.com/jquery-1.10.2.min.js"> </script>
-        	<script src="chalk.20170830_edit.js"></script>
-         	<script src="adminMode.js"></script>
-          <script src="linkedlist.js"></script>
-          <script src="meeting.js"></script>
-          <script src="global.js"></script>
-          <script src="dataIO.js"></script>
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"> </script>
+        <script src="chalk.20170830_edit.js"></script>
+        <script src="adminMode.js"></script>
+        <script src="linkedlist.js"></script>
+        <script src="meeting.js"></script>
+        <script src="global.js"></script>
+        <script src="dataIO.js"></script>
 
 
 </head>
@@ -31,12 +31,17 @@
 	<div class="jumbotron">
 	<!-- <h1> Let's schedule a meeting! (Beta version) </h1> -->
        	Please use your administrative login
-     	</div>
+    </div>
 
+	<div>
+		<form name="login">
+			Username:<input type="text" name="userid">
+			Password:<input type="text" name="password">
+			<input type="button" onclick="check(login)" value="Login">
+			<input type="button" value="Cancel" onclick="window.location='user_interface.html'"> 
+		</form>
 
-	<!-- Administrative login -->
-	<div id="chalk"></div>
-	<script> adminLogin(); </script>
+	</div>
 
 
 	<!-- </font> -->
