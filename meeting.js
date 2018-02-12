@@ -24,8 +24,9 @@ function meeting (title, date, length) {
 
 
 /**ADD ATTENDEE
-*@method add() Takes in a first name and a last name
+*Takes in a first name and a last name
 *creates a new attendee, and adds it to the list.
+*@method add()
 *@param {string} lastName
 *@param {string} firstName
 */
@@ -39,7 +40,8 @@ meeting.prototype.add = function (lastName, firstName){
 
 
 /**VALUE OF
-*@method valueOf() Allows for comparison of events by date.
+*Allows for comparison of events by date.
+*@method valueOf()
 */
 meeting.prototype.valueOf = function () {
   return this.date.getTime();
