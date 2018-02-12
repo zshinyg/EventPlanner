@@ -77,13 +77,8 @@ function timeSwitcher(){
 }
 
 /**
-<<<<<<< HEAD
- * addAMPM select box
- *@method addAMPM
-=======
  *addAMPM select box
  *@method addAMPM()
->>>>>>> 010f31a54292dc8059f7561942a9701ef5c42d7d
  */
 function addAMPM(){
     document.getElementById("ampm").style.visibility="";
@@ -92,11 +87,7 @@ function addAMPM(){
 }
 
 /**
-<<<<<<< HEAD
- *  Remove AMPM select box
-=======
  *Remove AMPM select box
->>>>>>> 010f31a54292dc8059f7561942a9701ef5c42d7d
  *@method removeAMPM()
  */
  function removeAMPM(){
@@ -109,11 +100,7 @@ function addAMPM(){
 /**
  * populates the select box with the correct number of hours
  *@method populateHours()
-<<<<<<< HEAD
- * 
-=======
  *
->>>>>>> 010f31a54292dc8059f7561942a9701ef5c42d7d
  * @param {number} mode - sets the mode for the select box
  *      23 for 24-Hour mode and 12 for 12-Hour mode.
  * @param {number} i - sets the number for the select box to
@@ -161,11 +148,7 @@ function addAMPM(){
 
 
 /**
-<<<<<<< HEAD
- *  unpopulates this given select box
-=======
  * unpopulates this given select box
->>>>>>> 010f31a54292dc8059f7561942a9701ef5c42d7d
  * @method unpopulateHour()
  * @param {string} id - This is the element id of the select
  *      box you would like to populate.

@@ -51,6 +51,13 @@
                 
                 
                             <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/add_event
+                Toggle 24 hour mode and 12 hour mode
+                Checks if the 24-Hour checkbox is checked then populates the
+                select box with the correct number of options..html">add_event
+                Toggle 24 hour mode and 12 hour mode
+                Checks if the 24-Hour checkbox is checked then populates the
+                select box with the correct number of options.</a></li>
                                 <li><a href="../modules/addEvent.html">addEvent</a></li>
                                 <li><a href="../modules/adminMode.html">adminMode</a></li>
                                 <li><a href="../modules/attendee.html">attendee</a></li>
@@ -58,6 +65,7 @@
                                 <li><a href="../modules/global.html">global</a></li>
                                 <li><a href="../modules/linkedlist.html">linkedlist</a></li>
                                 <li><a href="../modules/meetin.html">meetin</a></li>
+                                <li><a href="../modules/meeting.html">meeting</a></li>
                                 <li><a href="../modules/user.html">user</a></li>
                                 <li><a href="../modules/user_availability.html">user_availability</a></li>
                             </ul>
@@ -101,7 +109,13 @@
             Defined in: <a href="../files/add_event.js.html#l1"><code>add_event.js:1</code></a>
         </div>
 
-            Module: <a href="../modules/addEvent.html">addEvent</a>
+            Module: <a href="../modules/add_event
+Toggle 24 hour mode and 12 hour mode
+Checks if the 24-Hour checkbox is checked then populates the
+select box with the correct number of options..html">add_event
+Toggle 24 hour mode and 12 hour mode
+Checks if the 24-Hour checkbox is checked then populates the
+select box with the correct number of options.</a>
 
 </div>
 
@@ -127,27 +141,37 @@
 
                     <ul class="index-list methods">
                             <li class="index-item method">
-                                <a href="#method_addAMPM">addAMPM</a>
+                                <a href="#method_isInvalidDate()">isInvalidDate()</a>
 
                             </li>
                             <li class="index-item method">
-                                <a href="#method_populateHours()">populateHours()</a>
+                                <a href="#method_populateHours()
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 010f31a54292dc8059f7561942a9701ef5c42d7d">populateHours()
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 010f31a54292dc8059f7561942a9701ef5c42d7d</a>
 
                             </li>
                             <li class="index-item method">
-                                <a href="#method_removeAMPM()">removeAMPM()</a>
+                                <a href="#method_redirect()">redirect()</a>
 
                             </li>
                             <li class="index-item method">
-                                <a href="#method_setName">setName</a>
+                                <a href="#method_setName()">setName()</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_submitVals()">submitVals()</a>
 
                             </li>
                             <li class="index-item method">
                                 <a href="#method_timeSwitcher">timeSwitcher</a>
-
-                            </li>
-                            <li class="index-item method">
-                                <a href="#method_unpopulateHour()">unpopulateHour()</a>
 
                             </li>
                     </ul>
@@ -160,50 +184,34 @@
             <div id="methods" class="api-class-tabpanel">
                 <h2 class="off-left">Methods</h2>
 
-<div id="method_addAMPM" class="method item">
-    <h3 class="name"><code>addAMPM</code></h3>
-
-        <span class="paren">()</span>
-
-
-
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/add_event.js.html#l77"><code>add_event.js:77</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>addAMPM select box</p>
-
-    </div>
-
-
-
-
-</div>
-<div id="method_populateHours()" class="method item">
-    <h3 class="name"><code>populateHours()</code></h3>
+<div id="method_isInvalidDate()" class="method item">
+    <h3 class="name"><code>isInvalidDate()</code></h3>
 
         <div class="args">
             <span class="paren">(</span><ul class="args-list inline commas">
                 <li class="arg">
-                        <code>mode</code>
+                        <code>month</code>
                 </li>
                 <li class="arg">
-                        <code>i</code>
+                        <code>day</code>
                 </li>
                 <li class="arg">
-                        <code>id</code>
+                        <code>year</code>
+                </li>
+                <li class="arg">
+                        <code>inputDate</code>
+                </li>
+                <li class="arg">
+                        <code>currentDate</code>
+                </li>
+                <li class="arg">
+                        <code>length</code>
+                </li>
+                <li class="arg">
+                        <code>strthour</code>
+                </li>
+                <li class="arg">
+                        <code>endhour</code>
                 </li>
             </ul><span class="paren">)</span>
         </div>
@@ -218,7 +226,149 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/add_event.js.html#l98"><code>add_event.js:98</code></a>
+        <a href="../files/add_event.js.html#l299"><code>add_event.js:299</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Checks to see if the date can be used or not</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">month</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">day</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">year</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">inputDate</code>
+                        <span class="type">Date</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">currentDate</code>
+                        <span class="type">Date</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">length</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">strthour</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">endhour</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_populateHours()
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 010f31a54292dc8059f7561942a9701ef5c42d7d" class="method item">
+    <h3 class="name"><code>populateHours()
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 010f31a54292dc8059f7561942a9701ef5c42d7d</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>mode</code>
+                </li>
+                <li class="arg">
+                        <code>i</code>
+                </li>
+                <li class="arg">
+                        <code>id</code>
+                </li>
+                <li class="arg">
+                        <code>ampmID</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/add_event.js.html#l109"><code>add_event.js:109</code></a>
         </p>
 
 
@@ -277,14 +427,79 @@ box you would like to populate.</li>
                     </div>
 
                 </li>
+                <li class="param">
+                        <code class="param-name">ampmID</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
             </ul>
         </div>
 
 
 
 </div>
-<div id="method_removeAMPM()" class="method item">
-    <h3 class="name"><code>removeAMPM()</code></h3>
+<div id="method_redirect()" class="method item">
+    <h3 class="name"><code>redirect()</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>badDate</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/add_event.js.html#l401"><code>add_event.js:401</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Redirects the page according to if date is invalid
+If the date is bad, it will refresh the page,
+otherwise it will redirect to events.html</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">badDate</code>
+                        <span class="type">Bool</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setName()" class="method item">
+    <h3 class="name"><code>setName()</code></h3>
 
         <span class="paren">()</span>
 
@@ -298,7 +513,7 @@ box you would like to populate.</li>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/add_event.js.html#l87"><code>add_event.js:87</code></a>
+        <a href="../files/add_event.js.html#l26"><code>add_event.js:26</code></a>
         </p>
 
 
@@ -306,7 +521,7 @@ box you would like to populate.</li>
     </div>
 
     <div class="description">
-        <p>Remove AMPM select box</p>
+        <p>Sets the name for the user</p>
 
     </div>
 
@@ -314,8 +529,8 @@ box you would like to populate.</li>
 
 
 </div>
-<div id="method_setName" class="method item">
-    <h3 class="name"><code>setName</code></h3>
+<div id="method_submitVals()" class="method item">
+    <h3 class="name"><code>submitVals()</code></h3>
 
         <span class="paren">()</span>
 
@@ -329,7 +544,7 @@ box you would like to populate.</li>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/add_event.js.html#l25"><code>add_event.js:25</code></a>
+        <a href="../files/add_event.js.html#l184"><code>add_event.js:184</code></a>
         </p>
 
 
@@ -337,7 +552,8 @@ box you would like to populate.</li>
     </div>
 
     <div class="description">
-        
+        <p>If so, the page is redirected. Otherwise, it is refreshed.</p>
+
     </div>
 
 
@@ -359,7 +575,7 @@ box you would like to populate.</li>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/add_event.js.html#l45"><code>add_event.js:45</code></a>
+        <a href="../files/add_event.js.html#l47"><code>add_event.js:47</code></a>
         </p>
 
 
@@ -370,63 +586,6 @@ box you would like to populate.</li>
         
     </div>
 
-
-
-
-</div>
-<div id="method_unpopulateHour()" class="method item">
-    <h3 class="name"><code>unpopulateHour()</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>id</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-
-
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/add_event.js.html#l147"><code>add_event.js:147</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>unpopulates this given select box</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">id</code>
-                        <span class="type">String</span>
-
-
-                    <div class="param-description">
-                        <ul>
-<li>This is the element id of the select
-box you would like to populate.</li>
-</ul>
-
-                    </div>
-
-                </li>
-            </ul>
-        </div>
 
 
 

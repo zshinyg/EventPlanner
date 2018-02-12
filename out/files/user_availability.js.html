@@ -51,6 +51,13 @@
                 
                 
                             <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/add_event
+                Toggle 24 hour mode and 12 hour mode
+                Checks if the 24-Hour checkbox is checked then populates the
+                select box with the correct number of options..html">add_event
+                Toggle 24 hour mode and 12 hour mode
+                Checks if the 24-Hour checkbox is checked then populates the
+                select box with the correct number of options.</a></li>
                                 <li><a href="../modules/addEvent.html">addEvent</a></li>
                                 <li><a href="../modules/adminMode.html">adminMode</a></li>
                                 <li><a href="../modules/attendee.html">attendee</a></li>
@@ -58,6 +65,7 @@
                                 <li><a href="../modules/global.html">global</a></li>
                                 <li><a href="../modules/linkedlist.html">linkedlist</a></li>
                                 <li><a href="../modules/meetin.html">meetin</a></li>
+                                <li><a href="../modules/meeting.html">meeting</a></li>
                                 <li><a href="../modules/user.html">user</a></li>
                                 <li><a href="../modules/user_availability.html">user_availability</a></li>
                             </ul>
@@ -112,6 +120,9 @@
 var lastName = &#x27;&#x27;;
 var firstName = &#x27;&#x27;;
 
+/**
+ * Sets the username for the user
+ */
 function setName(){
   var name = sessionStorage.getItem(&quot;userName&quot;);
   var i = 0;
@@ -127,6 +138,14 @@ function setName(){
     //console.log(&quot;this is the name now: &quot; + window.firstName  + &#x27; &#x27; + window.lastName);
 }
 
+
+/**
+ * Adds the event to the Event Table
+ * 
+ * @param {string} title 
+ * @param {string} date 
+ * @param {string} time 
+ */
 function addRow(title, date, time) {
 
     var table = document.getElementById(&quot;eventTable&quot;)
@@ -149,9 +168,9 @@ function addRow(title, date, time) {
 
 }
 
-
-
-
+/**
+ * Loads the events from the list and shows which ones are available to the user
+ */
 function loadEvents(){
 
   var month = &#x27;&#x27;;
@@ -181,7 +200,9 @@ function loadEvents(){
   }
 
 
-  // Check to see what events the user is going to
+  /**
+   * Check to see what events the user is going to
+   */
   var checkBoxArray = document.getElementById(&quot;eventTable&quot;).getElementsByTagName(&quot;INPUT&quot;);
 
   for (var i = 0; i &lt; masterEvent.size; i++){
@@ -203,8 +224,9 @@ function loadEvents(){
   }
 }
 
-
-
+/**
+ * Adds user to the event they have chosen for their availability
+ */
 function submit(){
 
   //console.log(&quot;inside submit&quot;);
@@ -216,16 +238,20 @@ function submit(){
   }
 
 
-// Here we keep track of which events had a check by there name
-// Next thing to do is write to file (filename being that event)
-// that the person who is logged in is attending
+/** 
+ * Here we keep track of which events had a check by there name
+ * Next thing to do is write to file (filename being that event)
+ * that the person who is logged in is attending
+ */
   for (var i = 0; i &lt; checkBoxArray.length; i++){
     if (checkBoxArray[i].checked == true){
 
       console.log(checkBoxArray[i]);
       checkBoxArray[i].hidden = &quot;true&quot;;
 
-      // Populate the list of that event
+      /**
+       *  Populate the list of that event
+       */
       var eventTitle = nameArray[i].textContent;
       var list = populateUser(eventTitle);
       var attending = list.search(window.lastName);
@@ -234,11 +260,17 @@ function submit(){
       }
 
       else {
-      // create a new attendee with the user logged in
+      /**
+       *  create a new attendee with the user logged in
+       */
       var person = new attendee(window.lastName, window.firstName);
-      // add the person to the list
+      /**
+       *  add the person to the list
+       */
       list.add(person);
-      // write the list to file
+      /**
+       *  write the list to file
+       */
       var tempArr = userArray(list);
       writeData(tempArr, 2, eventTitle);
     }

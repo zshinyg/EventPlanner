@@ -13,16 +13,22 @@ YUI.add("yuidoc-meta", function(Y) {
     ],
     "modules": [
         "addEvent",
+        "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options.",
         "adminMode",
         "attendee",
         "dataIO",
         "global",
         "linkedlist",
         "meetin",
+        "meeting",
         "user",
         "user_availability"
     ],
     "allModules": [
+        {
+            "displayName": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options.",
+            "name": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+        },
         {
             "displayName": "addEvent",
             "name": "addEvent"
@@ -50,6 +56,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "meetin",
             "name": "meetin"
+        },
+        {
+            "displayName": "meeting",
+            "name": "meeting"
         },
         {
             "displayName": "user",

@@ -51,6 +51,13 @@
                 
                 
                             <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/add_event
+                Toggle 24 hour mode and 12 hour mode
+                Checks if the 24-Hour checkbox is checked then populates the
+                select box with the correct number of options..html">add_event
+                Toggle 24 hour mode and 12 hour mode
+                Checks if the 24-Hour checkbox is checked then populates the
+                select box with the correct number of options.</a></li>
                                 <li><a href="../modules/addEvent.html">addEvent</a></li>
                                 <li><a href="../modules/adminMode.html">adminMode</a></li>
                                 <li><a href="../modules/attendee.html">attendee</a></li>
@@ -58,6 +65,7 @@
                                 <li><a href="../modules/global.html">global</a></li>
                                 <li><a href="../modules/linkedlist.html">linkedlist</a></li>
                                 <li><a href="../modules/meetin.html">meetin</a></li>
+                                <li><a href="../modules/meeting.html">meeting</a></li>
                                 <li><a href="../modules/user.html">user</a></li>
                                 <li><a href="../modules/user_availability.html">user_availability</a></li>
                             </ul>
@@ -107,6 +115,7 @@
 
 
 /**
+ * @module add_event
  * Toggle 24 hour mode and 12 hour mode
  * Checks if the 24-Hour checkbox is checked then populates the
  * select box with the correct number of options.
@@ -121,9 +130,10 @@
 var lastName = &#x27;&#x27;;
 var firstName = &#x27;&#x27;;
 
-/** Sets the username
- * @method setName
- */
+/**
+*Sets the name for the user
+*@method setName()
+*/
 function setName(){
   var name = sessionStorage.getItem(&quot;userName&quot;);
   console.log(&quot;DEBUG &quot;+ name);
@@ -174,8 +184,13 @@ function timeSwitcher(){
 }
 
 /**
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
  * addAMPM select box
  *@method addAMPM
+=======
+ *addAMPM select box
+ *@method addAMPM()
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 010f31a54292dc8059f7561942a9701ef5c42d7d
  */
 function addAMPM(){
     document.getElementById(&quot;ampm&quot;).style.visibility=&quot;&quot;;
@@ -184,7 +199,11 @@ function addAMPM(){
 }
 
 /**
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
  *  Remove AMPM select box
+=======
+ *Remove AMPM select box
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 010f31a54292dc8059f7561942a9701ef5c42d7d
  *@method removeAMPM()
  */
  function removeAMPM(){
@@ -197,7 +216,11 @@ function addAMPM(){
 /**
  * populates the select box with the correct number of hours
  *@method populateHours()
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
  * 
+=======
+ *
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 010f31a54292dc8059f7561942a9701ef5c42d7d
  * @param {number} mode - sets the mode for the select box
  *      23 for 24-Hour mode and 12 for 12-Hour mode.
  * @param {number} i - sets the number for the select box to
@@ -205,6 +228,7 @@ function addAMPM(){
  *      5 for 24-Hour mode.
  * @param {string} id - This is the element id of the select
  *      box you would like to populate.
+ *@param {string} ampmID
  */
  function populateHours(mode,i,id,ampmID) {
 
@@ -244,7 +268,11 @@ function addAMPM(){
 
 
 /**
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
  *  unpopulates this given select box
+=======
+ * unpopulates this given select box
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 010f31a54292dc8059f7561942a9701ef5c42d7d
  * @method unpopulateHour()
  * @param {string} id - This is the element id of the select
  *      box you would like to populate.
@@ -260,9 +288,10 @@ function unpopulateHour(id){
 }
 
 
-/** @method submitVals() Submits user values for title, date, and time then
-*   checks if the values are valid. If so, the page is redirected. Otherwise,
-*   it is refreshed.*/
+/**Submits user values for title, date, and time then checks if the values are valid.
+* If so, the page is redirected. Otherwise, it is refreshed.
+* @method submitVals()
+*/
 
 function submitVals()  {
   var eventTitle = document.getElementById(&quot;event&quot;).value;
@@ -374,7 +403,18 @@ function submitVals()  {
 
 
 
-/**@method isInvalidDate() Checks to see if the date can be used or not*/
+/**
+* Checks to see if the date can be used or not
+* @method isInvalidDate()
+* @param {number} month
+* @param {number} day
+* @param {number} year
+* @param {date} inputDate
+* @param {date} currentDate
+* @param {number} length
+* @param {number} strthour
+* @param {number} endhour
+*/
 function isInvalidDate(month, day, year, inputDate, currentDate, length, strthour, endhour)
 {
   /**console.log(strthour);
@@ -465,9 +505,13 @@ function isInvalidDate(month, day, year, inputDate, currentDate, length, strthou
 
 
 
-/** @method redirect() Redirects the page according to if date is invalid
+/**
+*Redirects the page according to if date is invalid
 *    If the date is bad, it will refresh the page,
-*    otherwise it will redirect to events.html*/
+*    otherwise it will redirect to events.html
+* @method redirect()
+*@param {bool} badDate
+*/
 function redirect(badDate)
 {
     if(badDate == true)

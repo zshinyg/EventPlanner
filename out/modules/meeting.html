@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>user.js</title>
+    <title>meeting</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -101,101 +101,38 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-<h1 class="file-heading">File: user.js</h1>
-
-<div class="file">
-    <pre class="code prettyprint linenums">
-/**
- * @module user
- * @class   user
- */
+<h1>meeting Module</h1>
+<div class="box clearfix meta">
 
 
+        <div class="foundat">
+            Defined in: <a href="../files/meeting.js.html#l1"><code>meeting.js:1</code></a>
+        </div>
+
+</div>
 
 
-// USER.JS
-//
-// JavaScirpt file that accompanies user.html
-//
-// Has the user select from a drop down menu of people
-// If their name is not listed, user has the option to add their name
-// Clicks continue to move on to add availability
-
-function submitName()  {
-    var firstName = document.getElementById(&quot;userFirstName&quot;).value;
-    var lastName = document.getElementById(&quot;userLastName&quot;).value;
-
-    firstName = firstName.trim();
-    lastName =lastName.trim();
-
-    if(firstName == &quot;&quot; || lastName == &quot;&quot;){
-        alert(&quot;Invalid Name&quot;)
-        return;
-    }
-
-    console.log(&quot;second print all&quot;);
-    masterUser.printAll();
-    var person = new attendee(lastName,firstName);
-    masterUser.add(person);
-    var arr = userArray(masterUser);
-    writeData(arr, 2, &quot;masterUser&quot;);
-
-    populateUserSelect(&quot;userName&quot;);
-
-
-}
-
-function populateUserSelect(id) {
-
-    window.masterUser = populateUser(&quot;masterUser&quot;);
-    unpopulateNames();
-    var docfrag = document.createDocumentFragment();
-    console.log(&quot;before the loop&quot;);
-    window.masterUser.printAll();
-      for(var i = 0; i &lt; masterUser.size; i++){
-
-          //Get the node at index i from masterUser
-
-          var node = masterUser.returnAt(i);
-          var name = node.data.firstName  + &#x27; &#x27; + node.data.lastName;
-          //console.log(name);
-
-          docfrag.appendChild(new Option(name));
-
-
-      }
-
-
-  var select = document.getElementById(id);
-  select.appendChild(docfrag);
-
-}
-
-
-function unpopulateNames(){
-
-    var names = document.getElementById(&quot;userName&quot;);
-
-    for( var i = 0; i &lt; masterUser.size; i++){
-        names.remove(names.i);
-    }
-
-}
-
-
-function addAvailability(){
-
-  var name = document.getElementById(&quot;userName&quot;).value;
-  sessionStorage.setItem(&quot;userName&quot;, name);
-
-}
-
-
-function nextPage() {
+<div class="box intro">
     
-}
+</div>
 
-    </pre>
+
+<div class="yui3-g">
+    <div class="yui3-u-1-2">
+            <p>This module provides the following classes:</p>
+
+            <ul class="module-classes">
+                <li class="module-class">
+                    <a href="../classes/meeting.html">
+                        meeting
+                    </a>
+                </li>
+            </ul>
+    </div>
+
+
+    <div class="yui3-u-1-2">
+    </div>
 </div>
                     </div>
                 </div>
