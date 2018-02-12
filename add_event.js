@@ -8,6 +8,7 @@
 
 
 /**
+ * @module add_event
  * Toggle 24 hour mode and 12 hour mode
  * Checks if the 24-Hour checkbox is checked then populates the
  * select box with the correct number of options.
@@ -22,9 +23,10 @@
 var lastName = '';
 var firstName = '';
 
-/** Sets the username
- * @method setName
- */
+/**
+*Sets the name for the user
+*@method setName()
+*/
 function setName(){
   var name = sessionStorage.getItem("userName");
   console.log("DEBUG "+ name);
@@ -75,8 +77,13 @@ function timeSwitcher(){
 }
 
 /**
+<<<<<<< HEAD
  * addAMPM select box
  *@method addAMPM
+=======
+ *addAMPM select box
+ *@method addAMPM()
+>>>>>>> 010f31a54292dc8059f7561942a9701ef5c42d7d
  */
 function addAMPM(){
     document.getElementById("ampm").style.visibility="";
@@ -85,7 +92,11 @@ function addAMPM(){
 }
 
 /**
+<<<<<<< HEAD
  *  Remove AMPM select box
+=======
+ *Remove AMPM select box
+>>>>>>> 010f31a54292dc8059f7561942a9701ef5c42d7d
  *@method removeAMPM()
  */
  function removeAMPM(){
@@ -98,7 +109,11 @@ function addAMPM(){
 /**
  * populates the select box with the correct number of hours
  *@method populateHours()
+<<<<<<< HEAD
  * 
+=======
+ *
+>>>>>>> 010f31a54292dc8059f7561942a9701ef5c42d7d
  * @param {number} mode - sets the mode for the select box
  *      23 for 24-Hour mode and 12 for 12-Hour mode.
  * @param {number} i - sets the number for the select box to
@@ -106,6 +121,7 @@ function addAMPM(){
  *      5 for 24-Hour mode.
  * @param {string} id - This is the element id of the select
  *      box you would like to populate.
+ *@param {string} ampmID
  */
  function populateHours(mode,i,id,ampmID) {
 
@@ -145,7 +161,11 @@ function addAMPM(){
 
 
 /**
+<<<<<<< HEAD
  *  unpopulates this given select box
+=======
+ * unpopulates this given select box
+>>>>>>> 010f31a54292dc8059f7561942a9701ef5c42d7d
  * @method unpopulateHour()
  * @param {string} id - This is the element id of the select
  *      box you would like to populate.
@@ -161,9 +181,10 @@ function unpopulateHour(id){
 }
 
 
-/** @method submitVals() Submits user values for title, date, and time then
-*   checks if the values are valid. If so, the page is redirected. Otherwise,
-*   it is refreshed.*/
+/**Submits user values for title, date, and time then checks if the values are valid.
+* If so, the page is redirected. Otherwise, it is refreshed.
+* @method submitVals()
+*/
 
 function submitVals()  {
   var eventTitle = document.getElementById("event").value;
@@ -275,7 +296,18 @@ function submitVals()  {
 
 
 
-/**@method isInvalidDate() Checks to see if the date can be used or not*/
+/**
+* Checks to see if the date can be used or not
+* @method isInvalidDate()
+* @param {number} month
+* @param {number} day
+* @param {number} year
+* @param {date} inputDate
+* @param {date} currentDate
+* @param {number} length
+* @param {number} strthour
+* @param {number} endhour
+*/
 function isInvalidDate(month, day, year, inputDate, currentDate, length, strthour, endhour)
 {
   /**console.log(strthour);
@@ -366,9 +398,13 @@ function isInvalidDate(month, day, year, inputDate, currentDate, length, strthou
 
 
 
-/** @method redirect() Redirects the page according to if date is invalid
+/**
+*Redirects the page according to if date is invalid
 *    If the date is bad, it will refresh the page,
-*    otherwise it will redirect to events.html*/
+*    otherwise it will redirect to events.html
+* @method redirect()
+*@param {bool} badDate
+*/
 function redirect(badDate)
 {
     if(badDate == true)

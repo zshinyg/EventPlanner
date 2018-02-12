@@ -13,6 +13,9 @@
 var lastName = '';
 var firstName = '';
 
+/**
+ * Sets the username for the user
+ */
 function setName(){
   var name = sessionStorage.getItem("userName");
   var i = 0;
@@ -28,6 +31,14 @@ function setName(){
     //console.log("this is the name now: " + window.firstName  + ' ' + window.lastName);
 }
 
+
+/**
+ * Adds the event to the Event Table
+ * 
+ * @param {string} title 
+ * @param {string} date 
+ * @param {string} time 
+ */
 function addRow(title, date, time) {
 
     var table = document.getElementById("eventTable")
@@ -50,9 +61,9 @@ function addRow(title, date, time) {
 
 }
 
-
-
-
+/**
+ * Loads the events from the list and shows which ones are available to the user
+ */
 function loadEvents(){
 
   var month = '';
@@ -82,7 +93,9 @@ function loadEvents(){
   }
 
 
-  // Check to see what events the user is going to
+  /**
+   * Check to see what events the user is going to
+   */
   var checkBoxArray = document.getElementById("eventTable").getElementsByTagName("INPUT");
 
   for (var i = 0; i < masterEvent.size; i++){
@@ -104,8 +117,9 @@ function loadEvents(){
   }
 }
 
-
-
+/**
+ * Adds user to the event they have chosen for their availability
+ */
 function submit(){
 
   //console.log("inside submit");
@@ -117,16 +131,20 @@ function submit(){
   }
 
 
-// Here we keep track of which events had a check by there name
-// Next thing to do is write to file (filename being that event)
-// that the person who is logged in is attending
+/** 
+ * Here we keep track of which events had a check by there name
+ * Next thing to do is write to file (filename being that event)
+ * that the person who is logged in is attending
+ */
   for (var i = 0; i < checkBoxArray.length; i++){
     if (checkBoxArray[i].checked == true){
 
       console.log(checkBoxArray[i]);
       checkBoxArray[i].hidden = "true";
 
-      // Populate the list of that event
+      /**
+       *  Populate the list of that event
+       */
       var eventTitle = nameArray[i].textContent;
       var list = populateUser(eventTitle);
       var attending = list.search(window.lastName);
@@ -135,11 +153,17 @@ function submit(){
       }
 
       else {
-      // create a new attendee with the user logged in
+      /**
+       *  create a new attendee with the user logged in
+       */
       var person = new attendee(window.lastName, window.firstName);
-      // add the person to the list
+      /**
+       *  add the person to the list
+       */
       list.add(person);
-      // write the list to file
+      /**
+       *  write the list to file
+       */
       var tempArr = userArray(list);
       writeData(tempArr, 2, eventTitle);
     }
