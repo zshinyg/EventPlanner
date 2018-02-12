@@ -1,3 +1,11 @@
+/**
+ * @module linkedlist
+ * @class   linkedlist
+ */
+
+
+
+
 // linkedlist.js
 //
 // LinkedList consisting of type nodes

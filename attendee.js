@@ -1,3 +1,11 @@
+/**
+ * @module attendee
+ * @class attendnee
+ *  
+ */
+
+
+
 // ATTENDEE.JS
 //
 // CLASS FOR STORING INFORMATION ON EACH ATENDEE OF AN EVENT

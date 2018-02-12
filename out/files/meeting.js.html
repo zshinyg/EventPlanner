@@ -38,10 +38,28 @@
                 
                         <div id="api-tabview-panel">
                             <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/addEvent.html">addEvent</a></li>
+                                <li><a href="../classes/adminMode.html">adminMode</a></li>
+                                <li><a href="../classes/attendnee.html">attendnee</a></li>
+                                <li><a href="../classes/dataIO.html">dataIO</a></li>
+                                <li><a href="../classes/global.html">global</a></li>
+                                <li><a href="../classes/linkedlist.html">linkedlist</a></li>
+                                <li><a href="../classes/meeting.html">meeting</a></li>
+                                <li><a href="../classes/user.html">user</a></li>
+                                <li><a href="../classes/user_availability.html">user_availability</a></li>
                             </ul>
                 
                 
                             <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/addEvent.html">addEvent</a></li>
+                                <li><a href="../modules/adminMode.html">adminMode</a></li>
+                                <li><a href="../modules/attendee.html">attendee</a></li>
+                                <li><a href="../modules/dataIO.html">dataIO</a></li>
+                                <li><a href="../modules/global.html">global</a></li>
+                                <li><a href="../modules/linkedlist.html">linkedlist</a></li>
+                                <li><a href="../modules/meetin.html">meetin</a></li>
+                                <li><a href="../modules/user.html">user</a></li>
+                                <li><a href="../modules/user_availability.html">user_availability</a></li>
                             </ul>
                         </div>
                     </div>
@@ -79,15 +97,27 @@
 
 <div class="file">
     <pre class="code prettyprint linenums">
+/**
+ * @module meetin
+ * @class   meeting
+ */
+
+
+
+
+
+
 /**event.js
 *@constructor
 *THE NAME OF THE EVENT IS TAKEN AT CONSTRUCTION TIME
 *
-*STRING VARIALBE:
-*         TITLE
-*INTEGER VARIABLES:
-*         Date, Length
-*HAS A LINKED LIST
+*@param {string} title
+*
+*@param {number} length
+*
+*@param {date} date
+*
+*@param {linkedlist} list
 *
 *IMPORTANT:
 *         ALL HOURS ARE STORED IN 24 HOUR FORMAT FROM 0-23
@@ -101,7 +131,7 @@ function meeting (title, date, length) {
 
 
 /**ADD ATTENDEE
-*@method Takes in a first name and a last name
+*@method add() Takes in a first name and a last name
 *creates a new attendee, and adds it to the list.
 */
 meeting.prototype.add = function (lastName, firstName){
@@ -114,7 +144,7 @@ meeting.prototype.add = function (lastName, firstName){
 
 
 /**VALUE OF
-*@method Allows for comparison of events by date.
+*@method valueOf() Allows for comparison of events by date.
 */
 meeting.prototype.valueOf = function () {
   return this.date.getTime();

@@ -3,84 +3,415 @@
     "files": {
         "add_event.js": {
             "name": "add_event.js",
-            "modules": {},
-            "classes": {},
+            "modules": {
+                "addEvent": 1
+            },
+            "classes": {
+                "addEvent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "adminMode.js": {
+            "name": "adminMode.js",
+            "modules": {
+                "adminMode": 1
+            },
+            "classes": {
+                "adminMode": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "attendee.js": {
+            "name": "attendee.js",
+            "modules": {
+                "attendee": 1
+            },
+            "classes": {
+                "attendnee": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "dataIO.js": {
             "name": "dataIO.js",
-            "modules": {},
-            "classes": {},
+            "modules": {
+                "dataIO": 1
+            },
+            "classes": {
+                "dataIO": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "global.js": {
+            "name": "global.js",
+            "modules": {
+                "global": 1
+            },
+            "classes": {
+                "global": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "linkedlist.js": {
+            "name": "linkedlist.js",
+            "modules": {
+                "linkedlist": 1
+            },
+            "classes": {
+                "linkedlist": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "meeting.js": {
             "name": "meeting.js",
-            "modules": {},
-            "classes": {},
+            "modules": {
+                "meetin": 1
+            },
+            "classes": {
+                "meeting": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "user.js": {
+            "name": "user.js",
+            "modules": {
+                "user": 1
+            },
+            "classes": {
+                "user": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "user_availability.js": {
             "name": "user_availability.js",
-            "modules": {},
-            "classes": {},
+            "modules": {
+                "user_availability": 1
+            },
+            "classes": {
+                "user_availability": 1
+            },
             "fors": {},
             "namespaces": {}
         }
     },
-    "modules": {},
-    "classes": {},
+    "modules": {
+        "addEvent": {
+            "name": "addEvent",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "addEvent": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "add_event.js",
+            "line": 1
+        },
+        "adminMode": {
+            "name": "adminMode",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "adminMode": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "adminMode.js",
+            "line": 1
+        },
+        "attendee": {
+            "name": "attendee",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "attendnee": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "attendee.js",
+            "line": 1
+        },
+        "dataIO": {
+            "name": "dataIO",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "dataIO": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "dataIO.js",
+            "line": 1
+        },
+        "global": {
+            "name": "global",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "global": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "global.js",
+            "line": 1
+        },
+        "linkedlist": {
+            "name": "linkedlist",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "linkedlist": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "linkedlist.js",
+            "line": 1
+        },
+        "meetin": {
+            "name": "meetin",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "meeting": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "meeting.js",
+            "line": 1
+        },
+        "user": {
+            "name": "user",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "user": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "user.js",
+            "line": 1
+        },
+        "user_availability": {
+            "name": "user_availability",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "user_availability": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "user_availability.js",
+            "line": 1
+        }
+    },
+    "classes": {
+        "addEvent": {
+            "name": "addEvent",
+            "shortname": "addEvent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "addEvent",
+            "namespace": "",
+            "file": "add_event.js",
+            "line": 1
+        },
+        "adminMode": {
+            "name": "adminMode",
+            "shortname": "adminMode",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "adminMode",
+            "namespace": "",
+            "file": "adminMode.js",
+            "line": 1
+        },
+        "attendnee": {
+            "name": "attendnee",
+            "shortname": "attendnee",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "attendee",
+            "namespace": "",
+            "file": "attendee.js",
+            "line": 1
+        },
+        "dataIO": {
+            "name": "dataIO",
+            "shortname": "dataIO",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "dataIO",
+            "namespace": "",
+            "file": "dataIO.js",
+            "line": 1
+        },
+        "global": {
+            "name": "global",
+            "shortname": "global",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "global",
+            "namespace": "",
+            "file": "global.js",
+            "line": 1
+        },
+        "linkedlist": {
+            "name": "linkedlist",
+            "shortname": "linkedlist",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "linkedlist",
+            "namespace": "",
+            "file": "linkedlist.js",
+            "line": 1
+        },
+        "meeting": {
+            "name": "meeting",
+            "shortname": "meeting",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "meetin",
+            "namespace": "",
+            "file": "meeting.js",
+            "line": 1
+        },
+        "user": {
+            "name": "user",
+            "shortname": "user",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "user",
+            "namespace": "",
+            "file": "user.js",
+            "line": 1
+        },
+        "user_availability": {
+            "name": "user_availability",
+            "shortname": "user_availability",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "user_availability",
+            "namespace": "",
+            "file": "user_availability.js",
+            "line": 1
+        }
+    },
     "elements": {},
     "classitems": [
         {
             "file": "add_event.js",
-            "line": 4,
-            "description": "Toggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options.",
-            "class": ""
-        },
-        {
-            "file": "add_event.js",
             "line": 10,
-            "class": ""
+            "description": "Toggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options.",
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 13,
-            "class": ""
+            "line": 16,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
             "line": 19,
-            "class": ""
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 33,
-            "class": ""
+            "line": 25,
+            "itemtype": "method",
+            "name": "setName",
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 40,
-            "class": ""
+            "line": 41,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 66,
+            "line": 45,
+            "itemtype": "method",
+            "name": "timeSwitcher",
+            "class": "addEvent",
+            "module": "addEvent"
+        },
+        {
+            "file": "add_event.js",
+            "line": 51,
+            "class": "addEvent",
+            "module": "addEvent"
+        },
+        {
+            "file": "add_event.js",
+            "line": 77,
             "description": "addAMPM select box",
-            "class": ""
+            "itemtype": "method",
+            "name": "addAMPM",
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 75,
+            "line": 87,
             "description": "Remove AMPM select box",
-            "class": ""
+            "itemtype": "method",
+            "name": "removeAMPM()",
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 85,
+            "line": 98,
             "description": "populates the select box with the correct number of hours",
+            "itemtype": "method",
+            "name": "populateHours()",
             "params": [
                 {
                     "name": "mode",
@@ -98,200 +429,317 @@
                     "type": "String"
                 }
             ],
-            "class": ""
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 99,
-            "class": ""
+            "line": 114,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 108,
-            "class": ""
+            "line": 123,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 132,
+            "line": 147,
             "description": "unpopulates this given select box",
+            "itemtype": "method",
+            "name": "unpopulateHour()",
             "params": [
                 {
                     "name": "id",
-                    "description": "- This is the element id of the select\n     box you would like to populate.",
+                    "description": "- This is the element id of the select\n    box you would like to populate.",
                     "type": "String"
                 }
             ],
-            "class": ""
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 155,
+            "line": 164,
+            "description": "checks if the values are valid. If so, the page is redirected. Otherwise,",
+            "class": "addEvent",
+            "module": "addEvent"
+        },
+        {
+            "file": "add_event.js",
+            "line": 172,
             "description": "0123456789",
-            "class": ""
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 177,
-            "class": ""
+            "line": 194,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 179,
-            "class": ""
+            "line": 196,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 181,
+            "line": 198,
             "description": "FOR STORING THE TIME IN 24 HOUR MODE",
-            "class": ""
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 185,
-            "class": ""
+            "line": 202,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 203,
+            "line": 220,
             "description": "console.log(\"Event name: \"+ eventTitle);\nconsole.log(\"Date: \" + month + \"/\" + day + \"/\" + year);\nconsole.log(\"Start time: \"+strthour + \":\"+strtmin);",
-            "class": ""
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 211,
-            "class": ""
+            "line": 228,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 218,
-            "class": ""
-        },
-        {
-            "file": "add_event.js",
-            "line": 221,
-            "class": ""
-        },
-        {
-            "file": "add_event.js",
-            "line": 226,
-            "class": ""
-        },
-        {
-            "file": "add_event.js",
-            "line": 232,
-            "class": ""
+            "line": 235,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
             "line": 238,
-            "class": ""
-        },
-        {
-            "file": "add_event.js",
-            "line": 241,
-            "class": ""
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
             "line": 243,
-            "class": ""
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 261,
-            "class": ""
+            "line": 249,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 264,
-            "description": "console.log(endhour);",
-            "class": ""
+            "line": 255,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 272,
-            "class": ""
+            "line": 258,
+            "class": "addEvent",
+            "module": "addEvent"
+        },
+        {
+            "file": "add_event.js",
+            "line": 260,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
             "line": 278,
-            "class": ""
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 284,
-            "class": ""
+            "line": 281,
+            "description": "console.log(endhour);",
+            "class": "addEvent",
+            "module": "addEvent"
+        },
+        {
+            "file": "add_event.js",
+            "line": 285,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
             "line": 290,
-            "class": ""
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
             "line": 296,
-            "class": ""
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 301,
-            "class": ""
+            "line": 302,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 307,
-            "class": ""
+            "line": 308,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
             "line": 313,
-            "class": ""
+            "class": "addEvent",
+            "module": "addEvent"
+        },
+        {
+            "file": "add_event.js",
+            "line": 315,
+            "class": "addEvent",
+            "module": "addEvent"
+        },
+        {
+            "file": "add_event.js",
+            "line": 318,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
             "line": 321,
-            "class": ""
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 328,
-            "class": ""
+            "line": 327,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 334,
-            "class": ""
+            "line": 333,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 340,
-            "class": ""
+            "line": 341,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
             "line": 348,
+            "class": "addEvent",
+            "module": "addEvent"
+        },
+        {
+            "file": "add_event.js",
+            "line": 354,
+            "class": "addEvent",
+            "module": "addEvent"
+        },
+        {
+            "file": "add_event.js",
+            "line": 358,
+            "class": "addEvent",
+            "module": "addEvent"
+        },
+        {
+            "file": "add_event.js",
+            "line": 361,
+            "class": "addEvent",
+            "module": "addEvent"
+        },
+        {
+            "file": "add_event.js",
+            "line": 369,
             "description": "If the date is bad, it will refresh the page,",
-            "class": ""
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 355,
-            "class": ""
+            "line": 376,
+            "class": "addEvent",
+            "module": "addEvent"
         },
         {
             "file": "add_event.js",
-            "line": 360,
-            "class": ""
+            "line": 381,
+            "class": "addEvent",
+            "module": "addEvent"
+        },
+        {
+            "file": "adminMode.js",
+            "line": 7,
+            "description": "Populates the events to see which events can be selected",
+            "class": "adminMode",
+            "module": "adminMode"
+        },
+        {
+            "file": "adminMode.js",
+            "line": 20,
+            "description": "Get the node at index i from masterEvent",
+            "class": "adminMode",
+            "module": "adminMode"
+        },
+        {
+            "file": "adminMode.js",
+            "line": 39,
+            "description": "Removes the events when page is reloaded",
+            "class": "adminMode",
+            "module": "adminMode"
+        },
+        {
+            "file": "adminMode.js",
+            "line": 52,
+            "description": "Adds the attendee to the Attendee Table",
+            "class": "adminMode",
+            "module": "adminMode"
+        },
+        {
+            "file": "adminMode.js",
+            "line": 68,
+            "description": "Populates the Attendee Table to see who is attending",
+            "class": "adminMode",
+            "module": "adminMode"
+        },
+        {
+            "file": "adminMode.js",
+            "line": 92,
+            "description": "Removes the Attendee Table when page is reloaded",
+            "class": "adminMode",
+            "module": "adminMode"
         },
         {
             "file": "dataIO.js",
-            "line": 6,
-            "func": ": writeData(array to save, number of offset, name)",
+            "line": 13,
+            "func": "writeData(array,offset,name)",
             "params": [
                 {
-                    "name": "UNKNOWN",
-                    "description": "array: values to store are saved in with an offset\n   offset: # of values saved per item\n   name: name of value",
-                    "type": "Array, num, string"
+                    "name": "array",
+                    "description": ""
+                },
+                {
+                    "name": "num",
+                    "description": ""
+                },
+                {
+                    "name": "name",
+                    "description": "array: values to store are saved in with an offset\n   offset: # of values saved per item\n   name: name of value"
                 }
             ],
             "example": [
@@ -300,11 +748,12 @@
             "return": {
                 "description": "null"
             },
-            "class": ""
+            "class": "dataIO",
+            "module": "dataIO"
         },
         {
             "file": "dataIO.js",
-            "line": 67,
+            "line": 76,
             "func": "readData(name)",
             "params": [
                 {
@@ -318,11 +767,12 @@
             "return": {
                 "description": "array"
             },
-            "class": ""
+            "class": "dataIO",
+            "module": "dataIO"
         },
         {
             "file": "dataIO.js",
-            "line": 130,
+            "line": 139,
             "func": "readEventData(name)",
             "params": [
                 {
@@ -336,11 +786,12 @@
             "return": {
                 "description": "array formated as such\n [title, date, length,...]"
             },
-            "class": ""
+            "class": "dataIO",
+            "module": "dataIO"
         },
         {
             "file": "dataIO.js",
-            "line": 185,
+            "line": 194,
             "func": "eventArray(list)",
             "params": [
                 {
@@ -354,45 +805,47 @@
             "return": {
                 "description": ": (array)"
             },
-            "class": ""
+            "class": "dataIO",
+            "module": "dataIO"
         },
         {
             "file": "dataIO.js",
-            "line": 213,
+            "line": 222,
             "func": "userArray()\ntakes in a list of users and changes it to array",
             "params": [
                 {
-                    "name": "(list)",
+                    "name": "list",
                     "description": ""
                 }
             ],
             "example": [
-                " //userArray(masterUser)"
+                " userArray(masterUser)"
             ],
             "return": {
                 "description": "array"
             },
-            "class": ""
+            "class": "dataIO",
+            "module": "dataIO"
         },
         {
             "file": "dataIO.js",
-            "line": 235,
+            "line": 244,
             "func": "populateEvent()",
             "params": [
                 {
                     "name": "none",
-                    "description": "",
-                    "optional": true
+                    "description": ""
                 }
             ],
             "return": {
                 "description": "null"
             },
-            "class": ""
+            "class": "dataIO",
+            "module": "dataIO"
         },
         {
             "file": "dataIO.js",
-            "line": 265,
+            "line": 274,
             "itemtype": "method",
             "name": "populateUser(name)",
             "params": [
@@ -401,83 +854,116 @@
                     "description": ""
                 }
             ],
-            "class": ""
+            "return": {
+                "description": "list"
+            },
+            "class": "dataIO",
+            "module": "dataIO"
+        },
+        {
+            "file": "global.js",
+            "line": 20,
+            "global": "lists for keeping track of\n        all users and all events",
+            "class": "global",
+            "module": "global"
         },
         {
             "file": "meeting.js",
-            "line": 1,
+            "line": 11,
             "is_constructor": 1,
-            "class": ""
+            "params": [
+                {
+                    "name": "title",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "length",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "date",
+                    "description": "",
+                    "type": "Date"
+                },
+                {
+                    "name": "list\n\nIMPORTANT:",
+                    "description": "ALL HOURS ARE STORED IN 24 HOUR FORMAT FROM 0-23",
+                    "type": "Linkedlist"
+                }
+            ],
+            "class": "meeting",
+            "module": "meetin"
         },
         {
             "file": "meeting.js",
-            "line": 22,
+            "line": 34,
             "itemtype": "method",
-            "name": "Takes in a first name and a last name\ncreates a new attendee, and adds it to the list.",
-            "class": ""
+            "name": "add() Takes in a first name and a last name\ncreates a new attendee, and adds it to the list.",
+            "class": "meeting",
+            "module": "meetin"
         },
         {
             "file": "meeting.js",
-            "line": 35,
+            "line": 47,
             "itemtype": "method",
-            "name": "Allows for comparison of events by date.",
-            "class": ""
+            "name": "valueOf() Allows for comparison of events by date.",
+            "class": "meeting",
+            "module": "meetin"
         },
         {
             "file": "user_availability.js",
-            "line": 1,
+            "line": 9,
             "description": "Adds a row to the table on user_availabilty.html. This will\nbe used to add the given events to the table.",
-            "class": ""
+            "class": "user_availability",
+            "module": "user_availability"
         }
     ],
     "warnings": [
         {
             "message": "unknown tag: func",
-            "line": " dataIO.js:6"
-        },
-        {
-            "message": "param name missing: {array, num, string}\n   array: values to store are saved in with an offset\n   offset: # of values saved per item\n   name: name of value",
-            "line": " dataIO.js:6"
+            "line": " dataIO.js:13"
         },
         {
             "message": "unknown tag: func",
-            "line": " dataIO.js:67"
+            "line": " dataIO.js:76"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " dataIO.js:67"
+            "line": " dataIO.js:76"
         },
         {
             "message": "unknown tag: func",
-            "line": " dataIO.js:130"
+            "line": " dataIO.js:139"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " dataIO.js:130"
+            "line": " dataIO.js:139"
         },
         {
             "message": "unknown tag: func",
-            "line": " dataIO.js:185"
+            "line": " dataIO.js:194"
         },
         {
             "message": "unknown tag: func",
-            "line": " dataIO.js:213"
+            "line": " dataIO.js:222"
         },
         {
             "message": "unknown tag: func",
-            "line": " dataIO.js:235"
+            "line": " dataIO.js:244"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " dataIO.js:274"
         },
         {
             "message": "Missing item type\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options.",
-            "line": " add_event.js:4"
-        },
-        {
-            "message": "Missing item type",
             "line": " add_event.js:10"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:13"
+            "line": " add_event.js:16"
         },
         {
             "message": "Missing item type",
@@ -485,79 +971,55 @@
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:33"
+            "line": " add_event.js:41"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:40"
-        },
-        {
-            "message": "Missing item type\naddAMPM select box",
-            "line": " add_event.js:66"
-        },
-        {
-            "message": "Missing item type\nRemove AMPM select box",
-            "line": " add_event.js:75"
-        },
-        {
-            "message": "Missing item type\npopulates the select box with the correct number of hours",
-            "line": " add_event.js:85"
+            "line": " add_event.js:51"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:99"
+            "line": " add_event.js:114"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:108"
+            "line": " add_event.js:123"
         },
         {
-            "message": "Missing item type\nunpopulates this given select box",
-            "line": " add_event.js:132"
+            "message": "Missing item type\nchecks if the values are valid. If so, the page is redirected. Otherwise,",
+            "line": " add_event.js:164"
         },
         {
             "message": "Missing item type\n0123456789",
-            "line": " add_event.js:155"
+            "line": " add_event.js:172"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:177"
+            "line": " add_event.js:194"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:179"
+            "line": " add_event.js:196"
         },
         {
             "message": "Missing item type\nFOR STORING THE TIME IN 24 HOUR MODE",
-            "line": " add_event.js:181"
+            "line": " add_event.js:198"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:185"
+            "line": " add_event.js:202"
         },
         {
             "message": "Missing item type\nconsole.log(\"Event name: \"+ eventTitle);\nconsole.log(\"Date: \" + month + \"/\" + day + \"/\" + year);\nconsole.log(\"Start time: \"+strthour + \":\"+strtmin);",
-            "line": " add_event.js:203"
+            "line": " add_event.js:220"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:211"
+            "line": " add_event.js:228"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:218"
-        },
-        {
-            "message": "Missing item type",
-            "line": " add_event.js:221"
-        },
-        {
-            "message": "Missing item type",
-            "line": " add_event.js:226"
-        },
-        {
-            "message": "Missing item type",
-            "line": " add_event.js:232"
+            "line": " add_event.js:235"
         },
         {
             "message": "Missing item type",
@@ -565,31 +1027,35 @@
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:241"
-        },
-        {
-            "message": "Missing item type",
             "line": " add_event.js:243"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:261"
-        },
-        {
-            "message": "Missing item type\nconsole.log(endhour);",
-            "line": " add_event.js:264"
+            "line": " add_event.js:249"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:272"
+            "line": " add_event.js:255"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:258"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:260"
         },
         {
             "message": "Missing item type",
             "line": " add_event.js:278"
         },
         {
+            "message": "Missing item type\nconsole.log(endhour);",
+            "line": " add_event.js:281"
+        },
+        {
             "message": "Missing item type",
-            "line": " add_event.js:284"
+            "line": " add_event.js:285"
         },
         {
             "message": "Missing item type",
@@ -601,11 +1067,11 @@
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:301"
+            "line": " add_event.js:302"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:307"
+            "line": " add_event.js:308"
         },
         {
             "message": "Missing item type",
@@ -613,63 +1079,115 @@
         },
         {
             "message": "Missing item type",
+            "line": " add_event.js:315"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:318"
+        },
+        {
+            "message": "Missing item type",
             "line": " add_event.js:321"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:328"
+            "line": " add_event.js:327"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:334"
+            "line": " add_event.js:333"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:340"
+            "line": " add_event.js:341"
         },
         {
-            "message": "Missing item type\nIf the date is bad, it will refresh the page,",
+            "message": "Missing item type",
             "line": " add_event.js:348"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:355"
+            "line": " add_event.js:354"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:360"
+            "line": " add_event.js:358"
         },
         {
             "message": "Missing item type",
-            "line": " dataIO.js:6"
+            "line": " add_event.js:361"
+        },
+        {
+            "message": "Missing item type\nIf the date is bad, it will refresh the page,",
+            "line": " add_event.js:369"
         },
         {
             "message": "Missing item type",
-            "line": " dataIO.js:67"
+            "line": " add_event.js:376"
         },
         {
             "message": "Missing item type",
-            "line": " dataIO.js:130"
+            "line": " add_event.js:381"
+        },
+        {
+            "message": "Missing item type\nPopulates the events to see which events can be selected",
+            "line": " adminMode.js:7"
+        },
+        {
+            "message": "Missing item type\nGet the node at index i from masterEvent",
+            "line": " adminMode.js:20"
+        },
+        {
+            "message": "Missing item type\nRemoves the events when page is reloaded",
+            "line": " adminMode.js:39"
+        },
+        {
+            "message": "Missing item type\nAdds the attendee to the Attendee Table",
+            "line": " adminMode.js:52"
+        },
+        {
+            "message": "Missing item type\nPopulates the Attendee Table to see who is attending",
+            "line": " adminMode.js:68"
+        },
+        {
+            "message": "Missing item type\nRemoves the Attendee Table when page is reloaded",
+            "line": " adminMode.js:92"
         },
         {
             "message": "Missing item type",
-            "line": " dataIO.js:185"
+            "line": " dataIO.js:13"
         },
         {
             "message": "Missing item type",
-            "line": " dataIO.js:213"
+            "line": " dataIO.js:76"
         },
         {
             "message": "Missing item type",
-            "line": " dataIO.js:235"
+            "line": " dataIO.js:139"
         },
         {
             "message": "Missing item type",
-            "line": " meeting.js:1"
+            "line": " dataIO.js:194"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dataIO.js:222"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dataIO.js:244"
+        },
+        {
+            "message": "Missing item type",
+            "line": " global.js:20"
+        },
+        {
+            "message": "Missing item type",
+            "line": " meeting.js:11"
         },
         {
             "message": "Missing item type\nAdds a row to the table on user_availabilty.html. This will\nbe used to add the given events to the table.",
-            "line": " user_availability.js:1"
+            "line": " user_availability.js:9"
         }
     ]
 }

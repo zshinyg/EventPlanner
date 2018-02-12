@@ -1,3 +1,9 @@
+/**
+ * @module global
+ * @class   global
+ */
+
+
 // TWO MASTER LISTS:
 //      masterEvent
 //      masterUser

@@ -1,3 +1,9 @@
+/**
+ * @module addEvent
+ * @class addEvent
+ */
+
+
 "use-strict"
 
 
@@ -16,7 +22,9 @@
 var lastName = '';
 var firstName = '';
 
-/**@method setName() Sets the name for the user */
+/** Sets the username
+ * @method setName
+ */
 function setName(){
   var name = sessionStorage.getItem("userName");
   console.log("DEBUG "+ name);
@@ -34,8 +42,10 @@ function setName(){
 }
 
 
-/** @method timeSwitcher() changes the times in selectbox based on
-*   whether the "24 hour" box is checked*/
+/**  changes the times in selectbox based on whether the "24 hour" box is checked 
+* @method timeSwitcher
+* 
+*/
 
 function timeSwitcher(){
     /**console.log("timeSwitcher Ran");*/
@@ -65,7 +75,8 @@ function timeSwitcher(){
 }
 
 /**
- *@method addAMPM() addAMPM select box
+ * addAMPM select box
+ *@method addAMPM
  */
 function addAMPM(){
     document.getElementById("ampm").style.visibility="";
@@ -74,7 +85,8 @@ function addAMPM(){
 }
 
 /**
- *@method removeAMPM() Remove AMPM select box
+ *  Remove AMPM select box
+ *@method removeAMPM()
  */
  function removeAMPM(){
      document.getElementById("ampm").style.visibility="hidden";
@@ -84,8 +96,9 @@ function addAMPM(){
 
 
 /**
- *@method populateHours()
  * populates the select box with the correct number of hours
+ *@method populateHours()
+ * 
  * @param {number} mode - sets the mode for the select box
  *      23 for 24-Hour mode and 12 for 12-Hour mode.
  * @param {number} i - sets the number for the select box to
@@ -132,7 +145,8 @@ function addAMPM(){
 
 
 /**
- * @method unpopulateHour() unpopulates this given select box
+ *  unpopulates this given select box
+ * @method unpopulateHour()
  * @param {string} id - This is the element id of the select
  *      box you would like to populate.
  */

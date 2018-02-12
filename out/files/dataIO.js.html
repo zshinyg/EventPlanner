@@ -38,10 +38,28 @@
                 
                         <div id="api-tabview-panel">
                             <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/addEvent.html">addEvent</a></li>
+                                <li><a href="../classes/adminMode.html">adminMode</a></li>
+                                <li><a href="../classes/attendnee.html">attendnee</a></li>
+                                <li><a href="../classes/dataIO.html">dataIO</a></li>
+                                <li><a href="../classes/global.html">global</a></li>
+                                <li><a href="../classes/linkedlist.html">linkedlist</a></li>
+                                <li><a href="../classes/meeting.html">meeting</a></li>
+                                <li><a href="../classes/user.html">user</a></li>
+                                <li><a href="../classes/user_availability.html">user_availability</a></li>
                             </ul>
                 
                 
                             <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/addEvent.html">addEvent</a></li>
+                                <li><a href="../modules/adminMode.html">adminMode</a></li>
+                                <li><a href="../modules/attendee.html">attendee</a></li>
+                                <li><a href="../modules/dataIO.html">dataIO</a></li>
+                                <li><a href="../modules/global.html">global</a></li>
+                                <li><a href="../modules/linkedlist.html">linkedlist</a></li>
+                                <li><a href="../modules/meetin.html">meetin</a></li>
+                                <li><a href="../modules/user.html">user</a></li>
+                                <li><a href="../modules/user_availability.html">user_availability</a></li>
                             </ul>
                         </div>
                     </div>
@@ -79,14 +97,23 @@
 
 <div class="file">
     <pre class="code prettyprint linenums">
+/**
+ * @module dataIO
+ * @class dataIO
+ */
+
+
+
 // WRITE DATA.JS
 
 
 
 
 /**FUNCTION WRITE writeData
-*@func: writeData(array to save, number of offset, name)
-*@param{array, num, string}
+*@func writeData(array,offset,name)
+*@param array
+*@param num
+*@param name
 *   array: values to store are saved in with an offset
 *   offset: # of values saved per item
 *   name: name of value
@@ -294,9 +321,9 @@ function eventArray (list){
 /**
 *@func userArray()
 *takes in a list of users and changes it to array
-*@param (list)
+*@param list
 *
-*@example //userArray(masterUser)
+*@example userArray(masterUser)
 *@return array
 */
 function userArray (list){
@@ -315,7 +342,7 @@ function userArray (list){
 
 /**
 *@func populateEvent()
-*@param [none]
+*@param none
 *@return null
 */
 
@@ -346,6 +373,7 @@ function populateEvent() {
 /**
 *@method populateUser(name)
 *@param string
+*@returns list
 */
 function populateUser(name) {
   // var listNumber=1;

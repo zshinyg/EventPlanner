@@ -1,3 +1,11 @@
+/**
+ * @module user
+ * @class   user
+ */
+
+
+
+
 // USER.JS
 //
 // JavaScirpt file that accompanies user.html

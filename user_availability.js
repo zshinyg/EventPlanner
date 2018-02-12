@@ -1,4 +1,12 @@
 /**
+ * @module user_availability
+ * @class   user_availability
+ */
+
+
+
+
+/**
  * Adds a row to the table on user_availabilty.html. This will
  * be used to add the given events to the table.
  */

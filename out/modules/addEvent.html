@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>user_availability.js</title>
+    <title>addEvent</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -93,160 +93,38 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-<h1 class="file-heading">File: user_availability.js</h1>
-
-<div class="file">
-    <pre class="code prettyprint linenums">
-/**
- * @module user_availability
- * @class   user_availability
- */
+<h1>addEvent Module</h1>
+<div class="box clearfix meta">
 
 
+        <div class="foundat">
+            Defined in: <a href="../files/add_event.js.html#l1"><code>add_event.js:1</code></a>
+        </div>
+
+</div>
 
 
-/**
- * Adds a row to the table on user_availabilty.html. This will
- * be used to add the given events to the table.
- */
-var lastName = &#x27;&#x27;;
-var firstName = &#x27;&#x27;;
-
-function setName(){
-  var name = sessionStorage.getItem(&quot;userName&quot;);
-  var i = 0;
-  while (name[i] != &#x27; &#x27;){
-      firstName += name[i];
-      i++;
-  }
-  i++;
-  while (i &lt; name.length){
-    lastName += name[i];
-    i++;
-  } // end while
-    //console.log(&quot;this is the name now: &quot; + window.firstName  + &#x27; &#x27; + window.lastName);
-}
-
-function addRow(title, date, time) {
-
-    var table = document.getElementById(&quot;eventTable&quot;)
-
-    tr = document.createElement(&#x27;tr&#x27;);
-    tr.appendChild(document.createElement(&#x27;td&#x27;));
-    tr.appendChild(document.createElement(&#x27;td&#x27;));
-    tr.appendChild(document.createElement(&#x27;td&#x27;));
-    tr.appendChild(document.createElement(&#x27;td&#x27;));
-
-    var checkbox = document.createElement(&quot;INPUT&quot;);
-    checkbox.type = &quot;checkbox&quot;;
-
-    tr.cells[0].appendChild(document.createTextNode(title));
-    tr.cells[1].appendChild(document.createTextNode(date));
-    tr.cells[2].appendChild( document.createTextNode(time) );
-    tr.cells[3].appendChild(checkbox);
-
-    table.appendChild(tr);
-
-}
+<div class="box intro">
+    
+</div>
 
 
+<div class="yui3-g">
+    <div class="yui3-u-1-2">
+            <p>This module provides the following classes:</p>
+
+            <ul class="module-classes">
+                <li class="module-class">
+                    <a href="../classes/addEvent.html">
+                        addEvent
+                    </a>
+                </li>
+            </ul>
+    </div>
 
 
-function loadEvents(){
-
-  var month = &#x27;&#x27;;
-  var year = &#x27;&#x27;;
-  var day = &#x27;&#x27;;
-  var date = &#x27;&#x27;;
-  var startHours =&#x27;&#x27;;
-  var startMin = &#x27;&#x27;;
-  var endHours = &#x27;&#x27;;
-  var endMin = &#x27;&#x27;;
-  var timeString = &#x27;&#x27;;
-  for (var i = 0; i &lt; masterEvent.size; i++){
-    var node = masterEvent.returnAt(i);
-    date = node.data.date;
-    month = date.getMonth() + 1;
-    year = date.getFullYear();
-    day = date.getDate();
-    startHours = date.getHours();
-    startMin = date.getMinutes();
-    endHours = Math.floor((node.data.len)/60) + startHours;
-    endMin = (node.data.len)%60;
-    timeString = startHours + &#x27;:&#x27; + startMin + &#x27; to &#x27; + endHours + &#x27;:&#x27; + endMin;
-    addRow(node.data.title, month+&#x27;/&#x27;+day+&#x27;/&#x27;+year,timeString);
-  }
-  if (masterEvent.size == 0){
-    document.getElementById(&quot;list&quot;).innerHTML = &quot;No events at this time&quot;;
-  }
-
-
-  // Check to see what events the user is going to
-  var checkBoxArray = document.getElementById(&quot;eventTable&quot;).getElementsByTagName(&quot;INPUT&quot;);
-
-  for (var i = 0; i &lt; masterEvent.size; i++){
-
-    var node = masterEvent.returnAt(i);
-    var eventTitle = node.data.title;
-    window[eventTitle] = populateUser(eventTitle);
-    var attending = window[eventTitle].search(lastName);
-
-    // console.log(&quot;print ALL in load users&quot;);
-    // window[eventTitle].printAll();
-
-
-    // console.log(&quot;Searching for: &quot; + lastName + &quot; in &quot; + eventTitle);
-    // console.log(&quot;attending = &quot; + attending);
-    if (attending){
-      checkBoxArray[i].hidden = true;
-    }
-  }
-}
-
-
-
-function submit(){
-
-  //console.log(&quot;inside submit&quot;);
-  var checkBoxArray = document.getElementById(&quot;eventTable&quot;).getElementsByTagName(&quot;INPUT&quot;);
-  var itemArray = document.getElementById(&quot;eventTable&quot;).getElementsByTagName(&quot;td&quot;);
-  var nameArray = new Array;
-  for (var i = 0; i &lt; itemArray.length; i+=4){
-    nameArray[i/4] = itemArray[i];
-  }
-
-
-// Here we keep track of which events had a check by there name
-// Next thing to do is write to file (filename being that event)
-// that the person who is logged in is attending
-  for (var i = 0; i &lt; checkBoxArray.length; i++){
-    if (checkBoxArray[i].checked == true){
-
-      console.log(checkBoxArray[i]);
-      checkBoxArray[i].hidden = &quot;true&quot;;
-
-      // Populate the list of that event
-      var eventTitle = nameArray[i].textContent;
-      var list = populateUser(eventTitle);
-      var attending = list.search(window.lastName);
-      if(attending != 0){
-        console.log(&quot;already in &quot; + eventTitle);
-      }
-
-      else {
-      // create a new attendee with the user logged in
-      var person = new attendee(window.lastName, window.firstName);
-      // add the person to the list
-      list.add(person);
-      // write the list to file
-      var tempArr = userArray(list);
-      writeData(tempArr, 2, eventTitle);
-    }
-    }
-  }
-}
-
-    </pre>
+    <div class="yui3-u-1-2">
+    </div>
 </div>
                     </div>
                 </div>

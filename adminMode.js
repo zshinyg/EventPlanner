@@ -1,4 +1,10 @@
 /**
+ * @module adminMode
+ * @class adminMode
+ */
+
+
+/**
 * Populates the events to see which events can be selected 
 */
 function populateEventSelect(id) {

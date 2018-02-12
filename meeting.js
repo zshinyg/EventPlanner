@@ -1,3 +1,13 @@
+/**
+ * @module meetin
+ * @class   meeting
+ */
+
+
+
+
+
+
 /**event.js
 *@constructor
 *THE NAME OF THE EVENT IS TAKEN AT CONSTRUCTION TIME

@@ -38,10 +38,28 @@
                 
                         <div id="api-tabview-panel">
                             <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/addEvent.html">addEvent</a></li>
+                                <li><a href="../classes/adminMode.html">adminMode</a></li>
+                                <li><a href="../classes/attendnee.html">attendnee</a></li>
+                                <li><a href="../classes/dataIO.html">dataIO</a></li>
+                                <li><a href="../classes/global.html">global</a></li>
+                                <li><a href="../classes/linkedlist.html">linkedlist</a></li>
+                                <li><a href="../classes/meeting.html">meeting</a></li>
+                                <li><a href="../classes/user.html">user</a></li>
+                                <li><a href="../classes/user_availability.html">user_availability</a></li>
                             </ul>
                 
                 
                             <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/addEvent.html">addEvent</a></li>
+                                <li><a href="../modules/adminMode.html">adminMode</a></li>
+                                <li><a href="../modules/attendee.html">attendee</a></li>
+                                <li><a href="../modules/dataIO.html">dataIO</a></li>
+                                <li><a href="../modules/global.html">global</a></li>
+                                <li><a href="../modules/linkedlist.html">linkedlist</a></li>
+                                <li><a href="../modules/meetin.html">meetin</a></li>
+                                <li><a href="../modules/user.html">user</a></li>
+                                <li><a href="../modules/user_availability.html">user_availability</a></li>
                             </ul>
                         </div>
                     </div>
@@ -79,6 +97,12 @@
 
 <div class="file">
     <pre class="code prettyprint linenums">
+/**
+ * @module addEvent
+ * @class addEvent
+ */
+
+
 &quot;use-strict&quot;
 
 
@@ -97,7 +121,9 @@
 var lastName = &#x27;&#x27;;
 var firstName = &#x27;&#x27;;
 
-/**Sets the name for the user */
+/** Sets the username
+ * @method setName
+ */
 function setName(){
   var name = sessionStorage.getItem(&quot;userName&quot;);
   console.log(&quot;DEBUG &quot;+ name);
@@ -115,7 +141,10 @@ function setName(){
 }
 
 
-
+/**  changes the times in selectbox based on whether the &quot;24 hour&quot; box is checked 
+* @method timeSwitcher
+* 
+*/
 
 function timeSwitcher(){
     /**console.log(&quot;timeSwitcher Ran&quot;);*/
@@ -146,6 +175,7 @@ function timeSwitcher(){
 
 /**
  * addAMPM select box
+ *@method addAMPM
  */
 function addAMPM(){
     document.getElementById(&quot;ampm&quot;).style.visibility=&quot;&quot;;
@@ -154,7 +184,8 @@ function addAMPM(){
 }
 
 /**
- * Remove AMPM select box
+ *  Remove AMPM select box
+ *@method removeAMPM()
  */
  function removeAMPM(){
      document.getElementById(&quot;ampm&quot;).style.visibility=&quot;hidden&quot;;
@@ -165,6 +196,8 @@ function addAMPM(){
 
 /**
  * populates the select box with the correct number of hours
+ *@method populateHours()
+ * 
  * @param {number} mode - sets the mode for the select box
  *      23 for 24-Hour mode and 12 for 12-Hour mode.
  * @param {number} i - sets the number for the select box to
@@ -211,7 +244,8 @@ function addAMPM(){
 
 
 /**
- * unpopulates this given select box
+ *  unpopulates this given select box
+ * @method unpopulateHour()
  * @param {string} id - This is the element id of the select
  *      box you would like to populate.
  */
@@ -226,16 +260,17 @@ function unpopulateHour(id){
 }
 
 
-
-
+/** @method submitVals() Submits user values for title, date, and time then
+*   checks if the values are valid. If so, the page is redirected. Otherwise,
+*   it is refreshed.*/
 
 function submitVals()  {
   var eventTitle = document.getElementById(&quot;event&quot;).value;
   var date = document.getElementById(&quot;date&quot;).value;
 
   /**var date is in form yyyy-mm-dd
-                      0123456789
-  .substr(start,length)*/
+  *                  0123456789
+  *.substr(start,length)*/
   var dd = date.substr(8,2);
   var mm = date.substr(5,2);
   var yyyy = date.substr(0,4);
@@ -260,11 +295,11 @@ function submitVals()  {
   /** console.log(ampm2);*/
 
     /**For the hours, see if 24/12 hours are toggled.  If 12, see if it is am or pm
-    FOR STORING THE TIME IN 24 HOUR MODE
-   ALL TIMES OF EVENTS ARE STORED THIS WAY*/
+    *FOR STORING THE TIME IN 24 HOUR MODE
+    *ALL TIMES OF EVENTS ARE STORED THIS WAY*/
   if (!clock24){
      /**See if am/pm selected for both cases
-     If it is pm, add 12 to the value*/
+     *If it is pm, add 12 to the value*/
 
      if ((ampm1 == &quot;PM&quot;) &amp;&amp; (strthour != 12)){
        strthour = strthour+12;
@@ -282,15 +317,15 @@ function submitVals()  {
   }
 
   /** TEST IN CONSOLE
-  console.log(&quot;Event name: &quot;+ eventTitle);
-  console.log(&quot;Date: &quot; + month + &quot;/&quot; + day + &quot;/&quot; + year);
-  console.log(&quot;Start time: &quot;+strthour + &quot;:&quot;+strtmin);
-  console.log(&quot;End time: &quot; + endhour + &quot;:&quot; + endmin);*/
+  *console.log(&quot;Event name: &quot;+ eventTitle);
+  *console.log(&quot;Date: &quot; + month + &quot;/&quot; + day + &quot;/&quot; + year);
+  *console.log(&quot;Start time: &quot;+strthour + &quot;:&quot;+strtmin);
+  *console.log(&quot;End time: &quot; + endhour + &quot;:&quot; + endmin);*/
 
   let inputDate = new Date(year, month-1, day, strthour, strtmin);
   let currentDate = new Date();
   /**console.log(&quot;Input date: &quot;+ inputDate);
-  console.log(&quot;Curent date: &quot;+ currentDate);*/
+  *console.log(&quot;Curent date: &quot;+ currentDate);*/
 
   var length = ((endhour*60)+endmin)-((strthour*60)+strtmin);
 
@@ -300,18 +335,18 @@ function submitVals()  {
   if (!isInvalidDate(month, day, year, inputDate, currentDate, length, strthour, endhour)){
 
    /**If the date is valid, add it to the list of events
-   and write to file*/
+   *and write to file*/
 
 
     var temp = new meeting(eventTitle, inputDate, length);
     /**console.log(&quot;before the add&quot;);
-    window.masterEvent.printAll();*/
+    *window.masterEvent.printAll();*/
 
 
     window.masterEvent.add(temp);
 
     /**console.log(&quot;After the add&quot;);
-    window.masterEvent.printAll();*/
+    *window.masterEvent.printAll();*/
 
     var arr = eventArray(masterEvent);
     writeData(arr, 3, &quot;masterEvent&quot;);
@@ -339,13 +374,14 @@ function submitVals()  {
 
 
 
-/** Checks to see if the date can be used or not*/
+/**@method isInvalidDate() Checks to see if the date can be used or not*/
 function isInvalidDate(month, day, year, inputDate, currentDate, length, strthour, endhour)
 {
   /**console.log(strthour);
-  console.log(endhour);
-  Check to see if there is an overlap*/
+  *console.log(endhour);
+  *Check to see if there is an overlap*/
   let badTime=false;
+  /**checking if new event overlaps with old event*/
   for(var i = 0; i &lt; window.masterEvent.size; i ++){
     var  node = window.masterEvent.returnAt(i);
     if ((parseInt(node.data.date.getTime()/60000) &lt;= parseInt(inputDate.getTime()/60000)) &amp;&amp; ((parseInt(node.data.date.getTime()/60000) + parseInt(node.data.len)) &gt;= parseInt(inputDate.getTime()/60000))){
@@ -373,10 +409,12 @@ function isInvalidDate(month, day, year, inputDate, currentDate, length, strthou
       break;
     }
   }
+    /** returns if its a bad time*/
     if(badTime==true){
       /**console.log(&quot;badTime  is true&quot;);*/
       return true;
     }
+    /**given restrictions for certain days/times*/
     else if (month == 01 &amp;&amp; day == 01){
         window.alert(&quot;Can&#x27;t schedule a meeting on New Year&#x27;s Day. Please try again.&quot;);
         /**console.log(&quot;ERROR: Can&#x27;t schedule a meeting on New Year&#x27;s Day.&quot;);*/
@@ -416,6 +454,7 @@ function isInvalidDate(month, day, year, inputDate, currentDate, length, strthou
 
       return true;
     }
+    /**runs if the date is fine*/
     else
     {
         /**console.log(&quot;Success!&quot;);*/
@@ -426,9 +465,9 @@ function isInvalidDate(month, day, year, inputDate, currentDate, length, strthou
 
 
 
-/** Redirects the page according to if date is invalid
-    If the date is bad, it will refresh the page,
-    otherwise it will redirect to events.html*/
+/** @method redirect() Redirects the page according to if date is invalid
+*    If the date is bad, it will refresh the page,
+*    otherwise it will redirect to events.html*/
 function redirect(badDate)
 {
     if(badDate == true)
