@@ -18,8 +18,13 @@
 //  THE LIST OF MASTER USERS
 
 /**
-* @global lists for keeping track of
-*         all users and all events
+* @name masterEvent
+* @property {global} list
 */
 var masterEvent = new linkedlist();
+
+/**
+* @name masterUser
+* @property {global} list
+*/
 var masterUser = new linkedlist();
