@@ -8,7 +8,7 @@
 // Try and catch: https://www.w3schools.com/js/js_errors.asp
 // Checking if parameter is an array: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
 // Check to see if string includes a character:	https://www.w3schools.com/jsref/jsref_includes.asp
-// 
+//
 // Comparing two strings: https://stackoverflow.com/questions/7837456/how-to-compare-arrays-in-javascript
 // Open new html in javascript: https://stackoverflow.com/questions/442384/jumping-to-a-new-html-page-with-javascript
 //
@@ -22,7 +22,7 @@ main = function() {
 
 
 //
-// Takes in the username and password of an administrator 
+// Takes in the username and password of an administrator
 function adminLogin()
 {
 	try
@@ -31,7 +31,7 @@ function adminLogin()
 		chalk.newline();
 		//chalk.print("Please use your administrative login.");
 		//chalk.newline();
-		
+
 		//// Enter username ////
 		chalk.print("Username: ");
 		let u = chalk.entrybox();
@@ -39,7 +39,7 @@ function adminLogin()
 		{
 			console.log("Username: ", val);
 		});
-		
+
 		//// Enter password ////
 		chalk.print("Password: ");
 		let p = chalk.entrybox();
@@ -47,7 +47,7 @@ function adminLogin()
 		{
 			console.log("Password: ", val);
 		});
-		
+
 		//// Promise.all will validate the login input ////
 		Promise.all([u,p]).then(function(a)
 		{
@@ -61,7 +61,7 @@ function adminLogin()
 				//chalk.println("");
 				chalk.println("Invalid username! Cannot contain spaces!");
 				throw e;
-				
+
 			}
 			//// Checks if password has a space ////
 			else if(a[1].includes(" "))
@@ -88,7 +88,7 @@ function adminLogin()
 				chalk.println("Welcome!");
 				window.location.href = "add_event.html";
 			}
-			
+
 		}).catch(function(e)
 		{
 			console.log(u);
@@ -127,7 +127,7 @@ function adminCompare(a)
 function check(login) {
 
 	if(login.userid.value == "admin" && login.password.value == "1234") {
-		window.open('events.html');
+		window.location="events.html";
 	}
 	else{
 		alert("Incorrect username or password.");
@@ -139,7 +139,7 @@ function check(login) {
 
 
 function populateEventSelect(id) {
-	
+
 
 	console.log("DEBUG: ran populateEventSelect");
     unpopulateEvents();
