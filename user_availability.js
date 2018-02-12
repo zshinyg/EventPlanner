@@ -91,7 +91,7 @@ function loadEvents(){
     // console.log("Searching for: " + lastName + " in " + eventTitle);
     // console.log("attending = " + attending);
     if (attending){
-      checkBoxArray[i].checked = true;
+      checkBoxArray[i].hidden = true;
     }
   }
 }
@@ -114,6 +114,9 @@ function submit(){
 // that the person who is logged in is attending
   for (var i = 0; i < checkBoxArray.length; i++){
     if (checkBoxArray[i].checked == true){
+
+      console.log(checkBoxArray[i]);
+      checkBoxArray[i].hidden = "true";
 
       // Populate the list of that event
       var eventTitle = nameArray[i].textContent;
