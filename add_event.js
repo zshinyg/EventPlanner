@@ -2,6 +2,7 @@
 
 
 /**
+ * @module add_event
  * Toggle 24 hour mode and 12 hour mode
  * Checks if the 24-Hour checkbox is checked then populates the
  * select box with the correct number of options.
@@ -93,6 +94,7 @@ function addAMPM(){
  *      5 for 24-Hour mode.
  * @param {string} id - This is the element id of the select
  *      box you would like to populate.
+ *@param {string} ampmID
  */
  function populateHours(mode,i,id,ampmID) {
 
@@ -261,7 +263,16 @@ function submitVals()  {
 
 
 
-/**@method isInvalidDate() Checks to see if the date can be used or not*/
+/**@method isInvalidDate() Checks to see if the date can be used or not
+* @param {number} month
+* @param {number} day
+* @param {number} year
+* @param {date} inputDate
+* @param {date} currentDate
+* @param {number} length
+* @param {number} strthour
+* @param {number} endhour
+*/
 function isInvalidDate(month, day, year, inputDate, currentDate, length, strthour, endhour)
 {
   /**console.log(strthour);
@@ -354,7 +365,9 @@ function isInvalidDate(month, day, year, inputDate, currentDate, length, strthou
 
 /** @method redirect() Redirects the page according to if date is invalid
 *    If the date is bad, it will refresh the page,
-*    otherwise it will redirect to events.html*/
+*    otherwise it will redirect to events.html
+*@param {bool} badDate
+*/
 function redirect(badDate)
 {
     if(badDate == true)
