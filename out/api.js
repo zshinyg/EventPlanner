@@ -18,7 +18,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "dataIO",
         "global",
         "linkedlist",
-        "meetin",
         "meeting",
         "user",
         "user_availability"
@@ -48,10 +47,6 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "linkedlist",
             "name": "linkedlist"
-        },
-        {
-            "displayName": "meetin",
-            "name": "meetin"
         },
         {
             "displayName": "meeting",

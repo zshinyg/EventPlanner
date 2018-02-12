@@ -70,7 +70,6 @@
         "meeting.js": {
             "name": "meeting.js",
             "modules": {
-                "meetin": 1,
                 "meeting": 1
             },
             "classes": {
@@ -180,17 +179,6 @@
             "namespaces": {},
             "tag": "module",
             "file": "linkedlist.js",
-            "line": 1
-        },
-        "meetin": {
-            "name": "meetin",
-            "submodules": {},
-            "elements": {},
-            "classes": {},
-            "fors": {},
-            "namespaces": {},
-            "tag": "module",
-            "file": "meeting.js",
             "line": 1
         },
         "meeting": {
@@ -806,6 +794,78 @@
             "module": "adminMode"
         },
         {
+            "file": "attendee.js",
+            "line": 14,
+            "itemtype": "method",
+            "name": "attendee",
+            "params": [
+                {
+                    "name": "string",
+                    "description": ""
+                },
+                {
+                    "name": "string",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "none"
+            },
+            "class": "attendnee",
+            "module": "attendee"
+        },
+        {
+            "file": "attendee.js",
+            "line": 27,
+            "itemtype": "method",
+            "name": "getLastName",
+            "params": [
+                {
+                    "name": "none",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "this.lastName"
+            },
+            "class": "attendnee",
+            "module": "attendee"
+        },
+        {
+            "file": "attendee.js",
+            "line": 36,
+            "itemtype": "method",
+            "name": "getFirstName",
+            "params": [
+                {
+                    "name": "none",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "none"
+            },
+            "class": "attendnee",
+            "module": "attendee"
+        },
+        {
+            "file": "attendee.js",
+            "line": 53,
+            "itemtype": "method",
+            "name": "valueOf",
+            "params": [
+                {
+                    "name": "none",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "this.lastName"
+            },
+            "class": "attendnee",
+            "module": "attendee"
+        },
+        {
             "file": "dataIO.js",
             "line": 13,
             "itemtype": "method",
@@ -840,12 +900,13 @@
             "name": "readData",
             "params": [
                 {
-                    "name": "string",
-                    "description": ""
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
                 }
             ],
             "example": [
-                "\n //TAKES IN A NAME OF A DATA STRUCTURE TO READ IN\n //TAKES FROM localStorage\n //IF FILE NON EXISTENT, PRINT TO CONOSLE AND RETURN\n //RETURNS AN ARRAY STUCTURED AS SO\n //array(data1, data1a, data1b, data2a, data2b)\n //BASED ON READ FILE FORMAT AS\n data1@data1a@data1b... data2@data2a...\n //SEE HOW THE writeData FUNCTION ABOVE WRITES FOR A MORE\n // DETAILED DESCRIPTION"
+                "\n TAKES IN A NAME OF A DATA STRUCTURE TO READ IN\n TAKES FROM localStorage\n IF FILE NON EXISTENT, PRINT TO CONOSLE AND RETURN\n RETURNS AN ARRAY STUCTURED AS SO\n array(data1, data1a, data1b, data2a, data2b)\n BASED ON READ FILE FORMAT AS\n data1@data1a@data1b... data2@data2a...\n SEE HOW THE writeData FUNCTION ABOVE WRITES FOR A MORE\n DETAILED DESCRIPTION"
             ],
             "return": {
                 "description": "array"
@@ -896,8 +957,9 @@
         {
             "file": "dataIO.js",
             "line": 222,
+            "description": "takes in a list of users and changes it to array",
             "itemtype": "method",
-            "name": "userArray\ntakes in a list of users and changes it to array",
+            "name": "userArray",
             "params": [
                 {
                     "name": "list",
@@ -959,7 +1021,7 @@
             "line": 36,
             "description": "Takes in a first name and a last name\ncreates a new attendee, and adds it to the list.",
             "itemtype": "method",
-            "name": "add()",
+            "name": "add",
             "params": [
                 {
                     "name": "lastName",
@@ -1137,6 +1199,10 @@
         }
     ],
     "warnings": [
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " attendee.js:53"
+        },
         {
             "message": "replacing incorrect tag: returns with return",
             "line": " dataIO.js:76"

@@ -57,7 +57,6 @@
                                 <li><a href="../modules/dataIO.html">dataIO</a></li>
                                 <li><a href="../modules/global.html">global</a></li>
                                 <li><a href="../modules/linkedlist.html">linkedlist</a></li>
-                                <li><a href="../modules/meetin.html">meetin</a></li>
                                 <li><a href="../modules/meeting.html">meeting</a></li>
                                 <li><a href="../modules/user.html">user</a></li>
                                 <li><a href="../modules/user_availability.html">user_availability</a></li>
@@ -177,20 +176,20 @@ function writeData(arr, num, name) {
 *
 *@method readData
 *
-*@param string
+*@param {string} name
 *
 *@example
-* //TAKES IN A NAME OF A DATA STRUCTURE TO READ IN
-* //TAKES FROM localStorage
-* //IF FILE NON EXISTENT, PRINT TO CONOSLE AND RETURN
-* //RETURNS AN ARRAY STUCTURED AS SO
+* TAKES IN A NAME OF A DATA STRUCTURE TO READ IN
+* TAKES FROM localStorage
+* IF FILE NON EXISTENT, PRINT TO CONOSLE AND RETURN
+* RETURNS AN ARRAY STUCTURED AS SO
 *
-* //array(data1, data1a, data1b, data2a, data2b)
+* array(data1, data1a, data1b, data2a, data2b)
 *
-* //BASED ON READ FILE FORMAT AS
+* BASED ON READ FILE FORMAT AS
 * data1@data1a@data1b... data2@data2a...
-* //SEE HOW THE writeData FUNCTION ABOVE WRITES FOR A MORE
-* // DETAILED DESCRIPTION
+* SEE HOW THE writeData FUNCTION ABOVE WRITES FOR A MORE
+* DETAILED DESCRIPTION
 *@returns array
 */
 
@@ -320,8 +319,8 @@ function eventArray (list){
 
 
 /**
+* takes in a list of users and changes it to array
 *@method userArray
-*takes in a list of users and changes it to array
 *@param list
 *
 *@example userArray(masterUser)
