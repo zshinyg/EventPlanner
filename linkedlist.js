@@ -17,6 +17,12 @@
 // CONTAINS THE DATA TYPE NODE IN ORDER TO CONSTRUCTO A LINKED LIST
 // ADAPTED FROM https://code.tutsplus.com/articles/data-structures-with-javascript-singly-linked-list-and-doubly-linked-list--cms-23392
 
+/**
+*@method node
+*@param {object} data
+*@return {none}
+*/
+
 function node (data) {
   this.data = data;
   this.next = null;
@@ -25,6 +31,11 @@ function node (data) {
 // GREATER
 // RETURNS TRUE IF THE CURRENT NODE'S DATA IS LARGER THAN THE INPUT DATA
 // FLASE OTHERWISE
+/**
+*@method greater
+*@param {object} data
+*@return {bool} val
+*/
 node.prototype.greater = function (data) {
   val = false;
 
@@ -37,6 +48,11 @@ node.prototype.greater = function (data) {
 // EQUAL
 // RETURNS TRUE IF THE CURRENT NODE AND INPUT VALUE ARE EQUAL
 // FALSE OTHERWISE
+/**
+*@method equal
+*@param {object} data
+*@return {bool} val
+*/
 node.prototype.equal = function (data){
   val = false;
 
@@ -53,7 +69,11 @@ node.prototype.equal = function (data){
 //              LINKED LIST FUNCTIONS
 //_________________________________________________________________________
 
-
+/**
+*@method linkedlist
+*@param none
+*@return {none}
+*/
 function linkedlist() {
 
   // CONSTRUCTOR
@@ -70,6 +90,11 @@ function linkedlist() {
 // TAKES IN A VALUE TO SAVE IN THE NODE (IN OUR CASE AN ATTENDEE)
 // THIS FUNCTION SORTS THE DATA FROM LEAST (FIRST VALUE)  TO GREATEST (LAST NODE)
 //
+/**
+*@method add
+*@param {object} val
+*@return {object} node
+*/
 linkedlist.prototype.add = function (val) {
 
   var m_node = new node(val);
@@ -132,6 +157,11 @@ linkedlist.prototype.add = function (val) {
 // ADDBACK
 // ADDS THE NEW NODE TO THE BACK
 // RETURNS NODE ADDED
+/**
+*@method addBack
+*@param {object} val
+*@return {none}
+*/
 linkedlist.prototype.addBack = function (val) {
 
   var m_node = new node(val);
@@ -155,6 +185,11 @@ linkedlist.prototype.addBack = function (val) {
 // TAKES IN A VALUE TO SEARCH FOR AND SEES IF IT IS IN THE LIST
 // RETURNS 0 IF VALUE IS NOT FOUND IN LIST, OTHERWISE RETURNS THE NODE
 // WHEN USING SEARCH, SEE IF 0 IS RETURNED FOR IF IT IS FOUND
+/**
+*@method search
+*@param {object} val
+*@return {object} object if found, 0 else
+*/
 linkedlist.prototype.search = function (val) {
 
   var object = 0;  // varible used to retun value of node or 0
@@ -189,6 +224,11 @@ linkedlist.prototype.search = function (val) {
 // DELETES A NODE FROM THE LIST
 // TAKES IN THE VALUE TO SEARCH FOR
 // RETURNS TRUE IF DELETED, FALSE ELSE
+/**
+*@method remove
+*@param {object} val
+*@return {bool} True if removed, false else
+*/
 linkedlist.prototype.remove = function(val) {
 
   var bool = false;
@@ -237,6 +277,11 @@ linkedlist.prototype.remove = function(val) {
 // IS EMPTY
 // Checks to see if list is empty
 // returns true if it is, false else
+/**
+*@method isEmpty
+*@param {none}
+*@return {bool} True if empty, false else
+*/
 linkedlist.prototype.isEmpty = function() {
   if (this.size == 0){
     return true;
@@ -251,6 +296,11 @@ linkedlist.prototype.isEmpty = function() {
 
 //    PRINT ALL FUNCTION
 // WHEN CALLED, PRINTS ALL THE VALUES OF THE LIST
+/**
+*@method printAll
+*@param {none}
+*@return {none}
+*/
 linkedlist.prototype.printAll = function(){
   currentnode = this.first;
 
@@ -270,6 +320,11 @@ linkedlist.prototype.printAll = function(){
 
 // REMOVE FRONT
 // REMOVES FIRST VALUE FROM LIST
+/**
+*@method removeFront
+*@param {none}
+*@return {bool} true if removed, false else
+*/
 linkedlist.prototype.removeFront = function () {
 
   currentnode = this.first;
@@ -288,6 +343,11 @@ linkedlist.prototype.removeFront = function () {
 // return at
 // returns node at the specified index
 // Index ranges from 0 to size
+/**
+*@method returnAt
+*@param {int} index
+*@return {object} Node object if found, 0 else
+*/
 linkedlist.prototype.returnAt = function (index){
 
 

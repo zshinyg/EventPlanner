@@ -13,9 +13,9 @@
 
 /**
 *@method attendee
-*@param string
-*@param string
-*@return none
+*@param {string} lastName
+*@param {string} firstName
+*@return {none}
 */
 
 function attendee (lastName, firstName){
@@ -27,7 +27,7 @@ function attendee (lastName, firstName){
 /**
 *@method getLastName
 *@param none
-*@return this.lastName
+*@return {string} this.lastName
 */
 attendee.prototype.getLastName = function () {
   return this.lastName;
@@ -53,7 +53,7 @@ attendee.prototype.getFristName = function () {
 /**
 *@method valueOf
 *@param none
-*@returns this.lastName 
+*@returns {string} this.lastName
 */
 attendee.prototype.valueOf = function () {
   return this.lastName;
