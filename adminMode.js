@@ -1,20 +1,6 @@
-// Jamison Walrod
-// EECS 448
-// Project 1
-// 02 February 2018
-//
-// Code for checkbox used in html was found on StackOverflow: https://stackoverflow.com/questions/28372466/how-to-call-a-function-from-checkbox-onclick-or-onchange
-// String to array: https://stackoverflow.com/questions/19418244/elegant-way-to-convert-string-of-array-of-arrays-into-a-javascript-array-of-arra
-// Try and catch: https://www.w3schools.com/js/js_errors.asp
-// Checking if parameter is an array: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
-// Check to see if string includes a character:	https://www.w3schools.com/jsref/jsref_includes.asp
-//
-// Comparing two strings: https://stackoverflow.com/questions/7837456/how-to-compare-arrays-in-javascript
-// Open new html in javascript: https://stackoverflow.com/questions/442384/jumping-to-a-new-html-page-with-javascript
-//
-//
-
-
+/**
+* Populates the events to see which events can be selected 
+*/
 function populateEventSelect(id) {
 
 
@@ -25,7 +11,9 @@ function populateEventSelect(id) {
 
       for(var i = 0; i < masterEvent.size; i++){
 
-          //Get the node at index i from masterEvent
+		  /**
+		  * Get the node at index i from masterEvent
+		  */
 
           var node = masterEvent.returnAt(i);
           var event = node.data.title;
@@ -42,7 +30,9 @@ function populateEventSelect(id) {
 
 }
 
-
+/**
+* Removes the events when page is reloaded
+*/
 function unpopulateEvents(){
 
     var events = document.getElementById("events");
@@ -53,6 +43,9 @@ function unpopulateEvents(){
 
 }
 
+/**
+* Adds the attendee to the Attendee Table
+*/
 function addRow(name) {
 
 	console.log("ran addRow");
@@ -66,7 +59,9 @@ function addRow(name) {
 
 }
 
-
+/**
+ * Populates the Attendee Table to see who is attending
+ */
 function populateAttendeeTable() {
 
 	
@@ -88,6 +83,9 @@ function populateAttendeeTable() {
 	}
 }
 
+/**
+* Removes the Attendee Table when page is reloaded
+*/
 function unpopulateTable() {
 
 
