@@ -3,9 +3,6 @@
  * @class   user_availability
  */
 
-
-
-
 /**
  * Adds a row to the table on user_availabilty.html. This will
  * be used to add the given events to the table.
@@ -14,6 +11,7 @@ var lastName = '';
 var firstName = '';
 
 /**
+ * @method setName
  * Sets the username for the user
  */
 function setName(){
@@ -33,11 +31,11 @@ function setName(){
 
 
 /**
- * Adds the event to the Event Table
- * 
+ * @method addRow
  * @param {string} title 
  * @param {string} date 
  * @param {string} time 
+ * Adds the event to the Event Table
  */
 function addRow(title, date, time) {
 
@@ -62,6 +60,7 @@ function addRow(title, date, time) {
 }
 
 /**
+ * @method loadEvents
  * Loads the events from the list and shows which ones are available to the user
  */
 function loadEvents(){
@@ -118,6 +117,7 @@ function loadEvents(){
 }
 
 /**
+ * @method submit
  * Adds user to the event they have chosen for their availability
  */
 function submit(){
