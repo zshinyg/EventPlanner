@@ -1,5 +1,5 @@
 /**
- * @module meetin
+ * @module meeting
  * @class   meeting
  */
 
@@ -9,7 +9,7 @@
 
 
 /**event.js
-*@module meeting
+*@method meeting
 *
 *@constructor
 *THE NAME OF THE EVENT IS TAKEN AT CONSTRUCTION TIME
@@ -36,7 +36,7 @@ function meeting (title, date, length) {
 /**ADD ATTENDEE
 *Takes in a first name and a last name
 *creates a new attendee, and adds it to the list.
-*@method add()
+*@method add
 *@param {string} lastName
 *@param {string} firstName
 */
@@ -51,7 +51,7 @@ meeting.prototype.add = function (lastName, firstName){
 
 /**VALUE OF
 *Allows for comparison of events by date.
-*@method valueOf()
+*@method valueOf
 */
 meeting.prototype.valueOf = function () {
   return this.date.getTime();
