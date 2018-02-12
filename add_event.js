@@ -206,6 +206,8 @@ function submitVals()  {
 
   if (!isInvalidDate(month, day, year, inputDate, currentDate, length)){
 
+
+
    // If the date is valid, add it to the list of events
    // and write to file
 
@@ -213,7 +215,25 @@ function submitVals()  {
     var temp = new meeting(eventTitle, inputDate, length);
     //console.log("before the add");
     //window.masterEvent.printAll();
+
+    // Check to see if there is an overlap
+    // for(var i = 0; i < window.masterEvent.size; i ++){
+    //   var  node = window.masterEvent.returnAt(i);
+    //   if (((node.data.date.getTime()/60000) <= inputDate.getTime()/60000) && (node.data.date.getTime()/60000 + node.data.len) >= (inputDate.getTime()/60000)){
+    //     window.alert("Can't have an overlaping event");
+    //     console.log("ERROR: Can't have an overlaping event");
+    //     return;
+    //   }
+    //   if (((node.data.date.getTime()/60000) >= inputDate.getTime()/60000 + length) && (node.data.date.getTime()/60000 + node.data.len) <= (inputDate.getTime()/60000+ length)){
+    //     window.alert("Can't have an overlaping event");
+    //     console.log("ERROR: Can't have an overlaping event");
+    //     return;
+    //   }
+    // }
+
+
     window.masterEvent.add(temp);
+
     //console.log("After the add");
     //window.masterEvent.printAll();
 
@@ -294,9 +314,3 @@ function redirect(badDate)
     }
 
 }
-
-
-
-
-
-
