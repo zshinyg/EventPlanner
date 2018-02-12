@@ -3,28 +3,31 @@
 
 
 
-// FUNCTION WRITE writeData
-// FORM: writeData(array to save, number of offset, name)
-// Parameters to pass in:
-//    array: values to store are saved in with an offset
-//    offset: # of values saved per item
-//    name: name of value
-//
-//  EXAMPLE:
-//    Say I want to store the attendees of an event in
-//    an event.  If the event name is Birthday, the attendee's look like this:
-//    last name, first name
-//    Smith, John
-//    Foo, Bill
-//    Jimmy, Gill
-//
-//  The array should look like this:
-//  arr =[Smith, John, Foo, Bill, Jimmy, Gill]
-//
-//  num will be equal to 2 here for the number of items per attendee
-//
-//   This function will save it as so
-//   Smith@John Foo@Bill Jimmy@Gill
+/**FUNCTION WRITE writeData
+*@func: writeData(array to save, number of offset, name)
+*@param{array, num, string}
+*   array: values to store are saved in with an offset
+*   offset: # of values saved per item
+*   name: name of value
+*
+* @example:
+*  Say I want to store the attendees of an event in
+*   an event.  If the event name is Birthday, the attendee's look like this:
+*   last name, first name
+*   Smith, John
+*   Foo, Bill
+*   Jimmy, Gill
+*
+* The array should look like this:
+* arr =[Smith, John, Foo, Bill, Jimmy, Gill]
+*
+* num will be equal to 2 here for the number of items per attendee
+*
+*  This function will save it as so
+*  Smith@John Foo@Bill Jimmy@Gill
+* @return null
+*/
+
 
 function writeData(arr, num, name) {
 
@@ -61,21 +64,26 @@ function writeData(arr, num, name) {
 
 
 
-// FUNCTION readData
-//
-//   readData(name)
-//
-//  TAKES IN A NAME OF A DATA STRUCTURE TO READ IN
-//  TAKES FROM localStorage
-// IF FILE NON EXISTENT, PRINT TO CONOSLE AND RETURN null
-// RETURNS AN ARRAY STUCTURED AS SO
-//
-//  array(data1, data1.1, data1.2..., data2, data2.1,...)
-//
-// BASED ON READ FILE FORMAT AS
-//  data1@data1.1@data1.2... data2@data2.1...
-//  SEE HOW THE writeData FUNCTION ABOVE WRITES FOR A MORE
-//   DETAILED DESCRIPTION
+/** readData
+*
+*@func  readData(name)
+*
+*@param string
+*
+*@example
+* //TAKES IN A NAME OF A DATA STRUCTURE TO READ IN
+* //TAKES FROM localStorage
+* //IF FILE NON EXISTENT, PRINT TO CONOSLE AND RETURN
+* //RETURNS AN ARRAY STUCTURED AS SO
+*
+* //array(data1, data1a, data1b, data2a, data2b)
+*
+* //BASED ON READ FILE FORMAT AS
+* data1@data1a@data1b... data2@data2a...
+* //SEE HOW THE writeData FUNCTION ABOVE WRITES FOR A MORE
+* // DETAILED DESCRIPTION
+*@returns array
+*/
 
 function readData(name){
 
@@ -117,6 +125,21 @@ function readData(name){
 }
 
 
+
+
+/**
+*@func readEventData(name)
+*
+*@param string
+* Takes in a name of a file that stores event data
+* Different than readData because it parses information different
+* @example
+* trying to read masterEvent
+* call readEventData (masterEvent)
+* @returns array formated as such
+* [title, date, length,...]
+*
+*/
 function readEventData(name){
 
   var doc = localStorage.getItem(name);
@@ -159,10 +182,15 @@ function readEventData(name){
 
 
 
-// Event to array
-// takes in a list of events and changes it to an array
-// Since the list is passed by value, removing the first value won't destroy
-// the master list
+/**
+*@func eventArray(list)
+*@param list
+*@example
+*takes in a list of events and changes it to an array
+*Since the list is passed by value, removing the first value wont destroy
+*the master list
+*@return: (array)
+*/
 function eventArray (list){
 
   var arr = new Array;
@@ -182,10 +210,14 @@ function eventArray (list){
 }
 
 
-
-// User to array
-// takes in a list of users and changes it to array
-
+/**
+*@func userArray()
+*takes in a list of users and changes it to array
+*@param (list)
+*
+*@example //userArray(masterUser)
+*@return array
+*/
 function userArray (list){
 
   var arr = new Array;
@@ -200,9 +232,11 @@ function userArray (list){
 }
 
 
-// WHEN AT HOME PAGE, THIS FUNCTION WILL READ IN ALL DATA AND
-// POPULATE LISTS
-//
+/**
+*@func populateEvent()
+*@param [none]
+*@return null
+*/
 
 
 function populateEvent() {
@@ -228,6 +262,10 @@ function populateEvent() {
 
 
 
+/**
+*@func populateUser(name)
+*@param string
+*/
 function populateUser(name) {
   // var listNumber=1;
   // var listName = eval("var list" + listNumber + "=123;");
