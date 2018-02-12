@@ -4,8 +4,7 @@
         "add_event.js": {
             "name": "add_event.js",
             "modules": {
-                "addEvent": 1,
-                "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options.": 1
+                "add_event": 1
             },
             "classes": {
                 "addEvent": 1
@@ -104,19 +103,8 @@
         }
     },
     "modules": {
-        "addEvent": {
-            "name": "addEvent",
-            "submodules": {},
-            "elements": {},
-            "classes": {},
-            "fors": {},
-            "namespaces": {},
-            "tag": "module",
-            "file": "add_event.js",
-            "line": 1
-        },
-        "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options.": {
-            "name": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options.",
+        "add_event": {
+            "name": "add_event",
             "submodules": {},
             "elements": {},
             "classes": {
@@ -126,7 +114,8 @@
             "namespaces": {},
             "tag": "module",
             "file": "add_event.js",
-            "line": 1
+            "line": 1,
+            "description": "Toggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
         },
         "adminMode": {
             "name": "adminMode",
@@ -276,8 +265,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options.",
-            "namespace": "",
+            "module": "add_event",
             "file": "add_event.js",
             "line": 1
         },
@@ -392,13 +380,13 @@
             "file": "add_event.js",
             "line": 17,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
             "line": 20,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
@@ -407,13 +395,13 @@
             "itemtype": "method",
             "name": "setName()",
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
             "line": 43,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
@@ -421,34 +409,38 @@
             "itemtype": "method",
             "name": "timeSwitcher",
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
             "line": 53,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
             "line": 79,
-            "description": "<<<<<<< HEAD\n * addAMPM select box\n *@method addAMPM\n=======\n *addAMPM select box\n *@method addAMPM()\n>>>>>>> 010f31a54292dc8059f7561942a9701ef5c42d7d",
+            "description": "addAMPM select box",
+            "itemtype": "method",
+            "name": "addAMPM()",
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 94,
-            "description": "<<<<<<< HEAD\n *  Remove AMPM select box\n=======\n *Remove AMPM select box\n>>>>>>> 010f31a54292dc8059f7561942a9701ef5c42d7d\n *@method removeAMPM()",
+            "line": 89,
+            "description": "Remove AMPM select box",
+            "itemtype": "method",
+            "name": "removeAMPM()",
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 109,
+            "line": 100,
             "description": "populates the select box with the correct number of hours",
             "itemtype": "method",
-            "name": "populateHours()\n<<<<<<< HEAD\n\n=======\n\n>>>>>>> 010f31a54292dc8059f7561942a9701ef5c42d7d",
+            "name": "populateHours()",
             "params": [
                 {
                     "name": "mode",
@@ -472,126 +464,135 @@
                 }
             ],
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 130,
+            "line": 117,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 139,
+            "line": 126,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 163,
-            "description": "<<<<<<< HEAD\n *  unpopulates this given select box\n=======\n * unpopulates this given select box\n>>>>>>> 010f31a54292dc8059f7561942a9701ef5c42d7d\n * @method unpopulateHour()\n * @param {string} id - This is the element id of the select\n *      box you would like to populate.",
+            "line": 150,
+            "description": "unpopulates this given select box",
+            "itemtype": "method",
+            "name": "unpopulateHour()",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "- This is the element id of the select\n     box you would like to populate.",
+                    "type": "String"
+                }
+            ],
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 184,
+            "line": 167,
             "description": "If so, the page is redirected. Otherwise, it is refreshed.",
             "itemtype": "method",
             "name": "submitVals()",
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 193,
+            "line": 176,
             "description": "0123456789",
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 215,
+            "line": 198,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 217,
+            "line": 200,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 219,
+            "line": 202,
             "description": "FOR STORING THE TIME IN 24 HOUR MODE",
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 223,
+            "line": 206,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 241,
+            "line": 224,
             "description": "console.log(\"Event name: \"+ eventTitle);\nconsole.log(\"Date: \" + month + \"/\" + day + \"/\" + year);\nconsole.log(\"Start time: \"+strthour + \":\"+strtmin);",
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 249,
+            "line": 232,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 256,
+            "line": 239,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
+        },
+        {
+            "file": "add_event.js",
+            "line": 242,
+            "class": "addEvent",
+            "module": "add_event"
+        },
+        {
+            "file": "add_event.js",
+            "line": 247,
+            "class": "addEvent",
+            "module": "add_event"
+        },
+        {
+            "file": "add_event.js",
+            "line": 253,
+            "class": "addEvent",
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
             "line": 259,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
+        },
+        {
+            "file": "add_event.js",
+            "line": 262,
+            "class": "addEvent",
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
             "line": 264,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 270,
-            "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
-        },
-        {
-            "file": "add_event.js",
-            "line": 276,
-            "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
-        },
-        {
-            "file": "add_event.js",
-            "line": 279,
-            "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
-        },
-        {
-            "file": "add_event.js",
-            "line": 281,
-            "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
-        },
-        {
-            "file": "add_event.js",
-            "line": 299,
+            "line": 282,
             "description": "Checks to see if the date can be used or not",
             "itemtype": "method",
             "name": "isInvalidDate()",
@@ -638,114 +639,114 @@
                 }
             ],
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 313,
+            "line": 296,
             "description": "console.log(endhour);",
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
+        },
+        {
+            "file": "add_event.js",
+            "line": 300,
+            "class": "addEvent",
+            "module": "add_event"
+        },
+        {
+            "file": "add_event.js",
+            "line": 305,
+            "class": "addEvent",
+            "module": "add_event"
+        },
+        {
+            "file": "add_event.js",
+            "line": 311,
+            "class": "addEvent",
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
             "line": 317,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 322,
+            "line": 323,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
             "line": 328,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 334,
+            "line": 330,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 340,
+            "line": 333,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 345,
+            "line": 336,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 347,
+            "line": 342,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 350,
+            "line": 348,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 353,
+            "line": 356,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 359,
+            "line": 363,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 365,
+            "line": 369,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
             "line": 373,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 380,
+            "line": 376,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 386,
-            "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
-        },
-        {
-            "file": "add_event.js",
-            "line": 390,
-            "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
-        },
-        {
-            "file": "add_event.js",
-            "line": 393,
-            "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
-        },
-        {
-            "file": "add_event.js",
-            "line": 401,
+            "line": 384,
             "description": "Redirects the page according to if date is invalid\n    If the date is bad, it will refresh the page,\n    otherwise it will redirect to events.html",
             "itemtype": "method",
             "name": "redirect()",
@@ -757,19 +758,19 @@
                 }
             ],
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 412,
+            "line": 395,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "add_event.js",
-            "line": 417,
+            "line": 400,
             "class": "addEvent",
-            "module": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
+            "module": "add_event"
         },
         {
             "file": "adminMode.js",
@@ -1135,56 +1136,56 @@
             "line": " add_event.js:53"
         },
         {
-            "message": "Missing item type\n<<<<<<< HEAD\n * addAMPM select box\n *@method addAMPM\n=======\n *addAMPM select box\n *@method addAMPM()\n>>>>>>> 010f31a54292dc8059f7561942a9701ef5c42d7d",
-            "line": " add_event.js:79"
-        },
-        {
-            "message": "Missing item type\n<<<<<<< HEAD\n *  Remove AMPM select box\n=======\n *Remove AMPM select box\n>>>>>>> 010f31a54292dc8059f7561942a9701ef5c42d7d\n *@method removeAMPM()",
-            "line": " add_event.js:94"
+            "message": "Missing item type",
+            "line": " add_event.js:117"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:130"
-        },
-        {
-            "message": "Missing item type",
-            "line": " add_event.js:139"
-        },
-        {
-            "message": "Missing item type\n<<<<<<< HEAD\n *  unpopulates this given select box\n=======\n * unpopulates this given select box\n>>>>>>> 010f31a54292dc8059f7561942a9701ef5c42d7d\n * @method unpopulateHour()\n * @param {string} id - This is the element id of the select\n *      box you would like to populate.",
-            "line": " add_event.js:163"
+            "line": " add_event.js:126"
         },
         {
             "message": "Missing item type\n0123456789",
-            "line": " add_event.js:193"
+            "line": " add_event.js:176"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:215"
+            "line": " add_event.js:198"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:217"
+            "line": " add_event.js:200"
         },
         {
             "message": "Missing item type\nFOR STORING THE TIME IN 24 HOUR MODE",
-            "line": " add_event.js:219"
+            "line": " add_event.js:202"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:223"
+            "line": " add_event.js:206"
         },
         {
             "message": "Missing item type\nconsole.log(\"Event name: \"+ eventTitle);\nconsole.log(\"Date: \" + month + \"/\" + day + \"/\" + year);\nconsole.log(\"Start time: \"+strthour + \":\"+strtmin);",
-            "line": " add_event.js:241"
+            "line": " add_event.js:224"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:249"
+            "line": " add_event.js:232"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:256"
+            "line": " add_event.js:239"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:242"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:247"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:253"
         },
         {
             "message": "Missing item type",
@@ -1192,27 +1193,27 @@
         },
         {
             "message": "Missing item type",
+            "line": " add_event.js:262"
+        },
+        {
+            "message": "Missing item type",
             "line": " add_event.js:264"
         },
         {
-            "message": "Missing item type",
-            "line": " add_event.js:270"
-        },
-        {
-            "message": "Missing item type",
-            "line": " add_event.js:276"
-        },
-        {
-            "message": "Missing item type",
-            "line": " add_event.js:279"
-        },
-        {
-            "message": "Missing item type",
-            "line": " add_event.js:281"
-        },
-        {
             "message": "Missing item type\nconsole.log(endhour);",
-            "line": " add_event.js:313"
+            "line": " add_event.js:296"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:300"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:305"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:311"
         },
         {
             "message": "Missing item type",
@@ -1220,7 +1221,7 @@
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:322"
+            "line": " add_event.js:323"
         },
         {
             "message": "Missing item type",
@@ -1228,35 +1229,35 @@
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:334"
+            "line": " add_event.js:330"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:340"
+            "line": " add_event.js:333"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:345"
+            "line": " add_event.js:336"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:347"
+            "line": " add_event.js:342"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:350"
+            "line": " add_event.js:348"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:353"
+            "line": " add_event.js:356"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:359"
+            "line": " add_event.js:363"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:365"
+            "line": " add_event.js:369"
         },
         {
             "message": "Missing item type",
@@ -1264,27 +1265,15 @@
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:380"
+            "line": " add_event.js:376"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:386"
+            "line": " add_event.js:395"
         },
         {
             "message": "Missing item type",
-            "line": " add_event.js:390"
-        },
-        {
-            "message": "Missing item type",
-            "line": " add_event.js:393"
-        },
-        {
-            "message": "Missing item type",
-            "line": " add_event.js:412"
-        },
-        {
-            "message": "Missing item type",
-            "line": " add_event.js:417"
+            "line": " add_event.js:400"
         },
         {
             "message": "Missing item type\nPopulates the events to see which events can be selected",

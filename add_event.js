@@ -1,5 +1,5 @@
 /**
- * @module addEvent
+ * 
  * @class addEvent
  */
 
@@ -8,10 +8,10 @@
 
 
 /**
- * @module add_event
  * Toggle 24 hour mode and 12 hour mode
  * Checks if the 24-Hour checkbox is checked then populates the
  * select box with the correct number of options.
+ * @module add_event
  */
 
 /** Global variable for saving time in 24hr time format or not*/

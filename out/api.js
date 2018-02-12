@@ -12,8 +12,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "user_availability"
     ],
     "modules": [
-        "addEvent",
-        "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options.",
+        "add_event",
         "adminMode",
         "attendee",
         "dataIO",
@@ -26,12 +25,9 @@ YUI.add("yuidoc-meta", function(Y) {
     ],
     "allModules": [
         {
-            "displayName": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options.",
-            "name": "add_event\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
-        },
-        {
-            "displayName": "addEvent",
-            "name": "addEvent"
+            "displayName": "add_event",
+            "name": "add_event",
+            "description": "Toggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options."
         },
         {
             "displayName": "adminMode",

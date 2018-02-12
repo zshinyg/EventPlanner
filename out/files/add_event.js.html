@@ -51,14 +51,7 @@
                 
                 
                             <ul id="api-modules" class="apis modules">
-                                <li><a href="../modules/add_event
-                Toggle 24 hour mode and 12 hour mode
-                Checks if the 24-Hour checkbox is checked then populates the
-                select box with the correct number of options..html">add_event
-                Toggle 24 hour mode and 12 hour mode
-                Checks if the 24-Hour checkbox is checked then populates the
-                select box with the correct number of options.</a></li>
-                                <li><a href="../modules/addEvent.html">addEvent</a></li>
+                                <li><a href="../modules/add_event.html">add_event</a></li>
                                 <li><a href="../modules/adminMode.html">adminMode</a></li>
                                 <li><a href="../modules/attendee.html">attendee</a></li>
                                 <li><a href="../modules/dataIO.html">dataIO</a></li>
@@ -106,7 +99,7 @@
 <div class="file">
     <pre class="code prettyprint linenums">
 /**
- * @module addEvent
+ * 
  * @class addEvent
  */
 
@@ -115,10 +108,10 @@
 
 
 /**
- * @module add_event
  * Toggle 24 hour mode and 12 hour mode
  * Checks if the 24-Hour checkbox is checked then populates the
  * select box with the correct number of options.
+ * @module add_event
  */
 
 /** Global variable for saving time in 24hr time format or not*/
@@ -184,13 +177,8 @@ function timeSwitcher(){
 }
 
 /**
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
- * addAMPM select box
- *@method addAMPM
-=======
  *addAMPM select box
  *@method addAMPM()
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 010f31a54292dc8059f7561942a9701ef5c42d7d
  */
 function addAMPM(){
     document.getElementById(&quot;ampm&quot;).style.visibility=&quot;&quot;;
@@ -199,11 +187,7 @@ function addAMPM(){
 }
 
 /**
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
- *  Remove AMPM select box
-=======
  *Remove AMPM select box
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 010f31a54292dc8059f7561942a9701ef5c42d7d
  *@method removeAMPM()
  */
  function removeAMPM(){
@@ -216,11 +200,7 @@ function addAMPM(){
 /**
  * populates the select box with the correct number of hours
  *@method populateHours()
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
- * 
-=======
  *
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 010f31a54292dc8059f7561942a9701ef5c42d7d
  * @param {number} mode - sets the mode for the select box
  *      23 for 24-Hour mode and 12 for 12-Hour mode.
  * @param {number} i - sets the number for the select box to
@@ -268,11 +248,7 @@ function addAMPM(){
 
 
 /**
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
- *  unpopulates this given select box
-=======
  * unpopulates this given select box
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 010f31a54292dc8059f7561942a9701ef5c42d7d
  * @method unpopulateHour()
  * @param {string} id - This is the element id of the select
  *      box you would like to populate.
