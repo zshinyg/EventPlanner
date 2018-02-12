@@ -107,8 +107,8 @@ function submit(){
   for (var i = 0; i < itemArray.length; i+=4){
     nameArray[i/4] = itemArray[i];
   }
-//  console.log(checkBoxArray);
-//  console.log(nameArray);
+
+
 // Here we keep track of which events had a check by there name
 // Next thing to do is write to file (filename being that event)
 // that the person who is logged in is attending
