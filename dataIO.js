@@ -4,8 +4,10 @@
 
 
 /**FUNCTION WRITE writeData
-*@func: writeData(array to save, number of offset, name)
-*@param{array, num, string}
+*@func writeData(array,offset,name)
+*@param array
+*@param num
+*@param name
 *   array: values to store are saved in with an offset
 *   offset: # of values saved per item
 *   name: name of value
@@ -213,9 +215,9 @@ function eventArray (list){
 /**
 *@func userArray()
 *takes in a list of users and changes it to array
-*@param (list)
+*@param list
 *
-*@example //userArray(masterUser)
+*@example userArray(masterUser)
 *@return array
 */
 function userArray (list){
@@ -234,7 +236,7 @@ function userArray (list){
 
 /**
 *@func populateEvent()
-*@param [none]
+*@param none
 *@return null
 */
 
@@ -265,6 +267,7 @@ function populateEvent() {
 /**
 *@func populateUser(name)
 *@param string
+*@returns list
 */
 function populateUser(name) {
   // var listNumber=1;
