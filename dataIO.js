@@ -263,7 +263,7 @@ function populateEvent() {
 
 
 /**
-*@func populateUser(name)
+*@method populateUser(name)
 *@param string
 */
 function populateUser(name) {

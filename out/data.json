@@ -8,6 +8,20 @@
             "fors": {},
             "namespaces": {}
         },
+        "dataIO.js": {
+            "name": "dataIO.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "meeting.js": {
+            "name": "meeting.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
         "user_availability.js": {
             "name": "user_availability.js",
             "modules": {},
@@ -28,19 +42,44 @@
         },
         {
             "file": "add_event.js",
-            "line": 65,
+            "line": 10,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 13,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 19,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 33,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 40,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 66,
             "description": "addAMPM select box",
             "class": ""
         },
         {
             "file": "add_event.js",
-            "line": 74,
+            "line": 75,
             "description": "Remove AMPM select box",
             "class": ""
         },
         {
             "file": "add_event.js",
-            "line": 84,
+            "line": 85,
             "description": "populates the select box with the correct number of hours",
             "params": [
                 {
@@ -63,7 +102,17 @@
         },
         {
             "file": "add_event.js",
-            "line": 139,
+            "line": 99,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 108,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 132,
             "description": "unpopulates this given select box",
             "params": [
                 {
@@ -75,6 +124,306 @@
             "class": ""
         },
         {
+            "file": "add_event.js",
+            "line": 155,
+            "description": "0123456789",
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 177,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 179,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 181,
+            "description": "FOR STORING THE TIME IN 24 HOUR MODE",
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 185,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 203,
+            "description": "console.log(\"Event name: \"+ eventTitle);\nconsole.log(\"Date: \" + month + \"/\" + day + \"/\" + year);\nconsole.log(\"Start time: \"+strthour + \":\"+strtmin);",
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 211,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 218,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 221,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 226,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 232,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 238,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 241,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 243,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 261,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 264,
+            "description": "console.log(endhour);",
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 272,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 278,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 284,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 290,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 296,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 301,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 307,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 313,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 321,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 328,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 334,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 340,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 348,
+            "description": "If the date is bad, it will refresh the page,",
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 355,
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 360,
+            "class": ""
+        },
+        {
+            "file": "dataIO.js",
+            "line": 6,
+            "func": ": writeData(array to save, number of offset, name)",
+            "params": [
+                {
+                    "name": "UNKNOWN",
+                    "description": "array: values to store are saved in with an offset\n   offset: # of values saved per item\n   name: name of value",
+                    "type": "Array, num, string"
+                }
+            ],
+            "example": [
+                ":\n  Say I want to store the attendees of an event in\n   an event.  If the event name is Birthday, the attendee's look like this:\n   last name, first name\n   Smith, John\n   Foo, Bill\n   Jimmy, Gill\n\n The array should look like this:\n arr =[Smith, John, Foo, Bill, Jimmy, Gill]\n\n num will be equal to 2 here for the number of items per attendee\n\n  This function will save it as so\n  Smith@John Foo@Bill Jimmy@Gill"
+            ],
+            "return": {
+                "description": "null"
+            },
+            "class": ""
+        },
+        {
+            "file": "dataIO.js",
+            "line": 67,
+            "func": "readData(name)",
+            "params": [
+                {
+                    "name": "string",
+                    "description": ""
+                }
+            ],
+            "example": [
+                "\n //TAKES IN A NAME OF A DATA STRUCTURE TO READ IN\n //TAKES FROM localStorage\n //IF FILE NON EXISTENT, PRINT TO CONOSLE AND RETURN\n //RETURNS AN ARRAY STUCTURED AS SO\n //array(data1, data1a, data1b, data2a, data2b)\n //BASED ON READ FILE FORMAT AS\n data1@data1a@data1b... data2@data2a...\n //SEE HOW THE writeData FUNCTION ABOVE WRITES FOR A MORE\n // DETAILED DESCRIPTION"
+            ],
+            "return": {
+                "description": "array"
+            },
+            "class": ""
+        },
+        {
+            "file": "dataIO.js",
+            "line": 130,
+            "func": "readEventData(name)",
+            "params": [
+                {
+                    "name": "string",
+                    "description": "Takes in a name of a file that stores event data\n Different than readData because it parses information different"
+                }
+            ],
+            "example": [
+                "\n trying to read masterEvent\n call readEventData (masterEvent)"
+            ],
+            "return": {
+                "description": "array formated as such\n [title, date, length,...]"
+            },
+            "class": ""
+        },
+        {
+            "file": "dataIO.js",
+            "line": 185,
+            "func": "eventArray(list)",
+            "params": [
+                {
+                    "name": "list",
+                    "description": ""
+                }
+            ],
+            "example": [
+                "\ntakes in a list of events and changes it to an array\nSince the list is passed by value, removing the first value wont destroy\nthe master list"
+            ],
+            "return": {
+                "description": ": (array)"
+            },
+            "class": ""
+        },
+        {
+            "file": "dataIO.js",
+            "line": 213,
+            "func": "userArray()\ntakes in a list of users and changes it to array",
+            "params": [
+                {
+                    "name": "(list)",
+                    "description": ""
+                }
+            ],
+            "example": [
+                " //userArray(masterUser)"
+            ],
+            "return": {
+                "description": "array"
+            },
+            "class": ""
+        },
+        {
+            "file": "dataIO.js",
+            "line": 235,
+            "func": "populateEvent()",
+            "params": [
+                {
+                    "name": "none",
+                    "description": "",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "null"
+            },
+            "class": ""
+        },
+        {
+            "file": "dataIO.js",
+            "line": 265,
+            "itemtype": "method",
+            "name": "populateUser(name)",
+            "params": [
+                {
+                    "name": "string",
+                    "description": ""
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "meeting.js",
+            "line": 1,
+            "is_constructor": 1,
+            "class": ""
+        },
+        {
+            "file": "meeting.js",
+            "line": 22,
+            "itemtype": "method",
+            "name": "Takes in a first name and a last name\ncreates a new attendee, and adds it to the list.",
+            "class": ""
+        },
+        {
+            "file": "meeting.js",
+            "line": 35,
+            "itemtype": "method",
+            "name": "Allows for comparison of events by date.",
+            "class": ""
+        },
+        {
             "file": "user_availability.js",
             "line": 1,
             "description": "Adds a row to the table on user_availabilty.html. This will\nbe used to add the given events to the table.",
@@ -83,24 +432,240 @@
     ],
     "warnings": [
         {
+            "message": "unknown tag: func",
+            "line": " dataIO.js:6"
+        },
+        {
+            "message": "param name missing: {array, num, string}\n   array: values to store are saved in with an offset\n   offset: # of values saved per item\n   name: name of value",
+            "line": " dataIO.js:6"
+        },
+        {
+            "message": "unknown tag: func",
+            "line": " dataIO.js:67"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " dataIO.js:67"
+        },
+        {
+            "message": "unknown tag: func",
+            "line": " dataIO.js:130"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " dataIO.js:130"
+        },
+        {
+            "message": "unknown tag: func",
+            "line": " dataIO.js:185"
+        },
+        {
+            "message": "unknown tag: func",
+            "line": " dataIO.js:213"
+        },
+        {
+            "message": "unknown tag: func",
+            "line": " dataIO.js:235"
+        },
+        {
             "message": "Missing item type\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options.",
             "line": " add_event.js:4"
         },
         {
+            "message": "Missing item type",
+            "line": " add_event.js:10"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:13"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:19"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:33"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:40"
+        },
+        {
             "message": "Missing item type\naddAMPM select box",
-            "line": " add_event.js:65"
+            "line": " add_event.js:66"
         },
         {
             "message": "Missing item type\nRemove AMPM select box",
-            "line": " add_event.js:74"
+            "line": " add_event.js:75"
         },
         {
             "message": "Missing item type\npopulates the select box with the correct number of hours",
-            "line": " add_event.js:84"
+            "line": " add_event.js:85"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:99"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:108"
         },
         {
             "message": "Missing item type\nunpopulates this given select box",
-            "line": " add_event.js:139"
+            "line": " add_event.js:132"
+        },
+        {
+            "message": "Missing item type\n0123456789",
+            "line": " add_event.js:155"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:177"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:179"
+        },
+        {
+            "message": "Missing item type\nFOR STORING THE TIME IN 24 HOUR MODE",
+            "line": " add_event.js:181"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:185"
+        },
+        {
+            "message": "Missing item type\nconsole.log(\"Event name: \"+ eventTitle);\nconsole.log(\"Date: \" + month + \"/\" + day + \"/\" + year);\nconsole.log(\"Start time: \"+strthour + \":\"+strtmin);",
+            "line": " add_event.js:203"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:211"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:218"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:221"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:226"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:232"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:238"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:241"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:243"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:261"
+        },
+        {
+            "message": "Missing item type\nconsole.log(endhour);",
+            "line": " add_event.js:264"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:272"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:278"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:284"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:290"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:296"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:301"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:307"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:313"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:321"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:328"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:334"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:340"
+        },
+        {
+            "message": "Missing item type\nIf the date is bad, it will refresh the page,",
+            "line": " add_event.js:348"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:355"
+        },
+        {
+            "message": "Missing item type",
+            "line": " add_event.js:360"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dataIO.js:6"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dataIO.js:67"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dataIO.js:130"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dataIO.js:185"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dataIO.js:213"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dataIO.js:235"
+        },
+        {
+            "message": "Missing item type",
+            "line": " meeting.js:1"
         },
         {
             "message": "Missing item type\nAdds a row to the table on user_availabilty.html. This will\nbe used to add the given events to the table.",
