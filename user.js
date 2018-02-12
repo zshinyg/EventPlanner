@@ -10,7 +10,8 @@ function submitName()  {
     var firstName = document.getElementById("userFirstName").value;
     var lastName = document.getElementById("userLastName").value;
 
-    populateUser("masterUser");
+    console.log("second print all");
+    masterUser.printAll();
     var person = new attendee(lastName,firstName);
     masterUser.add(person);
     var arr = userArray(masterUser);
@@ -23,9 +24,11 @@ function submitName()  {
 
 function populateUserSelect(id) {
 
+    window.masterUser = populateUser("masterUser");
     unpopulateNames();
     var docfrag = document.createDocumentFragment();
-
+    console.log("before the loop");
+    window.masterUser.printAll();
       for(var i = 0; i < masterUser.size; i++){
 
           //Get the node at index i from masterUser

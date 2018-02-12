@@ -248,7 +248,8 @@ function populateUser(name) {
     var firstName = mU[i+1];
     var person = new attendee(lastName, firstName);
     console.log(person);
-    window["list"+listNumber].add(attendee);
+    window["list"+listNumber].add(person);
+    console.log("print all");
     window["list"+listNumber].printAll();
     console.log(window["list"+listNumber].size);
   }
