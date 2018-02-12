@@ -229,9 +229,13 @@ function populateEvent() {
 
 
 function populateUser(name) {
-
-  var list = new linkedlist;
-  list[name];
+  var listNumber=1;
+  // var listName = eval("var list" + listNumber + "=123;");
+  // listName = new linkedlist;
+  //listName.add(name);
+  window["list"+listNumber]= new linkedlist;
+  //var list = new linkedlist;
+  //list[name];
   var mU = readData(name);
     if (mU[0] == null) {
     var arr = new Array;
@@ -244,10 +248,10 @@ function populateUser(name) {
     var firstName = mU[i+1];
     var person = new attendee(lastName, firstName);
     console.log(person);
-    list.add(attendee);
-    list.printAll();
-    console.log(list.size);
+    window["list"+listNumber].add(attendee);
+    window["list"+listNumber].printAll();
+    console.log(window["list"+listNumber].size);
   }
-  return list;
+  return window["list"+listNumber];
   //window.masterUser.printAll();
 }
