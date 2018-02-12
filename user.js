@@ -10,6 +10,9 @@ function submitName()  {
     var firstName = document.getElementById("userFirstName").value;
     var lastName = document.getElementById("userLastName").value;
 
+    firstName = firstName.trim();
+    lastName =lastName.trim();
+
     if(firstName == "" || lastName == ""){
         alert("Invalid Name")
         return;
