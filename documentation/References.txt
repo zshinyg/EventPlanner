@@ -6,3 +6,7 @@ https://code.tutsplus.com/articles/data-structures-with-javascript-singly-linked
 
 REFERENCES FOR CHECK BOX:
 https://stackoverflow.com/questions/28372466/how-to-call-a-function-from-checkbox-onclick-or-onchange
+
+REFERENCES FOR REDIRECTING TO A NEW WINDOW:
+https://www.w3schools.com/js/js_window_location.asp
+
