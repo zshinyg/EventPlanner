@@ -17,7 +17,10 @@
 var lastName = '';
 var firstName = '';
 
-/**@method setName() Sets the name for the user */
+/**
+*Sets the name for the user
+*@method setName()
+*/
 function setName(){
   var name = sessionStorage.getItem("userName");
   console.log("DEBUG "+ name);
@@ -35,7 +38,8 @@ function setName(){
 }
 
 
-/** @method timeSwitcher() changes the times in selectbox based on
+/** changes the times in selectbox based on
+* @method timeSwitcher()
 *   whether the "24 hour" box is checked*/
 
 function timeSwitcher(){
@@ -66,7 +70,8 @@ function timeSwitcher(){
 }
 
 /**
- *@method addAMPM() addAMPM select box
+ *addAMPM select box
+ *@method addAMPM()
  */
 function addAMPM(){
     document.getElementById("ampm").style.visibility="";
@@ -75,7 +80,8 @@ function addAMPM(){
 }
 
 /**
- *@method removeAMPM() Remove AMPM select box
+ *Remove AMPM select box
+ *@method removeAMPM()
  */
  function removeAMPM(){
      document.getElementById("ampm").style.visibility="hidden";
@@ -85,8 +91,9 @@ function addAMPM(){
 
 
 /**
- *@method populateHours()
  * populates the select box with the correct number of hours
+ *@method populateHours()
+ *
  * @param {number} mode - sets the mode for the select box
  *      23 for 24-Hour mode and 12 for 12-Hour mode.
  * @param {number} i - sets the number for the select box to
@@ -134,7 +141,8 @@ function addAMPM(){
 
 
 /**
- * @method unpopulateHour() unpopulates this given select box
+ * unpopulates this given select box
+ * @method unpopulateHour()
  * @param {string} id - This is the element id of the select
  *      box you would like to populate.
  */
@@ -149,9 +157,10 @@ function unpopulateHour(id){
 }
 
 
-/** @method submitVals() Submits user values for title, date, and time then
-*   checks if the values are valid. If so, the page is redirected. Otherwise,
-*   it is refreshed.*/
+/**Submits user values for title, date, and time then checks if the values are valid.
+* If so, the page is redirected. Otherwise, it is refreshed.
+* @method submitVals()
+*/
 
 function submitVals()  {
   var eventTitle = document.getElementById("event").value;
@@ -263,7 +272,9 @@ function submitVals()  {
 
 
 
-/**@method isInvalidDate() Checks to see if the date can be used or not
+/**
+* Checks to see if the date can be used or not
+* @method isInvalidDate()
 * @param {number} month
 * @param {number} day
 * @param {number} year
@@ -363,9 +374,11 @@ function isInvalidDate(month, day, year, inputDate, currentDate, length, strthou
 
 
 
-/** @method redirect() Redirects the page according to if date is invalid
+/**
+*Redirects the page according to if date is invalid
 *    If the date is bad, it will refresh the page,
 *    otherwise it will redirect to events.html
+* @method redirect()
 *@param {bool} badDate
 */
 function redirect(badDate)
