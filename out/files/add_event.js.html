@@ -51,14 +51,7 @@
                 
                 
                             <ul id="api-modules" class="apis modules">
-                                <li><a href="../modules/add_event
-                Toggle 24 hour mode and 12 hour mode
-                Checks if the 24-Hour checkbox is checked then populates the
-                select box with the correct number of options..html">add_event
-                Toggle 24 hour mode and 12 hour mode
-                Checks if the 24-Hour checkbox is checked then populates the
-                select box with the correct number of options.</a></li>
-                                <li><a href="../modules/addEvent.html">addEvent</a></li>
+                                <li><a href="../modules/add_event.html">add_event</a></li>
                                 <li><a href="../modules/adminMode.html">adminMode</a></li>
                                 <li><a href="../modules/attendee.html">attendee</a></li>
                                 <li><a href="../modules/dataIO.html">dataIO</a></li>
@@ -106,7 +99,7 @@
 <div class="file">
     <pre class="code prettyprint linenums">
 /**
- * @module addEvent
+ * 
  * @class addEvent
  */
 
@@ -115,10 +108,10 @@
 
 
 /**
- * @module add_event
  * Toggle 24 hour mode and 12 hour mode
  * Checks if the 24-Hour checkbox is checked then populates the
  * select box with the correct number of options.
+ * @module add_event
  */
 
 /** Global variable for saving time in 24hr time format or not*/
@@ -132,7 +125,7 @@ var firstName = &#x27;&#x27;;
 
 /**
 *Sets the name for the user
-*@method setName()
+*@method setName
 */
 function setName(){
   var name = sessionStorage.getItem(&quot;userName&quot;);
@@ -184,13 +177,8 @@ function timeSwitcher(){
 }
 
 /**
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
- * addAMPM select box
- *@method addAMPM
-=======
  *addAMPM select box
- *@method addAMPM()
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 010f31a54292dc8059f7561942a9701ef5c42d7d
+ *@method addAMPM
  */
 function addAMPM(){
     document.getElementById(&quot;ampm&quot;).style.visibility=&quot;&quot;;
@@ -199,12 +187,8 @@ function addAMPM(){
 }
 
 /**
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
- *  Remove AMPM select box
-=======
  *Remove AMPM select box
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 010f31a54292dc8059f7561942a9701ef5c42d7d
- *@method removeAMPM()
+ *@method removeAMPM
  */
  function removeAMPM(){
      document.getElementById(&quot;ampm&quot;).style.visibility=&quot;hidden&quot;;
@@ -215,12 +199,8 @@ function addAMPM(){
 
 /**
  * populates the select box with the correct number of hours
- *@method populateHours()
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
- * 
-=======
+ *@method populateHour
  *
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 010f31a54292dc8059f7561942a9701ef5c42d7d
  * @param {number} mode - sets the mode for the select box
  *      23 for 24-Hour mode and 12 for 12-Hour mode.
  * @param {number} i - sets the number for the select box to
@@ -268,12 +248,8 @@ function addAMPM(){
 
 
 /**
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
- *  unpopulates this given select box
-=======
  * unpopulates this given select box
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 010f31a54292dc8059f7561942a9701ef5c42d7d
- * @method unpopulateHour()
+ * @method unpopulateHour
  * @param {string} id - This is the element id of the select
  *      box you would like to populate.
  */
@@ -290,7 +266,7 @@ function unpopulateHour(id){
 
 /**Submits user values for title, date, and time then checks if the values are valid.
 * If so, the page is redirected. Otherwise, it is refreshed.
-* @method submitVals()
+* @method submitVals
 */
 
 function submitVals()  {
@@ -345,16 +321,10 @@ function submitVals()  {
 
   }
 
-  /** TEST IN CONSOLE
-  *console.log(&quot;Event name: &quot;+ eventTitle);
-  *console.log(&quot;Date: &quot; + month + &quot;/&quot; + day + &quot;/&quot; + year);
-  *console.log(&quot;Start time: &quot;+strthour + &quot;:&quot;+strtmin);
-  *console.log(&quot;End time: &quot; + endhour + &quot;:&quot; + endmin);*/
+
 
   let inputDate = new Date(year, month-1, day, strthour, strtmin);
   let currentDate = new Date();
-  /**console.log(&quot;Input date: &quot;+ inputDate);
-  *console.log(&quot;Curent date: &quot;+ currentDate);*/
 
   var length = ((endhour*60)+endmin)-((strthour*60)+strtmin);
 
@@ -368,14 +338,8 @@ function submitVals()  {
 
 
     var temp = new meeting(eventTitle, inputDate, length);
-    /**console.log(&quot;before the add&quot;);
-    *window.masterEvent.printAll();*/
-
 
     window.masterEvent.add(temp);
-
-    /**console.log(&quot;After the add&quot;);
-    *window.masterEvent.printAll();*/
 
     var arr = eventArray(masterEvent);
     writeData(arr, 3, &quot;masterEvent&quot;);
@@ -405,7 +369,7 @@ function submitVals()  {
 
 /**
 * Checks to see if the date can be used or not
-* @method isInvalidDate()
+* @method isInvalidDate
 * @param {number} month
 * @param {number} day
 * @param {number} year
@@ -509,7 +473,7 @@ function isInvalidDate(month, day, year, inputDate, currentDate, length, strthou
 *Redirects the page according to if date is invalid
 *    If the date is bad, it will refresh the page,
 *    otherwise it will redirect to events.html
-* @method redirect()
+* @method redirect
 *@param {bool} badDate
 */
 function redirect(badDate)

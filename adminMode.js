@@ -5,8 +5,9 @@
 
 
 /**
+ * Populates the events to see which events can be selected
  * @method populateEventSelect
- * Populates the events to see which events can be selected 
+ *  
  */
 function populateEventSelect(id) {
 
@@ -38,8 +39,8 @@ function populateEventSelect(id) {
 }
 
 /**
- * @method unpopulateEvents
  * Removes the events when page is reloaded
+ * @method unpopulateEvents
  */
 function unpopulateEvents(){
 
@@ -70,8 +71,8 @@ function addRow(name) {
 }
 
 /**
- * @method populateAttendeeTable
  * Populates the Attendee Table to see who is attending
+ * @method populateAttendeeTable
  */
 function populateAttendeeTable() {
 
@@ -95,8 +96,8 @@ function populateAttendeeTable() {
 }
 
 /**
+* Removes the Attendee Table when page is reloaded
  * @method unpopulateTable
- * Removes the Attendee Table when page is reloaded
  */
 function unpopulateTable() {
 

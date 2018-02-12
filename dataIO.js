@@ -11,7 +11,7 @@
 
 
 /**FUNCTION WRITE writeData
-*@func writeData(array,offset,name)
+*@method writeData
 *@param array
 *@param num
 *@param name
@@ -19,7 +19,7 @@
 *   offset: # of values saved per item
 *   name: name of value
 *
-* @example:
+* @example
 *  Say I want to store the attendees of an event in
 *   an event.  If the event name is Birthday, the attendee's look like this:
 *   last name, first name
@@ -75,22 +75,22 @@ function writeData(arr, num, name) {
 
 /** readData
 *
-*@func  readData(name)
+*@method readData
 *
-*@param string
+*@param {string} name
 *
 *@example
-* //TAKES IN A NAME OF A DATA STRUCTURE TO READ IN
-* //TAKES FROM localStorage
-* //IF FILE NON EXISTENT, PRINT TO CONOSLE AND RETURN
-* //RETURNS AN ARRAY STUCTURED AS SO
+* TAKES IN A NAME OF A DATA STRUCTURE TO READ IN
+* TAKES FROM localStorage
+* IF FILE NON EXISTENT, PRINT TO CONOSLE AND RETURN
+* RETURNS AN ARRAY STUCTURED AS SO
 *
-* //array(data1, data1a, data1b, data2a, data2b)
+* array(data1, data1a, data1b, data2a, data2b)
 *
-* //BASED ON READ FILE FORMAT AS
+* BASED ON READ FILE FORMAT AS
 * data1@data1a@data1b... data2@data2a...
-* //SEE HOW THE writeData FUNCTION ABOVE WRITES FOR A MORE
-* // DETAILED DESCRIPTION
+* SEE HOW THE writeData FUNCTION ABOVE WRITES FOR A MORE
+* DETAILED DESCRIPTION
 *@returns array
 */
 
@@ -137,7 +137,7 @@ function readData(name){
 
 
 /**
-*@func readEventData(name)
+*@method readEventData
 *
 *@param string
 * Takes in a name of a file that stores event data
@@ -192,13 +192,13 @@ function readEventData(name){
 
 
 /**
-*@func eventArray(list)
+*@method eventArray
 *@param list
 *@example
 *takes in a list of events and changes it to an array
 *Since the list is passed by value, removing the first value wont destroy
 *the master list
-*@return: (array)
+*@return (array)
 */
 function eventArray (list){
 
@@ -220,8 +220,8 @@ function eventArray (list){
 
 
 /**
-*@func userArray()
-*takes in a list of users and changes it to array
+* takes in a list of users and changes it to array
+*@method userArray
 *@param list
 *
 *@example userArray(masterUser)
@@ -242,7 +242,7 @@ function userArray (list){
 
 
 /**
-*@func populateEvent()
+*@method populateEvent
 *@param none
 *@return null
 */
@@ -272,7 +272,7 @@ function populateEvent() {
 
 
 /**
-*@method populateUser(name)
+*@method populateUser
 *@param string
 *@returns list
 */
