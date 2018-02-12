@@ -1,4 +1,6 @@
 /**event.js
+*@module meeting
+*
 *@constructor
 *THE NAME OF THE EVENT IS TAKEN AT CONSTRUCTION TIME
 *
@@ -24,6 +26,8 @@ function meeting (title, date, length) {
 /**ADD ATTENDEE
 *@method add() Takes in a first name and a last name
 *creates a new attendee, and adds it to the list.
+*@param {string} lastName
+*@param {string} firstName
 */
 meeting.prototype.add = function (lastName, firstName){
 
