@@ -275,13 +275,25 @@ function isInvalidDate(month, day, year, inputDate, currentDate, length)
   for(var i = 0; i < window.masterEvent.size; i ++){
     var  node = window.masterEvent.returnAt(i);
     if ((parseInt(node.data.date.getTime()/60000) <= parseInt(inputDate.getTime()/60000)) && ((parseInt(node.data.date.getTime()/60000) + parseInt(node.data.len)) >= parseInt(inputDate.getTime()/60000))){
-      window.alert("Can't have an overlaping event1");
+      window.alert("Can't have an overlaping event");
       console.log("ERROR: Can't have an overlaping event");
       badTime=true;
       break;
     }
-    if ((parseInt(node.data.date.getTime()/60000) >= parseInt(inputDate.getTime()/60000)) && (parseInt(node.data.date.getTime()/60000) <= (parseInt(inputDate.getTime()/60000) + length))){
-      window.alert("Can't have an overlaping event2");
+    else if ((parseInt(node.data.date.getTime()/60000) >= parseInt(inputDate.getTime()/60000)) && (parseInt(node.data.date.getTime()/60000) <= (parseInt(inputDate.getTime()/60000) + length))){
+      window.alert("Can't have an overlaping event");
+      console.log("ERROR: Can't have an overlaping event");
+      badTime=true;
+      break;
+    }
+    else if ((parseInt(node.data.date.getTime()/60000) <= parseInt(inputDate.getTime()/60000)) && ((parseInt(node.data.date.getTime()/60000)+ parseInt(node.data.len)) >= (parseInt(inputDate.getTime()/60000) + length))){
+      window.alert("Can't have an overlaping event");
+      console.log("ERROR: Can't have an overlaping event");
+      badTime=true;
+      break;
+    }
+    else if ((parseInt(node.data.date.getTime()/60000) >= parseInt(inputDate.getTime()/60000)) && ((parseInt(node.data.date.getTime()/60000)+ parseInt(node.data.len)) <= (parseInt(inputDate.getTime()/60000) + length))){
+      window.alert("Can't have an overlaping event");
       console.log("ERROR: Can't have an overlaping event");
       badTime=true;
       break;
