@@ -32,7 +32,7 @@ node.prototype.greater = function (data) {
 node.prototype.equal = function (data){
   val = false;
 
-  if (this.data === data){
+  if (this.data == data){
     val = true;
   }
   return val;

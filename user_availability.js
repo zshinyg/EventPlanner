@@ -17,7 +17,7 @@ function setName(){
     lastName += name[i];
     i++;
   } // end while
-    console.log("this is the name now: " + window.firstName  + ' ' + window.lastName);
+    //console.log("this is the name now: " + window.firstName  + ' ' + window.lastName);
 }
 
 function addRow(title, date, time) {
@@ -72,6 +72,28 @@ function loadEvents(){
   if (masterEvent.size == 0){
     document.getElementById("list").innerHTML = "No events at this time";
   }
+
+
+  // Check to see what events the user is going to
+  var checkBoxArray = document.getElementById("eventTable").getElementsByTagName("INPUT");
+
+  for (var i = 0; i < masterEvent.size; i++){
+
+    var node = masterEvent.returnAt(i);
+    var eventTitle = node.data.title;
+    window[eventTitle] = populateUser(eventTitle);
+    var attending = window[eventTitle].search(lastName);
+
+    // console.log("print ALL in load users");
+    // window[eventTitle].printAll();
+
+
+    // console.log("Searching for: " + lastName + " in " + eventTitle);
+    // console.log("attending = " + attending);
+    if (attending){
+      checkBoxArray[i].checked = true;
+    }
+  }
 }
 
 
@@ -92,13 +114,13 @@ function submit(){
 // that the person who is logged in is attending
   for (var i = 0; i < checkBoxArray.length; i++){
     if (checkBoxArray[i].checked == true){
-      console.log("found a check");
-      console.log(nameArray[i].textContent);
+      // console.log("found a check");
+      // console.log(nameArray[i].textContent);
       // Populate the list of that event
       var eventTitle = nameArray[i].textContent;
       var list = populateUser(eventTitle);
       // create a new attendee with the user logged in
-      console.log(window.lastName + ' ' + window.firstName);
+      // console.log(window.lastName + ' ' + window.firstName);
       var person = new attendee(window.lastName, window.firstName);
       // add the person to the list
       list.add(person);
