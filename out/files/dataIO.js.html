@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>dataIO.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: dataIO.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+// WRITE DATA.JS
+
+
+
+
+/**FUNCTION WRITE writeData
+*@func: writeData(array to save, number of offset, name)
+*@param{array, num, string}
+*   array: values to store are saved in with an offset
+*   offset: # of values saved per item
+*   name: name of value
+*
+* @example:
+*  Say I want to store the attendees of an event in
+*   an event.  If the event name is Birthday, the attendee&#x27;s look like this:
+*   last name, first name
+*   Smith, John
+*   Foo, Bill
+*   Jimmy, Gill
+*
+* The array should look like this:
+* arr =[Smith, John, Foo, Bill, Jimmy, Gill]
+*
+* num will be equal to 2 here for the number of items per attendee
+*
+*  This function will save it as so
+*  Smith@John Foo@Bill Jimmy@Gill
+* @return null
+*/
+
+
+function writeData(arr, num, name) {
+
+  var line = &#x27;&#x27;;
+  var doc = &#x27;&#x27;;
+  //console.log(&quot;before for loop&quot;);
+  //console.log(arr.length);
+  //console.log(&quot;num: &quot; + num);
+
+  for (var i = 0; i &lt; arr.length; i+=num){
+
+    //console.log(&quot;i: &quot;+ i + &#x27;\n&#x27;);
+    line = &#x27;&#x27;;
+    for(var j = 0; j &lt; num; j++){
+
+      //console.log(&quot;j: &quot; + j + &#x27;\n&#x27;);
+
+      if (j == num-1){
+        line += arr[i+j];
+        //console.log(&quot;inside if of j&quot;);
+      } // end if
+
+      else {
+        line += arr[i+j] + &#x27;@&#x27;;
+        //console.log(&quot;inside else of j&quot;);
+      } // end else
+    } // end for j
+    doc += line + &#x27; &#x27;;
+  } // end for i
+
+  //console.log(doc);
+  localStorage.setItem(name, doc);
+}
+
+
+
+/** readData
+*
+*@func  readData(name)
+*
+*@param string
+*
+*@example
+* //TAKES IN A NAME OF A DATA STRUCTURE TO READ IN
+* //TAKES FROM localStorage
+* //IF FILE NON EXISTENT, PRINT TO CONOSLE AND RETURN
+* //RETURNS AN ARRAY STUCTURED AS SO
+*
+* //array(data1, data1a, data1b, data2a, data2b)
+*
+* //BASED ON READ FILE FORMAT AS
+* data1@data1a@data1b... data2@data2a...
+* //SEE HOW THE writeData FUNCTION ABOVE WRITES FOR A MORE
+* // DETAILED DESCRIPTION
+*@returns array
+*/
+
+function readData(name){
+
+  var doc = localStorage.getItem(name);
+  if (doc == null){
+
+    console.log(&quot;file &quot; + name + &quot; not found&quot;);
+    return 0;
+  }// end if
+
+  //console.log(doc);
+  var line = &#x27;&#x27;;
+  var elements = 0;
+  var arr = new Array;
+
+  // Go through each index of the string
+  for (var i = 0; i &lt; doc.length; i++){
+
+    // If the value is &#x27; &#x27; or &#x27;@&#x27; skip it and add that new element to arr
+    if (doc[i] == &#x27; &#x27;){
+      arr[elements] = line;
+      line = &#x27;&#x27;;
+      elements++;
+      //console.log(&quot;equal space&quot;);
+    }// ene if
+
+    else if (doc[i] == &#x27;@&#x27;){
+      //console.log(&quot;equal @&quot;);
+      arr[elements] = line;
+      line = &#x27;&#x27;;
+      elements++;
+    } // end else if
+    else{
+      line += doc[i];
+    }// end else
+  } // end for
+  //console.log(arr);
+  return arr;
+}
+
+
+
+
+/**
+*@func readEventData(name)
+*
+*@param string
+* Takes in a name of a file that stores event data
+* Different than readData because it parses information different
+* @example
+* trying to read masterEvent
+* call readEventData (masterEvent)
+* @returns array formated as such
+* [title, date, length,...]
+*
+*/
+function readEventData(name){
+
+  var doc = localStorage.getItem(name);
+  if (doc == null){
+
+        console.log(&quot;file &quot; + name + &quot; not found&quot;);
+        return 0;
+  }
+
+  var line = &#x27;&#x27;;
+  var elements = 0;
+  var arr = new Array;
+
+  for (var i = 0; i &lt; doc.length; i++){
+    var j = 0;
+    while(j&lt;2){
+      if(doc[i] == &#x27;@&#x27;){
+        arr[elements] = line;
+        line =&#x27;&#x27;;
+        elements++
+        j++;
+        i++;
+      }
+      line += doc[i];
+      i++;
+
+    }// end while j&lt;2
+
+    while(doc[i] != &#x27; &#x27;){
+      line += doc[i];
+      i++;
+    }
+    arr[elements] = line;
+    elements++;
+    line = &#x27;&#x27;;
+  }
+
+  return arr;
+}
+
+
+
+/**
+*@func eventArray(list)
+*@param list
+*@example
+*takes in a list of events and changes it to an array
+*Since the list is passed by value, removing the first value wont destroy
+*the master list
+*@return: (array)
+*/
+function eventArray (list){
+
+  var arr = new Array;
+  //console.log(list.isEmpty());
+  //console.log(list.size);
+
+  var ind = 0;
+  for (var i = 0; i &lt; list.size; i++){
+    currentnode = list.returnAt(i);
+    arr[ind] = currentnode.data.title;
+    arr[ind+1] = currentnode.data.date;
+    arr[ind+2] = currentnode.data.len;
+    ind+=3;
+  }
+
+  return arr;
+}
+
+
+/**
+*@func userArray()
+*takes in a list of users and changes it to array
+*@param (list)
+*
+*@example //userArray(masterUser)
+*@return array
+*/
+function userArray (list){
+
+  var arr = new Array;
+  var ind = 0;
+  for (var i = 0; i &lt; list.size; i++){
+    currentnode = list.returnAt(i);
+    arr[ind] = currentnode.data.lastName;
+    arr[ind+1] = currentnode.data.firstName;
+    ind+=2;
+  }
+  return arr;
+}
+
+
+/**
+*@func populateEvent()
+*@param [none]
+*@return null
+*/
+
+
+function populateEvent() {
+
+  var mE = readEventData(&quot;masterEvent&quot;);
+
+  if (mE[0] == null){
+    var arr = new Array;
+    writeData(arr, 0, &quot;masterEvent&quot;);
+  }
+
+
+  // For master event, create a list of all events
+  for (var i = 0; i &lt; mE.length; i+=3){
+    var title = mE[i];
+    var date = mE[i+1];
+    var length = mE[i+2];
+    var temp = new meeting(title, date, length);
+    window.masterEvent.add(temp);
+  } // end for i
+
+}
+
+
+
+/**
+*@method populateUser(name)
+*@param string
+*/
+function populateUser(name) {
+  // var listNumber=1;
+  // var listName = eval(&quot;var list&quot; + listNumber + &quot;=123;&quot;);
+  // listName = new linkedlist;
+  //listName.add(name);
+  window[name]= new linkedlist;
+  //var list = new linkedlist;
+  //list[name];
+  var mU = readData(name);
+    if (mU[0] == null) {
+    var arr = new Array;
+    writeData(arr, 0, name);
+  }
+
+  // For master user, create list of all users
+  for (var i = 0; i &lt; mU.length; i+=2){
+    var lastName = mU[i];
+    var firstName = mU[i+1];
+    var person = new attendee(lastName, firstName);
+    // console.log(person);
+    window[name].add(person);
+    // console.log(&quot;print all&quot;);
+    window[name].printAll();
+    // console.log(window[name].size);
+  }
+  return window[name];
+  //window.masterUser.printAll();
+}
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

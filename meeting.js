@@ -2,11 +2,13 @@
 *@constructor
 *THE NAME OF THE EVENT IS TAKEN AT CONSTRUCTION TIME
 *
-*STRING VARIALBE:
-*         TITLE
-*INTEGER VARIABLES:
-*         Date, Length
-*HAS A LINKED LIST
+*@param {string} title
+*
+*@param {number} length
+*
+*@param {date} date
+*
+*@param {linkedlist} list
 *
 *IMPORTANT:
 *         ALL HOURS ARE STORED IN 24 HOUR FORMAT FROM 0-23
@@ -20,7 +22,7 @@ function meeting (title, date, length) {
 
 
 /**ADD ATTENDEE
-*@method Takes in a first name and a last name
+*@method add() Takes in a first name and a last name
 *creates a new attendee, and adds it to the list.
 */
 meeting.prototype.add = function (lastName, firstName){
@@ -33,7 +35,7 @@ meeting.prototype.add = function (lastName, firstName){
 
 
 /**VALUE OF
-*@method Allows for comparison of events by date.
+*@method valueOf() Allows for comparison of events by date.
 */
 meeting.prototype.valueOf = function () {
   return this.date.getTime();

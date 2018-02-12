@@ -1,0 +1,5 @@
+{
+    "name": "Event Planner",
+    "description": "A web based application that lets people create events and select if they are attending events",
+    "version": "1.0"
+  }
