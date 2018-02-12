@@ -66,3 +66,8 @@ function addAvailability(){
   sessionStorage.setItem("userName", name);
 
 }
+
+
+function nextPage() {
+    
+}
