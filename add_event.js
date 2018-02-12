@@ -84,12 +84,12 @@ function addAMPM(){
 
 /**
  * populates the select box with the correct number of hours
- * @param {number} mode sets the mode for the select box
+ * @param {number} mode - sets the mode for the select box
  *      23 for 24-Hour mode and 12 for 12-Hour mode.
- * @param {number} i sets the number for the select box to
+ * @param {number} i - sets the number for the select box to
  *      start counting at. Should be 1 for 12-Hour mode and
  *      5 for 24-Hour mode.
- * @param {string} id This is the element id of the select
+ * @param {string} id - This is the element id of the select
  *      box you would like to populate.
  */
  function populateHours(mode,i,id,ampmID) {
@@ -131,7 +131,7 @@ function addAMPM(){
 
 /**
  * unpopulates this given select box
- * @param {string} id This is the element id of the select
+ * @param {string} id - This is the element id of the select
  *      box you would like to populate.
  */
 function unpopulateHour(id){

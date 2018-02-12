@@ -1,0 +1,110 @@
+{
+    "project": {},
+    "files": {
+        "add_event.js": {
+            "name": "add_event.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "user_availability.js": {
+            "name": "user_availability.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {},
+    "elements": {},
+    "classitems": [
+        {
+            "file": "add_event.js",
+            "line": 4,
+            "description": "Toggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options.",
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 65,
+            "description": "addAMPM select box",
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 74,
+            "description": "Remove AMPM select box",
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 84,
+            "description": "populates the select box with the correct number of hours",
+            "params": [
+                {
+                    "name": "mode",
+                    "description": "- sets the mode for the select box\n     23 for 24-Hour mode and 12 for 12-Hour mode.",
+                    "type": "Number"
+                },
+                {
+                    "name": "i",
+                    "description": "- sets the number for the select box to\n     start counting at. Should be 1 for 12-Hour mode and\n     5 for 24-Hour mode.",
+                    "type": "Number"
+                },
+                {
+                    "name": "id",
+                    "description": "- This is the element id of the select\n     box you would like to populate.",
+                    "type": "String"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "add_event.js",
+            "line": 139,
+            "description": "unpopulates this given select box",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "- This is the element id of the select\n     box you would like to populate.",
+                    "type": "String"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "user_availability.js",
+            "line": 1,
+            "description": "Adds a row to the table on user_availabilty.html. This will\nbe used to add the given events to the table.",
+            "class": ""
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nToggle 24 hour mode and 12 hour mode\nChecks if the 24-Hour checkbox is checked then populates the\nselect box with the correct number of options.",
+            "line": " add_event.js:4"
+        },
+        {
+            "message": "Missing item type\naddAMPM select box",
+            "line": " add_event.js:65"
+        },
+        {
+            "message": "Missing item type\nRemove AMPM select box",
+            "line": " add_event.js:74"
+        },
+        {
+            "message": "Missing item type\npopulates the select box with the correct number of hours",
+            "line": " add_event.js:84"
+        },
+        {
+            "message": "Missing item type\nunpopulates this given select box",
+            "line": " add_event.js:139"
+        },
+        {
+            "message": "Missing item type\nAdds a row to the table on user_availabilty.html. This will\nbe used to add the given events to the table.",
+            "line": " user_availability.js:1"
+        }
+    ]
+}
