@@ -62,8 +62,9 @@ function timeSwitcher(){
     }
 }
 
-
-
+/**
+ * addAMPM select box
+ */
 function addAMPM(){
     document.getElementById("ampm").style.visibility="";
     document.getElementById("ampm2").style.visibility="";
