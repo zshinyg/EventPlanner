@@ -176,7 +176,30 @@ function unpopulateEvents(){
 
 }
 
+function addRow(name) {
+
+	console.log("ran addRow");
+
+    var table = document.getElementById("attendeeTable")
+
+    tr = document.createElement('tr');
+    tr.appendChild(document.createElement('td'));
+    tr.cells[0].appendChild(document.createTextNode(name));
+    table.appendChild(tr);
+
+}
+
 
 function populateAttendeeTable() {
-	console.log("Populate Attendee table");
+
+	window.masterUser = populateUser("masterUser");
+	var firstName = "";
+	var lastName = "";
+	console.log("DEBUG: masterUser size = "+masterUser.size);
+	for(var i = 0; i < masterUser.size; i++) {
+		firstName = masterUser.data.firstName;
+		lastName = masterUser.data.lastName;
+		name = firstName + " " + lastName;
+		addRow(name);
+	}
 }
