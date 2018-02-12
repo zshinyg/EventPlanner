@@ -105,8 +105,10 @@
 
 
 /**
-* Populates the events to see which events can be selected 
-*/
+ * Populates the events to see which events can be selected
+ * @method populateEventSelect
+ *  
+ */
 function populateEventSelect(id) {
 
 
@@ -137,8 +139,9 @@ function populateEventSelect(id) {
 }
 
 /**
-* Removes the events when page is reloaded
-*/
+ * Removes the events when page is reloaded
+ * @method unpopulateEvents
+ */
 function unpopulateEvents(){
 
     var events = document.getElementById(&quot;events&quot;);
@@ -150,8 +153,10 @@ function unpopulateEvents(){
 }
 
 /**
-* Adds the attendee to the Attendee Table
-*/
+ * @method addRow
+ * @param {string} name
+ * Adds the attendee to the Attendee Table
+ */
 function addRow(name) {
 
 	console.log(&quot;ran addRow&quot;);
@@ -167,6 +172,7 @@ function addRow(name) {
 
 /**
  * Populates the Attendee Table to see who is attending
+ * @method populateAttendeeTable
  */
 function populateAttendeeTable() {
 
@@ -191,7 +197,8 @@ function populateAttendeeTable() {
 
 /**
 * Removes the Attendee Table when page is reloaded
-*/
+ * @method unpopulateTable
+ */
 function unpopulateTable() {
 
 

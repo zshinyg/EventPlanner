@@ -128,7 +128,33 @@
 
                     <ul class="index-list methods">
                             <li class="index-item method">
-                                <a href="#method_populateUser(name)">populateUser(name)</a>
+                                <a href="#method_eventArray">eventArray</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_populateEvent">populateEvent</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_populateUser">populateUser</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_readData">readData</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_readEventData">readEventData</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_userArray
+takes in a list of users and changes it to array">userArray
+takes in a list of users and changes it to array</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_writeData">writeData</a>
 
                             </li>
                     </ul>
@@ -141,8 +167,144 @@
             <div id="methods" class="api-class-tabpanel">
                 <h2 class="off-left">Methods</h2>
 
-<div id="method_populateUser(name)" class="method item">
-    <h3 class="name"><code>populateUser(name)</code></h3>
+<div id="method_eventArray" class="method item">
+    <h3 class="name"><code>eventArray</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>list</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/dataIO.js.html#l194"><code>dataIO.js:194</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">list</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                    <p>(array)</p>
+
+            </div>
+        </div>
+
+
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <p>takes in a list of events and changes it to an array
+Since the list is passed by value, removing the first value wont destroy
+the master list</p>
+
+            </div>
+        </div>
+</div>
+<div id="method_populateEvent" class="method item">
+    <h3 class="name"><code>populateEvent</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>none</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/dataIO.js.html#l244"><code>dataIO.js:244</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">none</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                    <p>null</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_populateUser" class="method item">
+    <h3 class="name"><code>populateUser</code></h3>
 
         <div class="args">
             <span class="paren">(</span><ul class="args-list inline commas">
@@ -203,6 +365,343 @@
         </div>
 
 
+</div>
+<div id="method_readData" class="method item">
+    <h3 class="name"><code>readData</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>string</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/dataIO.js.html#l76"><code>dataIO.js:76</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">string</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                    <p>array</p>
+
+            </div>
+        </div>
+
+
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <p>//TAKES IN A NAME OF A DATA STRUCTURE TO READ IN
+//TAKES FROM localStorage
+//IF FILE NON EXISTENT, PRINT TO CONOSLE AND RETURN
+//RETURNS AN ARRAY STUCTURED AS SO
+//array(data1, data1a, data1b, data2a, data2b)
+//BASED ON READ FILE FORMAT AS
+data1@data1a@data1b... data2@data2a...
+//SEE HOW THE writeData FUNCTION ABOVE WRITES FOR A MORE
+// DETAILED DESCRIPTION</p>
+
+            </div>
+        </div>
+</div>
+<div id="method_readEventData" class="method item">
+    <h3 class="name"><code>readEventData</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>string</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/dataIO.js.html#l139"><code>dataIO.js:139</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">string</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>Takes in a name of a file that stores event data
+Different than readData because it parses information different</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                    <p>array formated as such
+[title, date, length,...]</p>
+
+            </div>
+        </div>
+
+
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <p>trying to read masterEvent
+call readEventData (masterEvent)</p>
+
+            </div>
+        </div>
+</div>
+<div id="method_userArray
+takes in a list of users and changes it to array" class="method item">
+    <h3 class="name"><code>userArray
+takes in a list of users and changes it to array</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>list</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/dataIO.js.html#l222"><code>dataIO.js:222</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">list</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                    <p>array</p>
+
+            </div>
+        </div>
+
+
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <p>userArray(masterUser)</p>
+
+            </div>
+        </div>
+</div>
+<div id="method_writeData" class="method item">
+    <h3 class="name"><code>writeData</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>array</code>
+                </li>
+                <li class="arg">
+                        <code>num</code>
+                </li>
+                <li class="arg">
+                        <code>name</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/dataIO.js.html#l13"><code>dataIO.js:13</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">array</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">num</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">name</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>array: values to store are saved in with an offset
+offset: # of values saved per item
+name: name of value</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                    <p>null</p>
+
+            </div>
+        </div>
+
+
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <p>Say I want to store the attendees of an event in
+an event.  If the event name is Birthday, the attendee's look like this:
+last name, first name
+Smith, John
+Foo, Bill
+Jimmy, Gill</p>
+<p>The array should look like this:
+arr =[Smith, John, Foo, Bill, Jimmy, Gill]</p>
+<p>num will be equal to 2 here for the number of items per attendee</p>
+<p>This function will save it as so
+Smith@John Foo@Bill Jimmy@Gill</p>
+
+            </div>
+        </div>
 </div>
             </div>
 

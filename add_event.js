@@ -25,7 +25,7 @@ var firstName = '';
 
 /**
 *Sets the name for the user
-*@method setName()
+*@method setName
 */
 function setName(){
   var name = sessionStorage.getItem("userName");
@@ -78,7 +78,7 @@ function timeSwitcher(){
 
 /**
  *addAMPM select box
- *@method addAMPM()
+ *@method addAMPM
  */
 function addAMPM(){
     document.getElementById("ampm").style.visibility="";
@@ -88,7 +88,7 @@ function addAMPM(){
 
 /**
  *Remove AMPM select box
- *@method removeAMPM()
+ *@method removeAMPM
  */
  function removeAMPM(){
      document.getElementById("ampm").style.visibility="hidden";
@@ -99,7 +99,7 @@ function addAMPM(){
 
 /**
  * populates the select box with the correct number of hours
- *@method populateHours()
+ *@method populateHour
  *
  * @param {number} mode - sets the mode for the select box
  *      23 for 24-Hour mode and 12 for 12-Hour mode.
@@ -149,7 +149,7 @@ function addAMPM(){
 
 /**
  * unpopulates this given select box
- * @method unpopulateHour()
+ * @method unpopulateHour
  * @param {string} id - This is the element id of the select
  *      box you would like to populate.
  */
@@ -166,7 +166,7 @@ function unpopulateHour(id){
 
 /**Submits user values for title, date, and time then checks if the values are valid.
 * If so, the page is redirected. Otherwise, it is refreshed.
-* @method submitVals()
+* @method submitVals
 */
 
 function submitVals()  {
@@ -221,16 +221,10 @@ function submitVals()  {
 
   }
 
-  /** TEST IN CONSOLE
-  *console.log("Event name: "+ eventTitle);
-  *console.log("Date: " + month + "/" + day + "/" + year);
-  *console.log("Start time: "+strthour + ":"+strtmin);
-  *console.log("End time: " + endhour + ":" + endmin);*/
+
 
   let inputDate = new Date(year, month-1, day, strthour, strtmin);
   let currentDate = new Date();
-  /**console.log("Input date: "+ inputDate);
-  *console.log("Curent date: "+ currentDate);*/
 
   var length = ((endhour*60)+endmin)-((strthour*60)+strtmin);
 
@@ -244,14 +238,8 @@ function submitVals()  {
 
 
     var temp = new meeting(eventTitle, inputDate, length);
-    /**console.log("before the add");
-    *window.masterEvent.printAll();*/
-
 
     window.masterEvent.add(temp);
-
-    /**console.log("After the add");
-    *window.masterEvent.printAll();*/
 
     var arr = eventArray(masterEvent);
     writeData(arr, 3, "masterEvent");
@@ -281,7 +269,7 @@ function submitVals()  {
 
 /**
 * Checks to see if the date can be used or not
-* @method isInvalidDate()
+* @method isInvalidDate
 * @param {number} month
 * @param {number} day
 * @param {number} year
@@ -385,7 +373,7 @@ function isInvalidDate(month, day, year, inputDate, currentDate, length, strthou
 *Redirects the page according to if date is invalid
 *    If the date is bad, it will refresh the page,
 *    otherwise it will redirect to events.html
-* @method redirect()
+* @method redirect
 *@param {bool} badDate
 */
 function redirect(badDate)

@@ -111,7 +111,7 @@
 
 
 /**FUNCTION WRITE writeData
-*@func writeData(array,offset,name)
+*@method writeData
 *@param array
 *@param num
 *@param name
@@ -119,7 +119,7 @@
 *   offset: # of values saved per item
 *   name: name of value
 *
-* @example:
+* @example
 *  Say I want to store the attendees of an event in
 *   an event.  If the event name is Birthday, the attendee&#x27;s look like this:
 *   last name, first name
@@ -175,7 +175,7 @@ function writeData(arr, num, name) {
 
 /** readData
 *
-*@func  readData(name)
+*@method readData
 *
 *@param string
 *
@@ -237,7 +237,7 @@ function readData(name){
 
 
 /**
-*@func readEventData(name)
+*@method readEventData
 *
 *@param string
 * Takes in a name of a file that stores event data
@@ -292,13 +292,13 @@ function readEventData(name){
 
 
 /**
-*@func eventArray(list)
+*@method eventArray
 *@param list
 *@example
 *takes in a list of events and changes it to an array
 *Since the list is passed by value, removing the first value wont destroy
 *the master list
-*@return: (array)
+*@return (array)
 */
 function eventArray (list){
 
@@ -320,7 +320,7 @@ function eventArray (list){
 
 
 /**
-*@func userArray()
+*@method userArray
 *takes in a list of users and changes it to array
 *@param list
 *
@@ -342,7 +342,7 @@ function userArray (list){
 
 
 /**
-*@func populateEvent()
+*@method populateEvent
 *@param none
 *@return null
 */
@@ -372,7 +372,7 @@ function populateEvent() {
 
 
 /**
-*@method populateUser(name)
+*@method populateUser
 *@param string
 *@returns list
 */
