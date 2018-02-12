@@ -1,0 +1,7 @@
+REFERENCES FOR LINKED LIST:
+adapted from https://code.tutsplus.com/articles/data-structures-with-javascript-singly-linked-list-and-doubly-linked-list--cms-23392
+
+REFERENCES FOR NODE:
+https://code.tutsplus.com/articles/data-structures-with-javascript-singly-linked-list-and-doubly-linked-list--cms-23392
+
+REFERENCES FOR CHECK BOX:
