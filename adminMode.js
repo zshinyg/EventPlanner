@@ -180,7 +180,7 @@ function addRow(name) {
 
 	console.log("ran addRow");
 
-    var table = document.getElementById("attendeeTable")
+    var table = document.getElementById("attendeeTable");
 
     tr = document.createElement('tr');
     tr.appendChild(document.createElement('td'));
@@ -192,14 +192,32 @@ function addRow(name) {
 
 function populateAttendeeTable() {
 
-	window.masterUser = populateUser("masterUser");
+	
+	var event = document.getElementById("events").value;
+	
 	var firstName = "";
 	var lastName = "";
-	console.log("DEBUG: masterUser size = "+masterUser.size);
-	for(var i = 0; i < masterUser.size; i++) {
-		firstName = masterUser.data.firstName;
-		lastName = masterUser.data.lastName;
+	window[event] = populateUser(event);
+
+	console.log("DEBUG: masterUser size = "+ window[event].size);
+	for(var i = 0; i < window[event].size; i++) {
+		
+		var node = window[event].returnAt(i);
+		firstName = node.data.firstName;
+		lastName = node.data.lastName;
+
 		name = firstName + " " + lastName;
 		addRow(name);
+	}
+}
+
+function unpopulateTable() {
+
+
+	var table = document.getElementById("attendeeTable");
+	console.log(table);
+	for(var i = table.rows.length - 1; i > 0; i--)
+	{
+		table.deleteRow(i);
 	}
 }

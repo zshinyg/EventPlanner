@@ -13,6 +13,28 @@
 // Used for web page redirection if date is invalid
  var badDate;
 
+var lastName = '';
+var firstName = '';
+
+function setName(){
+  var name = sessionStorage.getItem("userName");
+  console.log("DEBUG "+ name);
+  var i = 0;
+  while (name[i] != ' '){
+      firstName += name[i];
+      i++;
+  }
+  i++;
+  while (i < name.length){
+    lastName += name[i];
+    i++;
+  } // end while
+    console.log("this is the name now: " + window.firstName  + ' ' + window.lastName);
+}
+
+
+
+
 function timeSwitcher(){
     console.log("timeSwitcher Ran");
 
@@ -225,6 +247,14 @@ function submitVals()  {
     var arr = eventArray(masterEvent);
     writeData(arr, 3, "masterEvent");
 
+    // add the creator to the list
+        var list = populateUser(eventTitle);
+    var person = new attendee(window.lastName, window.firstName);
+    // add the person to the list
+    list.add(person);
+    // write the list to file
+    var tempArr = userArray(list);
+    writeData(tempArr, 2, eventTitle);
 
     redirect(false);
   } // End if on invalid date

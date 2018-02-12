@@ -20,7 +20,7 @@
     <script src="dataIO.js"></script>    
     <title>Events</title>
 </head>
-<body onload="populateEvent('masterEvent'); populateEventSelect('events')">
+<body onload=" populateEvent('masterEvent'); populateEventSelect('events'); populateAttendeeTable()">
     <div class="jumbotron">
         <h1>Events</h1>
         <p>Select an event to see attendees or create an event.</p>
@@ -29,13 +29,13 @@
     <div class="form-groups">
         <div class="col-sm-5">
             <form>
-                Events:<select onchange="populateAttendeeTable()" type="select" name="Events List" id="events">
+                Events:<select onchange="unpopulateTable(); populateAttendeeTable()" type="select" name="Events List" id="events">
             </form>
         </div>
     
         <div class="col-sm-5">
-            <input type="button" value="Create Event" id="createEvent" onclick="window.location = 'add_event.html'">
-            <input type=button value="Back" id="back" onclick="window.location = 'adminLogin_interface.html'">
+            <input type="button" value="Create Another Event" id="createEvent" onclick="window.location = 'add_event.html'">
+            <input type=button value="Home" id="back" onclick="window.location = 'user.html'">
         </div>
     </div>
     <div>
