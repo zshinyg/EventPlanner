@@ -11,5 +11,9 @@
 //  GLOBAL VARIABLES HERE ARE THE ARRAY FOR LISTS OF YEARS AND
 //  THE LIST OF MASTER USERS
 
+/**
+* @global lists for keeping track of
+*         all users and all events
+*/
 var masterEvent = new linkedlist();
 var masterUser = new linkedlist();
