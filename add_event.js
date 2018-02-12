@@ -16,7 +16,7 @@
 var lastName = '';
 var firstName = '';
 
-/**Sets the name for the user */
+/**@method setName() Sets the name for the user */
 function setName(){
   var name = sessionStorage.getItem("userName");
   console.log("DEBUG "+ name);
@@ -34,7 +34,8 @@ function setName(){
 }
 
 
-
+/** @method timeSwitcher() changes the times in selectbox based on
+*   whether the "24 hour" box is checked*/
 
 function timeSwitcher(){
     /**console.log("timeSwitcher Ran");*/
@@ -64,7 +65,7 @@ function timeSwitcher(){
 }
 
 /**
- * addAMPM select box
+ *@method addAMPM() addAMPM select box
  */
 function addAMPM(){
     document.getElementById("ampm").style.visibility="";
@@ -73,7 +74,7 @@ function addAMPM(){
 }
 
 /**
- * Remove AMPM select box
+ *@method removeAMPM() Remove AMPM select box
  */
  function removeAMPM(){
      document.getElementById("ampm").style.visibility="hidden";
@@ -83,6 +84,7 @@ function addAMPM(){
 
 
 /**
+ *@method populateHours()
  * populates the select box with the correct number of hours
  * @param {number} mode - sets the mode for the select box
  *      23 for 24-Hour mode and 12 for 12-Hour mode.
@@ -130,7 +132,7 @@ function addAMPM(){
 
 
 /**
- * unpopulates this given select box
+ * @method unpopulateHour() unpopulates this given select box
  * @param {string} id - This is the element id of the select
  *      box you would like to populate.
  */
@@ -145,16 +147,17 @@ function unpopulateHour(id){
 }
 
 
-
-
+/** @method submitVals() Submits user values for title, date, and time then
+*   checks if the values are valid. If so, the page is redirected. Otherwise,
+*   it is refreshed.*/
 
 function submitVals()  {
   var eventTitle = document.getElementById("event").value;
   var date = document.getElementById("date").value;
 
   /**var date is in form yyyy-mm-dd
-                      0123456789
-  .substr(start,length)*/
+  *                  0123456789
+  *.substr(start,length)*/
   var dd = date.substr(8,2);
   var mm = date.substr(5,2);
   var yyyy = date.substr(0,4);
@@ -179,11 +182,11 @@ function submitVals()  {
   /** console.log(ampm2);*/
 
     /**For the hours, see if 24/12 hours are toggled.  If 12, see if it is am or pm
-    FOR STORING THE TIME IN 24 HOUR MODE
-   ALL TIMES OF EVENTS ARE STORED THIS WAY*/
+    *FOR STORING THE TIME IN 24 HOUR MODE
+    *ALL TIMES OF EVENTS ARE STORED THIS WAY*/
   if (!clock24){
      /**See if am/pm selected for both cases
-     If it is pm, add 12 to the value*/
+     *If it is pm, add 12 to the value*/
 
      if ((ampm1 == "PM") && (strthour != 12)){
        strthour = strthour+12;
@@ -201,15 +204,15 @@ function submitVals()  {
   }
 
   /** TEST IN CONSOLE
-  console.log("Event name: "+ eventTitle);
-  console.log("Date: " + month + "/" + day + "/" + year);
-  console.log("Start time: "+strthour + ":"+strtmin);
-  console.log("End time: " + endhour + ":" + endmin);*/
+  *console.log("Event name: "+ eventTitle);
+  *console.log("Date: " + month + "/" + day + "/" + year);
+  *console.log("Start time: "+strthour + ":"+strtmin);
+  *console.log("End time: " + endhour + ":" + endmin);*/
 
   let inputDate = new Date(year, month-1, day, strthour, strtmin);
   let currentDate = new Date();
   /**console.log("Input date: "+ inputDate);
-  console.log("Curent date: "+ currentDate);*/
+  *console.log("Curent date: "+ currentDate);*/
 
   var length = ((endhour*60)+endmin)-((strthour*60)+strtmin);
 
@@ -219,18 +222,18 @@ function submitVals()  {
   if (!isInvalidDate(month, day, year, inputDate, currentDate, length, strthour, endhour)){
 
    /**If the date is valid, add it to the list of events
-   and write to file*/
+   *and write to file*/
 
 
     var temp = new meeting(eventTitle, inputDate, length);
     /**console.log("before the add");
-    window.masterEvent.printAll();*/
+    *window.masterEvent.printAll();*/
 
 
     window.masterEvent.add(temp);
 
     /**console.log("After the add");
-    window.masterEvent.printAll();*/
+    *window.masterEvent.printAll();*/
 
     var arr = eventArray(masterEvent);
     writeData(arr, 3, "masterEvent");
@@ -258,13 +261,14 @@ function submitVals()  {
 
 
 
-/** Checks to see if the date can be used or not*/
+/**@method isInvalidDate() Checks to see if the date can be used or not*/
 function isInvalidDate(month, day, year, inputDate, currentDate, length, strthour, endhour)
 {
   /**console.log(strthour);
-  console.log(endhour);
-  Check to see if there is an overlap*/
+  *console.log(endhour);
+  *Check to see if there is an overlap*/
   let badTime=false;
+  /**checking if new event overlaps with old event*/
   for(var i = 0; i < window.masterEvent.size; i ++){
     var  node = window.masterEvent.returnAt(i);
     if ((parseInt(node.data.date.getTime()/60000) <= parseInt(inputDate.getTime()/60000)) && ((parseInt(node.data.date.getTime()/60000) + parseInt(node.data.len)) >= parseInt(inputDate.getTime()/60000))){
@@ -292,10 +296,12 @@ function isInvalidDate(month, day, year, inputDate, currentDate, length, strthou
       break;
     }
   }
+    /** returns if its a bad time*/
     if(badTime==true){
       /**console.log("badTime  is true");*/
       return true;
     }
+    /**given restrictions for certain days/times*/
     else if (month == 01 && day == 01){
         window.alert("Can't schedule a meeting on New Year's Day. Please try again.");
         /**console.log("ERROR: Can't schedule a meeting on New Year's Day.");*/
@@ -335,6 +341,7 @@ function isInvalidDate(month, day, year, inputDate, currentDate, length, strthou
 
       return true;
     }
+    /**runs if the date is fine*/
     else
     {
         /**console.log("Success!");*/
@@ -345,9 +352,9 @@ function isInvalidDate(month, day, year, inputDate, currentDate, length, strthou
 
 
 
-/** Redirects the page according to if date is invalid
-    If the date is bad, it will refresh the page,
-    otherwise it will redirect to events.html*/
+/** @method redirect() Redirects the page according to if date is invalid
+*    If the date is bad, it will refresh the page,
+*    otherwise it will redirect to events.html*/
 function redirect(badDate)
 {
     if(badDate == true)
