@@ -192,30 +192,7 @@
             "namespaces": {},
             "tag": "module",
             "file": "meeting.js",
-            "line": 1,
-            "is_constructor": 1,
-            "params": [
-                {
-                    "name": "title",
-                    "description": "",
-                    "type": "String"
-                },
-                {
-                    "name": "length",
-                    "description": "",
-                    "type": "Number"
-                },
-                {
-                    "name": "date",
-                    "description": "",
-                    "type": "Date"
-                },
-                {
-                    "name": "list\n\nIMPORTANT:",
-                    "description": "ALL HOURS ARE STORED IN 24 HOUR FORMAT FROM 0-23",
-                    "type": "Linkedlist"
-                }
-            ]
+            "line": 1
         },
         "user": {
             "name": "user",
@@ -800,16 +777,19 @@
             "name": "attendee",
             "params": [
                 {
-                    "name": "string",
-                    "description": ""
+                    "name": "lastName",
+                    "description": "",
+                    "type": "String"
                 },
                 {
-                    "name": "string",
-                    "description": ""
+                    "name": "firstName",
+                    "description": "",
+                    "type": "String"
                 }
             ],
             "return": {
-                "description": "none"
+                "description": "",
+                "type": "None"
             },
             "class": "attendnee",
             "module": "attendee"
@@ -826,7 +806,8 @@
                 }
             ],
             "return": {
-                "description": "this.lastName"
+                "description": "this.lastName",
+                "type": "String"
             },
             "class": "attendnee",
             "module": "attendee"
@@ -860,7 +841,8 @@
                 }
             ],
             "return": {
-                "description": "this.lastName"
+                "description": "this.lastName",
+                "type": "String"
             },
             "class": "attendnee",
             "module": "attendee"
@@ -1012,9 +994,278 @@
         {
             "file": "global.js",
             "line": 20,
-            "global": "lists for keeping track of\n        all users and all events",
+            "name": "list",
+            "itemtype": "property",
+            "type": "Global",
             "class": "global",
             "module": "global"
+        },
+        {
+            "file": "global.js",
+            "line": 26,
+            "name": "list",
+            "itemtype": "property",
+            "type": "Global",
+            "class": "global",
+            "module": "global"
+        },
+        {
+            "file": "linkedlist.js",
+            "line": 20,
+            "itemtype": "method",
+            "name": "node",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "None"
+            },
+            "class": "linkedlist",
+            "module": "linkedlist"
+        },
+        {
+            "file": "linkedlist.js",
+            "line": 34,
+            "itemtype": "method",
+            "name": "greater",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "val",
+                "type": "Bool"
+            },
+            "class": "linkedlist",
+            "module": "linkedlist"
+        },
+        {
+            "file": "linkedlist.js",
+            "line": 51,
+            "itemtype": "method",
+            "name": "equal",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "val",
+                "type": "Bool"
+            },
+            "class": "linkedlist",
+            "module": "linkedlist"
+        },
+        {
+            "file": "linkedlist.js",
+            "line": 72,
+            "itemtype": "method",
+            "name": "linkedlist",
+            "params": [
+                {
+                    "name": "none",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "None"
+            },
+            "class": "linkedlist",
+            "module": "linkedlist"
+        },
+        {
+            "file": "linkedlist.js",
+            "line": 93,
+            "itemtype": "method",
+            "name": "add",
+            "params": [
+                {
+                    "name": "val",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "node",
+                "type": "Object"
+            },
+            "class": "linkedlist",
+            "module": "linkedlist"
+        },
+        {
+            "file": "linkedlist.js",
+            "line": 160,
+            "itemtype": "method",
+            "name": "addBack",
+            "params": [
+                {
+                    "name": "val",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "None"
+            },
+            "class": "linkedlist",
+            "module": "linkedlist"
+        },
+        {
+            "file": "linkedlist.js",
+            "line": 188,
+            "itemtype": "method",
+            "name": "search",
+            "params": [
+                {
+                    "name": "val",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "object if found, 0 else",
+                "type": "Object"
+            },
+            "class": "linkedlist",
+            "module": "linkedlist"
+        },
+        {
+            "file": "linkedlist.js",
+            "line": 227,
+            "itemtype": "method",
+            "name": "remove",
+            "params": [
+                {
+                    "name": "val",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "True if removed, false else",
+                "type": "Bool"
+            },
+            "class": "linkedlist",
+            "module": "linkedlist"
+        },
+        {
+            "file": "linkedlist.js",
+            "line": 280,
+            "itemtype": "method",
+            "name": "isEmpty",
+            "params": [
+                {
+                    "name": "UNKNOWN",
+                    "description": "",
+                    "type": "None"
+                }
+            ],
+            "return": {
+                "description": "True if empty, false else",
+                "type": "Bool"
+            },
+            "class": "linkedlist",
+            "module": "linkedlist"
+        },
+        {
+            "file": "linkedlist.js",
+            "line": 299,
+            "itemtype": "method",
+            "name": "printAll",
+            "params": [
+                {
+                    "name": "UNKNOWN",
+                    "description": "",
+                    "type": "None"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "None"
+            },
+            "class": "linkedlist",
+            "module": "linkedlist"
+        },
+        {
+            "file": "linkedlist.js",
+            "line": 323,
+            "itemtype": "method",
+            "name": "removeFront",
+            "params": [
+                {
+                    "name": "UNKNOWN",
+                    "description": "",
+                    "type": "None"
+                }
+            ],
+            "return": {
+                "description": "true if removed, false else",
+                "type": "Bool"
+            },
+            "class": "linkedlist",
+            "module": "linkedlist"
+        },
+        {
+            "file": "linkedlist.js",
+            "line": 346,
+            "itemtype": "method",
+            "name": "returnAt",
+            "params": [
+                {
+                    "name": "index",
+                    "description": "",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "Node object if found, 0 else",
+                "type": "Object"
+            },
+            "class": "linkedlist",
+            "module": "linkedlist"
+        },
+        {
+            "file": "meeting.js",
+            "line": 11,
+            "itemtype": "method",
+            "name": "meeting",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "title",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "length",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "date",
+                    "description": "",
+                    "type": "Date"
+                },
+                {
+                    "name": "list\n\nIMPORTANT:",
+                    "description": "ALL HOURS ARE STORED IN 24 HOUR FORMAT FROM 0-23",
+                    "type": "Linkedlist"
+                }
+            ],
+            "class": "meeting",
+            "module": "meeting"
         },
         {
             "file": "meeting.js",
@@ -1042,7 +1293,7 @@
             "line": 52,
             "description": "Allows for comparison of events by date.",
             "itemtype": "method",
-            "name": "valueOf()",
+            "name": "valueOf",
             "class": "meeting",
             "module": "meeting"
         },
@@ -1056,8 +1307,9 @@
         {
             "file": "user.js",
             "line": 15,
+            "description": "Takes in user input for the username and submits it",
             "itemtype": "method",
-            "name": "submitName\nTakes in user input for the username and submits it",
+            "name": "submitName",
             "class": "user",
             "module": "user"
         },
@@ -1086,16 +1338,25 @@
         {
             "file": "user.js",
             "line": 76,
+            "description": "Removes the usernames when page is reloaded",
             "itemtype": "method",
-            "name": "unpopulateNames\nRemoves the usernames when page is reloaded",
+            "name": "unpopulateNames",
             "class": "user",
             "module": "user"
         },
         {
             "file": "user.js",
             "line": 90,
+            "description": "Takes the selected username and carries it over from user.html to user_availability.html",
             "itemtype": "method",
-            "name": "addAvailability\nTakes the selected username and carries it over from user.html to user_availability.html",
+            "name": "addAvailability",
+            "params": [
+                {
+                    "name": "dest",
+                    "description": "this is the destination for the button.",
+                    "type": "String"
+                }
+            ],
             "class": "user",
             "module": "user"
         },
@@ -1109,8 +1370,9 @@
         {
             "file": "user_availability.js",
             "line": 13,
+            "description": "Sets the username for the user",
             "itemtype": "method",
-            "name": "setName\nSets the username for the user",
+            "name": "setName",
             "class": "user_availability",
             "module": "user_availability"
         },
@@ -1142,8 +1404,9 @@
         {
             "file": "user_availability.js",
             "line": 62,
+            "description": "Loads the events from the list and shows which ones are available to the user",
             "itemtype": "method",
-            "name": "loadEvents\nLoads the events from the list and shows which ones are available to the user",
+            "name": "loadEvents",
             "class": "user_availability",
             "module": "user_availability"
         },
@@ -1157,8 +1420,9 @@
         {
             "file": "user_availability.js",
             "line": 119,
+            "description": "Adds user to the event they have chosen for their availability",
             "itemtype": "method",
-            "name": "submit\nAdds user to the event they have chosen for their availability",
+            "name": "submit",
             "class": "user_availability",
             "module": "user_availability"
         },
@@ -1214,6 +1478,26 @@
         {
             "message": "replacing incorrect tag: returns with return",
             "line": " dataIO.js:274"
+        },
+        {
+            "message": "unknown tag: name",
+            "line": " global.js:20"
+        },
+        {
+            "message": "unknown tag: name",
+            "line": " global.js:26"
+        },
+        {
+            "message": "param name missing: {none}",
+            "line": " linkedlist.js:280"
+        },
+        {
+            "message": "param name missing: {none}",
+            "line": " linkedlist.js:299"
+        },
+        {
+            "message": "param name missing: {none}",
+            "line": " linkedlist.js:323"
         },
         {
             "message": "Missing item type",
@@ -1358,10 +1642,6 @@
         {
             "message": "Missing item type\nGet the node at index i from masterEvent",
             "line": " adminMode.js:22"
-        },
-        {
-            "message": "Missing item type",
-            "line": " global.js:20"
         },
         {
             "message": "Missing item type\nJavaScirpt file that accompanies user.html\nHas the user select from a drop down menu of people\n If their name is not listed, user has the option to add their name\n Clicks continue to move on to add availability",

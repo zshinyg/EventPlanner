@@ -13,9 +13,9 @@
 */ 
 
 /**
- * @method submitName
- * Takes in user input for the username and submits it
- */
+* Takes in user input for the username and submits it
+* @method submitName
+*/
 function submitName()  {
     var firstName = document.getElementById("userFirstName").value;
     var lastName = document.getElementById("userLastName").value;
@@ -74,8 +74,8 @@ function populateUserSelect(id) {
 }
 
 /**
- * @method unpopulateNames
  * Removes the usernames when page is reloaded
+ * @method unpopulateNames
  */
 function unpopulateNames(){
 
@@ -88,12 +88,37 @@ function unpopulateNames(){
 }
 
 /**
- * @method addAvailability
  * Takes the selected username and carries it over from user.html to user_availability.html
+ * @method addAvailability
+ * @param {string} dest this is the destination for the button.
  */
-function addAvailability(){
+function addAvailability(dest){
+    var name = document.getElementById("userName").value;
+    
+    
+    name = name.trim();
+    console.log(name);
+    if(name == ""){
+        alert("Please select your name or create a new one.")
+        window.location.href= "user.html";
+        return;
 
-  var name = document.getElementById("userName").value;
-  sessionStorage.setItem("userName", name);
+    }
+    else{
+        sessionStorage.setItem("userName", name);
+        if( dest == "avail"){
+            console.log("in here");
+            window.location.href="user_availability.html";
+            return true;
+
+        }
+        else if( dest == "admin"){
+            window.location.href="adminMode.html";
+            return true;
+        }
+        
+
+    }
+  
 
 }

@@ -44,16 +44,16 @@
 
     </div>
 
-    <form action = "user_availability.html">
-        <button type="Continue" onclick= "addAvailability()"
-        class="btn btn-primary" name="Continue">
+    <form action="javascript:addAvailability('avail')" method="post">
+        <button type="Continue" onclick= "addAvailability('avail')"
+        class="btn btn-primary" id="avail" name="Continue">
         Add Availability
         </button>
     </form>
 
-    <form action = "adminMode.html">
-            <button type="Continue" onclick= "addAvailability()"
-            class="btn btn-primary" name="Continue">
+    <form action="javascript:addAvailability('admin')" method="post">
+            <button type="Continue" onclick= "addAvailability('admin')"
+            class="btn btn-primary" id="admin" name="Continue">
             Admin Mode
             </button>
         </form>

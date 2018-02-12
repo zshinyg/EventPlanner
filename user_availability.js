@@ -11,8 +11,8 @@ var lastName = '';
 var firstName = '';
 
 /**
- * @method setName
  * Sets the username for the user
+ * @method setName
  */
 function setName(){
   var name = sessionStorage.getItem("userName");
@@ -60,8 +60,8 @@ function addRow(title, date, time) {
 }
 
 /**
- * @method loadEvents
  * Loads the events from the list and shows which ones are available to the user
+ * @method loadEvents
  */
 function loadEvents(){
 
@@ -117,8 +117,8 @@ function loadEvents(){
 }
 
 /**
- * @method submit
  * Adds user to the event they have chosen for their availability
+ * @method submit
  */
 function submit(){
 
