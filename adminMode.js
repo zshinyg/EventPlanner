@@ -127,11 +127,56 @@ function adminCompare(a)
 function check(login) {
 
 	if(login.userid.value == "admin" && login.password.value == "1234") {
-		window.open('add_event.html');
+		window.open('events.html');
 	}
 	else{
 		alert("Incorrect username or password.");
 	}
 
 
+}
+
+
+
+function populateEventSelect(id) {
+	
+
+	console.log("DEBUG: ran populateEventSelect");
+    unpopulateEvents();
+    var docfrag = document.createDocumentFragment();
+	console.log(masterEvent.size);
+
+      for(var i = 0; i < masterEvent.size; i++){
+
+          //Get the node at index i from masterEvent
+
+          var node = masterEvent.returnAt(i);
+          var event = node.data.title;
+          console.log(event);
+
+          docfrag.appendChild(new Option(event));
+
+
+      }
+
+
+  var select = document.getElementById(id);
+  select.appendChild(docfrag);
+
+}
+
+
+function unpopulateEvents(){
+
+    var events = document.getElementById("events");
+
+    for( var i = 0; i < masterEvent.size; i++){
+        events.remove(events.i);
+    }
+
+}
+
+
+function populateAttendeeTable() {
+	console.log("Populate Attendee table");
 }

@@ -15,10 +15,39 @@
     <script src ="meeting.js"></script>
     <script src="global.js"></script>
     <script src="add_event.js"></script>
+    <script src="adminMode.js"></script>
     <script src="dataIO.js"></script>    
     <title>Events</title>
 </head>
-<body>
+<body onload="populateEvent('masterEvent'); populateEventSelect('events')">
+    <div class="jumbotron">
+        <h1>Events</h1>
+        <p>Select an event to see attendees or create an event.</p>
+    </div>
     
+    <div class="form-groups">
+        <div class="col-sm-5">
+            <form>
+                Events:<select onchange="populateAttendeeTable()" type="select" name="Events List" id="events">
+            </form>
+        </div>
+    
+        <div class="col-sm-5">
+            <input type="button" value="Create Event" id="createEvent" onclick="window.location = 'add_event.html'">
+            <input type=button value="Back" id="back" onclick="window.location = 'adminLogin_interface.html'">
+        </div>
+    </div>
+    <div>
+        <table name="userTable" id="userTable">
+            <thead>
+                <tr>
+                    <th>ATTENDING:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr name= "attendingList" id="attendingList" ></tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
