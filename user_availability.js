@@ -114,19 +114,24 @@ function submit(){
 // that the person who is logged in is attending
   for (var i = 0; i < checkBoxArray.length; i++){
     if (checkBoxArray[i].checked == true){
-      // console.log("found a check");
-      // console.log(nameArray[i].textContent);
+
       // Populate the list of that event
       var eventTitle = nameArray[i].textContent;
       var list = populateUser(eventTitle);
+      var attending = list.search(window.lastName);
+      if(attending != 0){
+        console.log("already in " + eventTitle);
+      }
+
+      else {
       // create a new attendee with the user logged in
-      // console.log(window.lastName + ' ' + window.firstName);
       var person = new attendee(window.lastName, window.firstName);
       // add the person to the list
       list.add(person);
       // write the list to file
       var tempArr = userArray(list);
       writeData(tempArr, 2, eventTitle);
+    }
     }
   }
 }
