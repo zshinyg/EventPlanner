@@ -17,7 +17,7 @@ function setName(){
     lastName += name[i];
     i++;
   } // end while
-    console.log("this is the name now: " + window.firstName  + ' ' + window.lastName);
+    //console.log("this is the name now: " + window.firstName  + ' ' + window.lastName);
 }
 
 function addRow(title, date, time) {
@@ -71,6 +71,28 @@ function loadEvents(){
   }
   if (masterEvent.size == 0){
     document.getElementById("list").innerHTML = "No events at this time";
+  }
+
+
+  // Check to see what events the user is going to
+  var checkBoxArray = document.getElementById("eventTable").getElementsByTagName("INPUT");
+
+  for (var i = 0; i < masterEvent.size; i++){
+
+    var node = masterEvent.returnAt(i);
+    var eventTitle = node.data.title;
+    window[eventTitle] = populateUser(eventTitle);
+    var attending = window[eventTitle].search(lastName);
+
+    console.log("print ALL in load users");
+    window[eventTitle].printAll();
+
+
+    console.log("Searching for: " + lastName + " in " + eventTitle);
+    console.log("attending = " + attending);
+    if (attending){
+      checkBoxArray[i].checked = true;
+    }
   }
 }
 
