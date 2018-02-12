@@ -179,10 +179,6 @@ function submitVals()  {
   var endmin = parseInt(lmin);
 
   // Integer values of time
-  var startHour = parseInt(10, shour);
-  var startMin = parseInt(10, smin);
-  var lastHour = parseInt(10, lhour);
-  var lastMin = parseInt(10, lmin);
 
   var ampm1 = document.getElementById("ampm").value;
   // console.log(ampm1);
@@ -226,7 +222,7 @@ function submitVals()  {
 
   // Check date
   populateEvent();
-  if (!isInvalidDate(month, day, year, inputDate, currentDate, length)){
+  if (!isInvalidDate(month, day, year, inputDate, currentDate, length, strthour, endhour)){
 
 
 
@@ -268,8 +264,10 @@ function submitVals()  {
 } // end submitVals
 
 // Checks to see if the date can be used or not
-function isInvalidDate(month, day, year, inputDate, currentDate, length)
+function isInvalidDate(month, day, year, inputDate, currentDate, length, strthour, endhour)
 {
+  console.log(strthour);
+  console.log(endhour);
   // Check to see if there is an overlap
   let badTime=false;
   for(var i = 0; i < window.masterEvent.size; i ++){
@@ -335,6 +333,12 @@ function isInvalidDate(month, day, year, inputDate, currentDate, length)
         console.log("ERROR: Can't start and end a meeting at the same time.");
 
         return true;
+    }
+    else if ((strthour <= 12) && (endhour >= 12)){
+      window.alert("Can't Schedule a meeting over lunch hour.");
+      console.log("ERROR: Can't Schedule a meeting over lunch hour.");
+
+      return true;
     }
     else
     {
