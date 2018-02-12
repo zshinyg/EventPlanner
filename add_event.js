@@ -203,7 +203,7 @@ function submitVals()  {
   var length = ((endhour*60)+endmin)-((strthour*60)+strtmin);
 
   // Check date
-
+  populateEvent();
   if (!isInvalidDate(month, day, year, inputDate, currentDate, length)){
 
 
@@ -211,25 +211,10 @@ function submitVals()  {
    // If the date is valid, add it to the list of events
    // and write to file
 
-    populateEvent();
+
     var temp = new meeting(eventTitle, inputDate, length);
     //console.log("before the add");
     //window.masterEvent.printAll();
-
-    // Check to see if there is an overlap
-    // for(var i = 0; i < window.masterEvent.size; i ++){
-    //   var  node = window.masterEvent.returnAt(i);
-    //   if (((node.data.date.getTime()/60000) <= inputDate.getTime()/60000) && (node.data.date.getTime()/60000 + node.data.len) >= (inputDate.getTime()/60000)){
-    //     window.alert("Can't have an overlaping event");
-    //     console.log("ERROR: Can't have an overlaping event");
-    //     return;
-    //   }
-    //   if (((node.data.date.getTime()/60000) >= inputDate.getTime()/60000 + length) && (node.data.date.getTime()/60000 + node.data.len) <= (inputDate.getTime()/60000+ length)){
-    //     window.alert("Can't have an overlaping event");
-    //     console.log("ERROR: Can't have an overlaping event");
-    //     return;
-    //   }
-    // }
 
 
     window.masterEvent.add(temp);
@@ -255,7 +240,28 @@ function submitVals()  {
 // Checks to see if the date can be used or not
 function isInvalidDate(month, day, year, inputDate, currentDate, length)
 {
-    if (month == 01 && day == 01){
+  // Check to see if there is an overlap
+  let badTime=false;
+  for(var i = 0; i < window.masterEvent.size; i ++){
+    var  node = window.masterEvent.returnAt(i);
+    if ((parseInt(node.data.date.getTime()/60000) <= parseInt(inputDate.getTime()/60000)) && ((parseInt(node.data.date.getTime()/60000) + parseInt(node.data.len)) >= parseInt(inputDate.getTime()/60000))){
+      window.alert("Can't have an overlaping event1");
+      console.log("ERROR: Can't have an overlaping event");
+      badTime=true;
+      break;
+    }
+    if ((parseInt(node.data.date.getTime()/60000) >= parseInt(inputDate.getTime()/60000)) && (parseInt(node.data.date.getTime()/60000) <= (parseInt(inputDate.getTime()/60000) + length))){
+      window.alert("Can't have an overlaping event2");
+      console.log("ERROR: Can't have an overlaping event");
+      badTime=true;
+      break;
+    }
+  }
+    if(badTime==true){
+      console.log("badTime  is true");
+      return true;
+    }
+    else if (month == 01 && day == 01){
         window.alert("Can't schedule a meeting on New Year's Day. Please try again.");
         console.log("ERROR: Can't schedule a meeting on New Year's Day.");
 
@@ -309,7 +315,7 @@ function redirect(badDate)
     else if(badDate == false)
     {
         console.log("Redirecting to redirect page");
-        window.location.href = "redirect_interface.html";
+        window.location.href = "events.html";
         return true;
     }
 
