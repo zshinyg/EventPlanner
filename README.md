@@ -11,3 +11,4 @@ Look at dataIO.txt to find out about data management
 Alejandro: userAvailability.html & .js
 Herbert: add_event.html & js
 Ethan: user.html & js
+Shogun: AdminMode html & js
