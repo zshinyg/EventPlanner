@@ -22,6 +22,8 @@ KNOWN BUGS:
 - 24 Hour times written as start time end time and not as one number.
 - Can see list of attendees to any event, regardless of if you created it or not
 
+Testing with local repo
+
 
 NOT BUGS BUT TODO:
 
