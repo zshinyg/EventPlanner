@@ -12,3 +12,21 @@ Alejandro: userAvailability.html & .js
 Herbert: add_event.html & js
 Ethan: user.html & js
 Shogun: AdminMode html & js, Attendee.js
+
+KNOWN BUGS:
+
+- Can add multiple users of same name to user list
+- Can make an event that goes from 1:00 pm to 5:00 am (overnight)
+- Event can only have one time slot
+- Can create event even if no event data input
+- 24 Hour times written in the stupidest way possible
+- Can see list of attendees to any event, regardless of if you created it or not
+
+
+NOT BUGS BUT TODO:
+
+- Split up sign in screen
+- Give confirmation of user created
+- Add "edit event" area to admin mode
+- Don't clear input when bad user input
+- Add intermediate page between user.html and user_availability.html
