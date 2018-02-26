@@ -19,7 +19,7 @@ KNOWN BUGS:
 - Can make an event that goes from 1:00 pm to 5:00 am (overnight)
 - Event can only have one time slot
 - Can create event even if no event data input
-- 24 Hour times written in the stupidest way possible
+- 24 Hour times written as start time end time and not as one number.
 - Can see list of attendees to any event, regardless of if you created it or not
 
 
